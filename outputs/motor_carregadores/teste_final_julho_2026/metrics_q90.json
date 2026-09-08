@@ -1,0 +1,10 @@
+{
+  "raw_q90_coverage_pct": 91.1185315860215,
+  "upper_coverage_pct": 91.2732414874552,
+  "raw_pinball_loss": 1.4217454482264333,
+  "upper_pinball_loss": 1.4145655535757085,
+  "q90_below_point_pct": 32.15935819892473,
+  "mean_upper_kw": 18.631175727569072,
+  "mean_margin_kw": 7.895545758014406,
+  "n": 142848
+}

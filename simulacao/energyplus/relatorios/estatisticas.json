@@ -1,0 +1,31 @@
+{
+  "registros": 17376,
+  "inicio": "2026-01-01 00:00:00",
+  "ultimo_inicio_intervalo": "2026-06-30 23:45:00",
+  "fim_exclusivo": "2026-07-01 00:00:00",
+  "intervalo_minutos": 15,
+  "timezone": "UTC-03:00",
+  "consumo_medio_kw": 101.0165722344683,
+  "consumo_maximo_kw": 324.7137576407371,
+  "consumo_minimo_kw": 22.4,
+  "energia_total_kwh": 438815.9897865304,
+  "energia_semestral_kwh_m2": 54.8519987233163,
+  "media_dias_uteis_kw": 127.39563304952934,
+  "media_fim_de_semana_kw": 35.57620982787457,
+  "temperatura_min_c": 11.2,
+  "temperatura_max_c": 33.7,
+  "fracao_zona_intervalos_fora_setpoint_1c_apos_primeira_hora": 0.0,
+  "correlacao_temperatura_resfriamento_residual_calendario": 0.9232933878365995,
+  "energia_por_uso_kwh": {
+    "Cooling:Electricity": 120674.52871914089,
+    "Fans:Electricity": 38038.45373853304,
+    "Heating:Electricity": 43.8073288563734,
+    "InteriorEquipment:Electricity": 175560.0,
+    "InteriorLights:Electricity": 104499.2,
+    "Electricity:Facility": 438815.9897865304
+  },
+  "energyplus_resumo": "************* EnergyPlus Completed Successfully-- 0 Warning; 0 Severe Errors; Elapsed Time=00hr 00min  7.39sec",
+  "epw_sha256": "e3fc5a807387948e1b69145df8677c2a51bbc2556b00ab98ca6da69ecb4208b5",
+  "idf_sha256": "d67c4edd467a36dc1cbb240417e5c71e6d7537c2996a832a0ddf1ed51e7b4589",
+  "validacoes": "Sequencia completa, sem nulos/duplicatas, energia-potencia e soma de usos finais conferidas."
+}

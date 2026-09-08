@@ -1,0 +1,471 @@
+{
+  "engine": "Goodwe Motor 1 V2 híbrido",
+  "feature_names": [
+    "consumo_atual_kw",
+    "consumo_lag_15m",
+    "consumo_lag_30m",
+    "consumo_lag_60m",
+    "consumo_lag_120m",
+    "consumo_lag_180m",
+    "consumo_lag_360m",
+    "consumo_lag_720m",
+    "consumo_lag_1440m",
+    "consumo_lag_10080m",
+    "consumo_mean_60m",
+    "consumo_min_60m",
+    "consumo_max_60m",
+    "consumo_std_60m",
+    "consumo_mean_180m",
+    "consumo_min_180m",
+    "consumo_max_180m",
+    "consumo_std_180m",
+    "consumo_mean_360m",
+    "consumo_min_360m",
+    "consumo_max_360m",
+    "consumo_std_360m",
+    "consumo_mean_1440m",
+    "consumo_min_1440m",
+    "consumo_max_1440m",
+    "consumo_std_1440m",
+    "temperatura_externa_c_atual",
+    "temperatura_externa_c_lag_15m",
+    "temperatura_externa_c_lag_60m",
+    "temperatura_externa_c_lag_180m",
+    "temperatura_externa_c_lag_360m",
+    "temperatura_externa_c_lag_720m",
+    "temperatura_externa_c_lag_1440m",
+    "temperatura_externa_c_media_60m",
+    "temperatura_externa_c_media_180m",
+    "temperatura_externa_c_media_360m",
+    "temperatura_externa_c_media_1440m",
+    "umidade_relativa_pct_atual",
+    "umidade_relativa_pct_lag_15m",
+    "umidade_relativa_pct_lag_60m",
+    "umidade_relativa_pct_lag_180m",
+    "umidade_relativa_pct_lag_360m",
+    "umidade_relativa_pct_lag_720m",
+    "umidade_relativa_pct_lag_1440m",
+    "umidade_relativa_pct_media_60m",
+    "umidade_relativa_pct_media_180m",
+    "umidade_relativa_pct_media_360m",
+    "umidade_relativa_pct_media_1440m",
+    "origem_hora",
+    "origem_dia_semana",
+    "origem_fim_de_semana",
+    "origem_mes",
+    "origem_hora_sin",
+    "origem_hora_cos",
+    "origem_semana_sin",
+    "origem_semana_cos",
+    "consumo_diferenca_semana_atual",
+    "consumo_razao_semana_atual",
+    "consumo_diferenca_dia_atual",
+    "tendencia_consumo_15m",
+    "tendencia_consumo_60m",
+    "tendencia_consumo_180m",
+    "tendencia_consumo_360m",
+    "correcao_semanal_media_60m",
+    "correcao_semanal_std_60m",
+    "correcao_semanal_media_180m",
+    "correcao_semanal_std_180m",
+    "correcao_semanal_media_360m",
+    "correcao_semanal_std_360m",
+    "correcao_semanal_media_1440m",
+    "correcao_semanal_std_1440m",
+    "temperatura_externa_c_diferenca_semana_atual",
+    "temperatura_externa_c_tendencia_1h",
+    "umidade_relativa_pct_diferenca_semana_atual",
+    "umidade_relativa_pct_tendencia_1h",
+    "alvo_hora",
+    "alvo_dia_semana",
+    "alvo_fim_de_semana",
+    "alvo_mes",
+    "alvo_hora_sin",
+    "alvo_hora_cos",
+    "alvo_semana_sin",
+    "alvo_semana_cos",
+    "consumo_alvo_dia_anterior",
+    "consumo_alvo_semana_anterior"
+  ],
+  "feature_count": 85,
+  "source_path": "C:\\Users\\Tommaso\\Desktop\\Gie\\consumo_predio_6_meses.csv",
+  "source_sha256": "1b241f5f20154ba8a1d2f6599435c9ec23761fb23ffe48a2306636c3665396d7",
+  "minimum_history_rows": 768,
+  "parameters": {
+    "objective": "regression",
+    "metric": "l1",
+    "learning_rate": 0.05,
+    "num_leaves": 15,
+    "min_data_in_leaf": 40,
+    "lambda_l2": 1.0,
+    "feature_fraction": 1.0,
+    "bagging_fraction": 1.0,
+    "seed": 20260905,
+    "num_threads": 2,
+    "deterministic": true,
+    "force_col_wise": true,
+    "verbosity": -1
+  },
+  "max_rounds": 400,
+  "early_stopping_rounds": 35,
+  "residual_target": "y(t+h)-y(t+h-672)",
+  "reconstruction": "max(0, weekly_baseline + signed_residual_prediction)",
+  "train_origins": 10705,
+  "validation_origins": 2928,
+  "fit_period": "Jan-Apr 2026",
+  "early_stopping_and_selection": "May 2026",
+  "june_role": "secondary diagnostic, previously inspected; NOT independent final test",
+  "independent_final_test": "pending new completely unobserved period",
+  "selection_caveat": "May reused for early stopping and method selection; optimistic selection estimate",
+  "models": [
+    {
+      "horizon": 1,
+      "file": "residual_01.txt",
+      "best_iteration": 125,
+      "sha256": "5077a12c4866ee93d179fcc7e3f32253b05647e977956f4a7a46b078904afc24"
+    },
+    {
+      "horizon": 2,
+      "file": "residual_02.txt",
+      "best_iteration": 104,
+      "sha256": "dc05cd1411ba315e41ec5d6e166e524543682798a3200d97ac26b12f73ed21eb"
+    },
+    {
+      "horizon": 3,
+      "file": "residual_03.txt",
+      "best_iteration": 82,
+      "sha256": "f36d2a86572048a4677639dd60e88195ffd61763b231d6c21037d5253f2d20d8"
+    },
+    {
+      "horizon": 4,
+      "file": "residual_04.txt",
+      "best_iteration": 74,
+      "sha256": "1a5d96bfb9e23f63b53660150c059829f47a68959df6c9fdec73cc640ffd25c0"
+    },
+    {
+      "horizon": 5,
+      "file": "residual_05.txt",
+      "best_iteration": 62,
+      "sha256": "a3534999b483f2e3a20f826344d797b3798b8c95ba1004b42f9d177a157920d2"
+    },
+    {
+      "horizon": 6,
+      "file": "residual_06.txt",
+      "best_iteration": 59,
+      "sha256": "595294c8a9f140275b5d92da8e87c5613fa183be7c5d5927f07b8369d327c1f2"
+    },
+    {
+      "horizon": 7,
+      "file": "residual_07.txt",
+      "best_iteration": 59,
+      "sha256": "ece6d03ff458d0469d5cd2a14bfce0667dc41f1438d26b36d1149d895a84d9b9"
+    },
+    {
+      "horizon": 8,
+      "file": "residual_08.txt",
+      "best_iteration": 55,
+      "sha256": "38089986b457fd5c5a87181627f6b4d10117efc42a9759c841eac701e7e55ebf"
+    },
+    {
+      "horizon": 9,
+      "file": "residual_09.txt",
+      "best_iteration": 51,
+      "sha256": "e869b12b881f5ae07742eafd3d5bc2c499501f3e5083b9c2e2b54351a942f903"
+    },
+    {
+      "horizon": 10,
+      "file": "residual_10.txt",
+      "best_iteration": 52,
+      "sha256": "cfb58e187b1d16bf53ce137544a2ff7a2e239a6477842c4ac8310a56aa4e1399"
+    },
+    {
+      "horizon": 11,
+      "file": "residual_11.txt",
+      "best_iteration": 64,
+      "sha256": "9939641609267b2125d5ec0fc4105d54db9d0e034f445544b0e30748a79a9fd1"
+    },
+    {
+      "horizon": 12,
+      "file": "residual_12.txt",
+      "best_iteration": 52,
+      "sha256": "f95d7f7551ee7c7a020b589454d2719aa9148a0ebc0304bacf4c2604163b3272"
+    },
+    {
+      "horizon": 13,
+      "file": "residual_13.txt",
+      "best_iteration": 58,
+      "sha256": "0b766b3d1590222c2cc26bd64982e38c52496a59557a33fa5fd8a415023c67f4"
+    },
+    {
+      "horizon": 14,
+      "file": "residual_14.txt",
+      "best_iteration": 48,
+      "sha256": "1d9fd6ddfffb3dc2671db6869b8d2cd23461aec45d2e511bcef63caeaec1206a"
+    },
+    {
+      "horizon": 15,
+      "file": "residual_15.txt",
+      "best_iteration": 50,
+      "sha256": "3ef82be73e519cb5fb44e7214919f779858371e29cb81007a64b45460e16b7de"
+    },
+    {
+      "horizon": 16,
+      "file": "residual_16.txt",
+      "best_iteration": 54,
+      "sha256": "490558e9e739de5311995cbf94fcf687c4b1cdbf626f1a55d4bcd6f47325fd39"
+    },
+    {
+      "horizon": 17,
+      "file": "residual_17.txt",
+      "best_iteration": 42,
+      "sha256": "2fd869c01d72d9fb5be2cb8db634b2921c94149df89b440a68f1c99947841607"
+    },
+    {
+      "horizon": 18,
+      "file": "residual_18.txt",
+      "best_iteration": 47,
+      "sha256": "e639e35f2e7418139af697affaae1c0cfacaa1d938c8892087359644acc0e671"
+    },
+    {
+      "horizon": 19,
+      "file": "residual_19.txt",
+      "best_iteration": 39,
+      "sha256": "ae3c40f68306f0fac1b14688fd5a93d60472aa2e4b7a0c509c17c7a1d3ec0cc8"
+    },
+    {
+      "horizon": 20,
+      "file": "residual_20.txt",
+      "best_iteration": 42,
+      "sha256": "d987d69feb1da14672190872492bfc21cf920a87f2e5b6c6672823f38b23976f"
+    },
+    {
+      "horizon": 21,
+      "file": "residual_21.txt",
+      "best_iteration": 49,
+      "sha256": "2fe7e921d0b3d5cfbfe62daac45bb33e234fb6a6b9b1c997bbee5b948034fceb"
+    },
+    {
+      "horizon": 22,
+      "file": "residual_22.txt",
+      "best_iteration": 44,
+      "sha256": "6615f2ccc99460466662308cc49aa9da4403b4b66911cd430283244ed5f071c7"
+    },
+    {
+      "horizon": 23,
+      "file": "residual_23.txt",
+      "best_iteration": 55,
+      "sha256": "b2cc9d31ae3370ec04b87d595b04601da6813bf7ab4e76e1e4f5b8ca33be04c9"
+    },
+    {
+      "horizon": 24,
+      "file": "residual_24.txt",
+      "best_iteration": 49,
+      "sha256": "03738662443b5904a285eff7967a94398d7447e7e9f0ae2d801c8461689fc891"
+    },
+    {
+      "horizon": 25,
+      "file": "residual_25.txt",
+      "best_iteration": 42,
+      "sha256": "ad069bd3fce4de85df5a27af28b5b75cea599457301142fb583c68403e7eb732"
+    },
+    {
+      "horizon": 26,
+      "file": "residual_26.txt",
+      "best_iteration": 37,
+      "sha256": "e79d401a1989904db50f5366a6d9cd6031fe0b98e788ef6e84722b4d2bece388"
+    },
+    {
+      "horizon": 27,
+      "file": "residual_27.txt",
+      "best_iteration": 38,
+      "sha256": "3480937522ad97347f702a1500af67172094e336580d5871635d63984b844c56"
+    },
+    {
+      "horizon": 28,
+      "file": "residual_28.txt",
+      "best_iteration": 37,
+      "sha256": "58fb4c8e24015d68ff291ddf3ae3e921339a02c699c2c512e2639c1dc2ceb2b4"
+    },
+    {
+      "horizon": 29,
+      "file": "residual_29.txt",
+      "best_iteration": 36,
+      "sha256": "fcc8fa0c3f3192e15025f69e73a31e9f55868517dfdf62368289794fff0d9d2a"
+    },
+    {
+      "horizon": 30,
+      "file": "residual_30.txt",
+      "best_iteration": 37,
+      "sha256": "dc30f20655375ee0152e26914c5c05dbf8a0d99200473f0532354afe7952b00b"
+    },
+    {
+      "horizon": 31,
+      "file": "residual_31.txt",
+      "best_iteration": 37,
+      "sha256": "647824a9daf60613cb9302cf8ba3be5d69a6aa12f08d6685585112e202bd1b0d"
+    },
+    {
+      "horizon": 32,
+      "file": "residual_32.txt",
+      "best_iteration": 36,
+      "sha256": "c5ab54212a4330fe5239794ebadfa02fde7b24e6f890f94e66aacfdac5933392"
+    },
+    {
+      "horizon": 33,
+      "file": "residual_33.txt",
+      "best_iteration": 35,
+      "sha256": "c5f10c245f6870ee516e2ebb960968e1e68a43adbf5335daa30440dfc9b6cb2c"
+    },
+    {
+      "horizon": 34,
+      "file": "residual_34.txt",
+      "best_iteration": 31,
+      "sha256": "507d2c18d5e5cc6394e052b154d6e890eaac9636bbc8c564ca699278ad20b500"
+    },
+    {
+      "horizon": 35,
+      "file": "residual_35.txt",
+      "best_iteration": 31,
+      "sha256": "2308ccb3dc48b17c172d9417e494ac70c889570f9c6612c8b36524a4d8bfcb69"
+    },
+    {
+      "horizon": 36,
+      "file": "residual_36.txt",
+      "best_iteration": 36,
+      "sha256": "55f51d451e7623fed3b2c472b5975202b72589ae7c50949d6850ec28ba3a0a61"
+    },
+    {
+      "horizon": 37,
+      "file": "residual_37.txt",
+      "best_iteration": 39,
+      "sha256": "26c77f2d0c8dd88f38683373fdde576e449d42bc6d87d570db9fb7af29d7ef1b"
+    },
+    {
+      "horizon": 38,
+      "file": "residual_38.txt",
+      "best_iteration": 40,
+      "sha256": "48f0fdbf1e9de81f84fd67e2410a9245a0a42b9ead68c44c71eb1d3d3afb4879"
+    },
+    {
+      "horizon": 39,
+      "file": "residual_39.txt",
+      "best_iteration": 35,
+      "sha256": "b89f2f4e1aa2541bd996db44a7839caba0eae4e40bc25e4a27bc42a97d77313e"
+    },
+    {
+      "horizon": 40,
+      "file": "residual_40.txt",
+      "best_iteration": 49,
+      "sha256": "c32bfa43394f70debb86ae8cb767df69a16e2969dccb5870949a7975f949d27b"
+    },
+    {
+      "horizon": 41,
+      "file": "residual_41.txt",
+      "best_iteration": 40,
+      "sha256": "f7e00500251267b68355f6c1b372940a93bfc182e61a2ed3032a876694481498"
+    },
+    {
+      "horizon": 42,
+      "file": "residual_42.txt",
+      "best_iteration": 32,
+      "sha256": "b59a0914598adcf6fe9ed8571c148139b62f373c9be640aec8c4888b63ad7d9f"
+    },
+    {
+      "horizon": 43,
+      "file": "residual_43.txt",
+      "best_iteration": 36,
+      "sha256": "34c4d4d7d3a85f7e2c6417bf03f34ccf1e7625cd1b06e779f6d2f6309995bfd0"
+    },
+    {
+      "horizon": 44,
+      "file": "residual_44.txt",
+      "best_iteration": 34,
+      "sha256": "0dfc01810ad43e193bbd890440c1fdffd060ba9c8555d6a6b661e99ca6ae19f5"
+    },
+    {
+      "horizon": 45,
+      "file": "residual_45.txt",
+      "best_iteration": 35,
+      "sha256": "a5dc00d6f950cdec996e424ad83d04e462ac4f79c3bb9f71f4446bc553f0c709"
+    },
+    {
+      "horizon": 46,
+      "file": "residual_46.txt",
+      "best_iteration": 31,
+      "sha256": "1f9ea77edc243e0cc6585b03cb46eb1fbe456b18648b4e589c7bb5ee143dab67"
+    },
+    {
+      "horizon": 47,
+      "file": "residual_47.txt",
+      "best_iteration": 30,
+      "sha256": "fe6e0376d23081e14e6bcb51a8dd0f132b4230ce5e6eefcba10cf1b4b33c4fcc"
+    },
+    {
+      "horizon": 48,
+      "file": "residual_48.txt",
+      "best_iteration": 32,
+      "sha256": "26390b5243f3d3157678d875cce58d122066f060cc9a8502149b72b8ad06e2ca"
+    }
+  ],
+  "v1_models": "C:\\goodwill_ai\\models\\consumo_predio",
+  "v1_model_hashes": {
+    "horizon_01.txt": "29247834ca5bfbc25d8d568880647e95b8a4826596fa5321de72f944e766f90e",
+    "horizon_02.txt": "5cfc1b8dfef3d60181adba7aecbed8a101bc39366694c23bb624ad84a705aa82",
+    "horizon_03.txt": "1af234d4fb54949d6435bccdd0b26b74ba3ce247ef1bf964a45702b542b743e0",
+    "horizon_04.txt": "94958b9bbfe89c27bd5745257278c946041d8141be2d4db6a877b49c24cf0f65",
+    "horizon_05.txt": "febfd1ff56935e1edf31e7c9aa07e89ce38ec85ab19c28e417230826dd64d4f9",
+    "horizon_06.txt": "cb40f284831b38fe53910bb115d711ef12d4e084a89f21718dce4d4e57fc3e8e",
+    "horizon_07.txt": "1c13c990179e685a603f005a2558af044c75168e6fa05e181b5bb7c1db5d2cb1",
+    "horizon_08.txt": "fed76e4b4c0f7e3d82a45946c8d1d1e1fc1eede7a0ad904025caed660307e30d",
+    "horizon_09.txt": "caa0225fd9eaf46c6f5fb6422c9c90514b2ad8a89ad002e070879749833df782",
+    "horizon_10.txt": "dcc005034052c1329362948d89e78d814398aa95eab125f613d02e610de45422",
+    "horizon_11.txt": "dda50403bde5335d20dff70f70973bacf2b302da6cf77d5f8708bc0127f5feba",
+    "horizon_12.txt": "427c6059066f0bb834d301063d3ce1f1885acbf542c3ac1a5ac4dd909d07264c",
+    "horizon_13.txt": "1879ef6a6213edea986e207e8a316cec54dd7a152d516817ac5c724f306012a7",
+    "horizon_14.txt": "df2124208341f617f13fd386a4c01e97d3206bda40bb2721eefe4d1d89bb26da",
+    "horizon_15.txt": "e7c1fa07126b0a296760e94da6bedab8515a71bd066a79d8cde6f62c94d8baa9",
+    "horizon_16.txt": "f3b3de9d99372818a1a4b658946dd7cc2a79422d6cfffdd60eb3f6c0ebae848c",
+    "horizon_17.txt": "b4ffc0b24de973755f814bc3d50f12f7aa23670023ceffbfed409a7035f30ada",
+    "horizon_18.txt": "46a9f891ca0fe5c8b002ca7ae283cd60472b5afdf55f94094ef406dcb2595912",
+    "horizon_19.txt": "29e6e2f61e1c5db12e30efaeb2ab04daac9ba30cbffb93618cb657ba98ac1eb3",
+    "horizon_20.txt": "274827edca5d157fdef96113b7023a55d51bbc9de80acb3d6da94eef8ac19666",
+    "horizon_21.txt": "6c189515e18ac0a20bb5a2ccac4b6177e22d0e9af37b5be031650de30bf8225e",
+    "horizon_22.txt": "0087318d1ecc553a7d67f4c65f8c4142e6cafc4c5f3b9e15f3363a39326b4fe0",
+    "horizon_23.txt": "72cb8d385503f29bcc36449d9e439f33637b58cd09449555fd81b5306f492f7c",
+    "horizon_24.txt": "00c391e560b5bd050b18f0eb00a38c4ea0e4d229ec9433d7813dfe8e78f227cc",
+    "horizon_25.txt": "6f70f09cdd2958a70a7f1b37af1b6b9a861191b36b1182c35ea47218356d7e40",
+    "horizon_26.txt": "54b6c504974f6e8b91e9dfac123b4a8a6cac237cd6e7620171b38ee13bf2cdda",
+    "horizon_27.txt": "e489457032a1956dfc05d5de1aa0e6ba3f4ae12c622d2aa8cfffb8e2d6280101",
+    "horizon_28.txt": "de19f25c31b8467b0e57d7d7d7ec40085a98fb590d1fc2be51ef9f8d34f25936",
+    "horizon_29.txt": "62cde00a5826cf1a0fec52a13105943171d84ce09e819f54295d4953e04fc5d3",
+    "horizon_30.txt": "0502dbf836fbf06a0a7af04d13f15b08175a9395a7bffc9d2c1d67d4851ba1ab",
+    "horizon_31.txt": "f901b90ca26a8880201ec24ad03e8458835148a9561b7bfe014e6552ac1492fe",
+    "horizon_32.txt": "0d992d5f871ee621cbcd3d48b4c82fa945740244a5df4540a9def32b6e7d77d7",
+    "horizon_33.txt": "e6d988a9292ee67507b1d7bacf0c38299408a7fe92e9c53d30740cd379335b61",
+    "horizon_34.txt": "747365e31201513518d206be72f32ab3ce22260c4d30ce98ee23abac2025f2b9",
+    "horizon_35.txt": "c9b2ce24d5e13170d8d3e7a56edd01990e52d6d6546b7960f8bab7a68ac130c0",
+    "horizon_36.txt": "4b94fccdee6175eac221294e05102251d767faaefd6e57807418adb8efc5cb79",
+    "horizon_37.txt": "bcf6cf62f20a1bea8811f1792040c501aba0175b1bfcbd0c1d60c48e6955836a",
+    "horizon_38.txt": "5e0f86747149a65bec69960740346839e88be8cc13d26d0e07bed2f815f9d2a1",
+    "horizon_39.txt": "d36ea1412287191cdabed61f34d26bd7529f2fc33e1f81c70a1141373710b409",
+    "horizon_40.txt": "fd54a94b5ef4a02ea5564025263e46560f20466288663ea3fdaba37e449e99e6",
+    "horizon_41.txt": "6e8951c2ef44b8ff6ab33e82f9f98ca9a78ed28abe8a63113bda9cb26340b6bd",
+    "horizon_42.txt": "3a0f93c0f1407406bb6ce08e09e437ac446b497f3c263fe46c62ba9515c0dfbc",
+    "horizon_43.txt": "86d2a242e2f8bf2821e3a730a08c59f3b949331664322a9c76280fe6588f6892",
+    "horizon_44.txt": "76058e9b91802e126deb4472ebb55368e3bb3e9c5b070aa7133f8ee5e7e63921",
+    "horizon_45.txt": "d8df7296e69dc5cb879a9e834597c7f9f19cef43e1fb63bed186147c67cf8ef9",
+    "horizon_46.txt": "8c2e6604c9347bb706090fa5e88b4cac1a88e82012b1b4bcad8f83b2f0a4348a",
+    "horizon_47.txt": "d8197970e53a94b077b988718937e6101a61a8e56aaec7de10df063cce10b630",
+    "horizon_48.txt": "3f0d979a69505c21a7d5c86ad5f3f5aea381996c15352a9ba0b54ffaa919e770"
+  },
+  "selector_sha256": "172f8b28743c1d8d7f1ea480236a5c8eed9c520eee4eb987f7f859f61c483dad",
+  "timestamp_semantics": "t is START of last observed interval, available at t+15min; next interval begins at issuance",
+  "seed": 20260905,
+  "versions": {
+    "python": "3.12.14",
+    "lightgbm": "4.7.0",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5"
+  },
+  "elapsed_seconds": 15.273793899978045
+}

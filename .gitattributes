@@ -1,0 +1,2 @@
+# Preserve exact bytes of frozen code, model/data hashes and saved evidence across platforms.
+* -text

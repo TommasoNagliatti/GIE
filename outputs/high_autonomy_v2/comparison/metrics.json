@@ -1,0 +1,42 @@
+{
+  "V1": {
+    "building_kwh": 2514.4077024999997,
+    "ev_requested_kwh": 361.621623285,
+    "ev_served_kwh": 345.121623285,
+    "total_consumed_kwh": 2859.529325785,
+    "solar_generated_kwh": 606.7521306298913,
+    "solar_self_consumed_kwh": 606.7521306298913,
+    "solar_exported_kwh": 0.0,
+    "grid_imported_kwh": 2214.7771951551085,
+    "grid_peak_kw": 295.718614960093,
+    "battery_charged_kwh": 0.0,
+    "battery_discharged_kwh": 37.99999999999999,
+    "soc_min_pct": 30.0,
+    "soc_max_pct": 50.0,
+    "soc_final_pct": 30.0,
+    "ev_unserved_kwh": 16.5,
+    "solar_self_consumption_pct": 100.0,
+    "self_sufficiency_pct": 22.547491463578318,
+    "initial_stored_energy_kwh": 100.0
+  },
+  "V2": {
+    "building_kwh": 2514.4077024999997,
+    "ev_requested_kwh": 361.621623285,
+    "ev_served_kwh": 345.121623285,
+    "total_consumed_kwh": 2859.529325785,
+    "solar_generated_kwh": 3101.199306490361,
+    "solar_self_consumed_kwh": 3101.199306490361,
+    "solar_exported_kwh": 0.0,
+    "grid_imported_kwh": 3.2862601528904634e-14,
+    "grid_peak_kw": 2.842170943040401e-14,
+    "battery_charged_kwh": 1123.751720023063,
+    "battery_discharged_kwh": 882.0817393177016,
+    "soc_min_pct": 39.968432472922906,
+    "soc_max_pct": 87.9229236794231,
+    "soc_final_pct": 56.95285200016376,
+    "ev_unserved_kwh": 16.5,
+    "solar_self_consumption_pct": 100.0,
+    "self_sufficiency_pct": 100.0,
+    "initial_stored_energy_kwh": 1000.0
+  }
+}

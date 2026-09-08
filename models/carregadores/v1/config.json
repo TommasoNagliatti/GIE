@@ -1,0 +1,11 @@
+{
+  "threshold": 0.15999999999999998,
+  "criterion": "maximum May F1; lowest threshold on tie",
+  "partition": "validation",
+  "bounds": {
+    "power": 88.0,
+    "occupancy": 4.0,
+    "arrivals": 6.0,
+    "queue": 3.0
+  }
+}

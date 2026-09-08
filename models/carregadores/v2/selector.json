@@ -1,0 +1,300 @@
+{
+  "partition": "validation",
+  "criterion": "MAE",
+  "tie_order": [
+    "persistencia",
+    "semana_anterior",
+    "media_4semanas",
+    "residual_v1"
+  ],
+  "horizons": [
+    {
+      "horizon": 1,
+      "minutes": 15,
+      "method": "persistencia",
+      "validation_mae": 2.480765909815574
+    },
+    {
+      "horizon": 2,
+      "minutes": 30,
+      "method": "persistencia",
+      "validation_mae": 4.36665618522541
+    },
+    {
+      "horizon": 3,
+      "minutes": 45,
+      "method": "residual_v1",
+      "validation_mae": 5.110055448621166
+    },
+    {
+      "horizon": 4,
+      "minutes": 60,
+      "method": "residual_v1",
+      "validation_mae": 5.112988695491695
+    },
+    {
+      "horizon": 5,
+      "minutes": 75,
+      "method": "residual_v1",
+      "validation_mae": 5.114051654357616
+    },
+    {
+      "horizon": 6,
+      "minutes": 90,
+      "method": "residual_v1",
+      "validation_mae": 5.114972995278933
+    },
+    {
+      "horizon": 7,
+      "minutes": 105,
+      "method": "residual_v1",
+      "validation_mae": 5.117118770490708
+    },
+    {
+      "horizon": 8,
+      "minutes": 120,
+      "method": "residual_v1",
+      "validation_mae": 5.120377449066507
+    },
+    {
+      "horizon": 9,
+      "minutes": 135,
+      "method": "residual_v1",
+      "validation_mae": 5.120877678463046
+    },
+    {
+      "horizon": 10,
+      "minutes": 150,
+      "method": "residual_v1",
+      "validation_mae": 5.123807530768237
+    },
+    {
+      "horizon": 11,
+      "minutes": 165,
+      "method": "residual_v1",
+      "validation_mae": 5.128060876609011
+    },
+    {
+      "horizon": 12,
+      "minutes": 180,
+      "method": "residual_v1",
+      "validation_mae": 5.13140157281243
+    },
+    {
+      "horizon": 13,
+      "minutes": 195,
+      "method": "residual_v1",
+      "validation_mae": 5.1357964527431195
+    },
+    {
+      "horizon": 14,
+      "minutes": 210,
+      "method": "residual_v1",
+      "validation_mae": 5.139458015884403
+    },
+    {
+      "horizon": 15,
+      "minutes": 225,
+      "method": "residual_v1",
+      "validation_mae": 5.145523469266857
+    },
+    {
+      "horizon": 16,
+      "minutes": 240,
+      "method": "residual_v1",
+      "validation_mae": 5.149021583265403
+    },
+    {
+      "horizon": 17,
+      "minutes": 255,
+      "method": "residual_v1",
+      "validation_mae": 5.15202741822114
+    },
+    {
+      "horizon": 18,
+      "minutes": 270,
+      "method": "residual_v1",
+      "validation_mae": 5.154340128195559
+    },
+    {
+      "horizon": 19,
+      "minutes": 285,
+      "method": "residual_v1",
+      "validation_mae": 5.15562245480671
+    },
+    {
+      "horizon": 20,
+      "minutes": 300,
+      "method": "residual_v1",
+      "validation_mae": 5.156776009878687
+    },
+    {
+      "horizon": 21,
+      "minutes": 315,
+      "method": "residual_v1",
+      "validation_mae": 5.156414785348719
+    },
+    {
+      "horizon": 22,
+      "minutes": 330,
+      "method": "residual_v1",
+      "validation_mae": 5.153410773216399
+    },
+    {
+      "horizon": 23,
+      "minutes": 345,
+      "method": "residual_v1",
+      "validation_mae": 5.151338047327271
+    },
+    {
+      "horizon": 24,
+      "minutes": 360,
+      "method": "residual_v1",
+      "validation_mae": 5.150918090591806
+    },
+    {
+      "horizon": 25,
+      "minutes": 375,
+      "method": "residual_v1",
+      "validation_mae": 5.1484247152492575
+    },
+    {
+      "horizon": 26,
+      "minutes": 390,
+      "method": "residual_v1",
+      "validation_mae": 5.147839952927833
+    },
+    {
+      "horizon": 27,
+      "minutes": 405,
+      "method": "residual_v1",
+      "validation_mae": 5.147593099366237
+    },
+    {
+      "horizon": 28,
+      "minutes": 420,
+      "method": "residual_v1",
+      "validation_mae": 5.150078264801774
+    },
+    {
+      "horizon": 29,
+      "minutes": 435,
+      "method": "residual_v1",
+      "validation_mae": 5.148558031148659
+    },
+    {
+      "horizon": 30,
+      "minutes": 450,
+      "method": "residual_v1",
+      "validation_mae": 5.146106915549187
+    },
+    {
+      "horizon": 31,
+      "minutes": 465,
+      "method": "residual_v1",
+      "validation_mae": 5.136929153827611
+    },
+    {
+      "horizon": 32,
+      "minutes": 480,
+      "method": "residual_v1",
+      "validation_mae": 5.1303789214061135
+    },
+    {
+      "horizon": 33,
+      "minutes": 495,
+      "method": "residual_v1",
+      "validation_mae": 5.1305233478464585
+    },
+    {
+      "horizon": 34,
+      "minutes": 510,
+      "method": "residual_v1",
+      "validation_mae": 5.129080393121867
+    },
+    {
+      "horizon": 35,
+      "minutes": 525,
+      "method": "residual_v1",
+      "validation_mae": 5.122948376495502
+    },
+    {
+      "horizon": 36,
+      "minutes": 540,
+      "method": "residual_v1",
+      "validation_mae": 5.1168920356647805
+    },
+    {
+      "horizon": 37,
+      "minutes": 555,
+      "method": "residual_v1",
+      "validation_mae": 5.1125725360576375
+    },
+    {
+      "horizon": 38,
+      "minutes": 570,
+      "method": "residual_v1",
+      "validation_mae": 5.113527041900096
+    },
+    {
+      "horizon": 39,
+      "minutes": 585,
+      "method": "residual_v1",
+      "validation_mae": 5.113324526026085
+    },
+    {
+      "horizon": 40,
+      "minutes": 600,
+      "method": "residual_v1",
+      "validation_mae": 5.1120719292920604
+    },
+    {
+      "horizon": 41,
+      "minutes": 615,
+      "method": "residual_v1",
+      "validation_mae": 5.1127486838380936
+    },
+    {
+      "horizon": 42,
+      "minutes": 630,
+      "method": "residual_v1",
+      "validation_mae": 5.111971303728097
+    },
+    {
+      "horizon": 43,
+      "minutes": 645,
+      "method": "residual_v1",
+      "validation_mae": 5.11055710821638
+    },
+    {
+      "horizon": 44,
+      "minutes": 660,
+      "method": "residual_v1",
+      "validation_mae": 5.110798951527597
+    },
+    {
+      "horizon": 45,
+      "minutes": 675,
+      "method": "residual_v1",
+      "validation_mae": 5.107992091894767
+    },
+    {
+      "horizon": 46,
+      "minutes": 690,
+      "method": "residual_v1",
+      "validation_mae": 5.104300354325497
+    },
+    {
+      "horizon": 47,
+      "minutes": 705,
+      "method": "residual_v1",
+      "validation_mae": 5.101500229119736
+    },
+    {
+      "horizon": 48,
+      "minutes": 720,
+      "method": "residual_v1",
+      "validation_mae": 5.101846962653937
+    }
+  ]
+}

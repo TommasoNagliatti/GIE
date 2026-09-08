@@ -1,0 +1,592 @@
+{
+  "engine": "Goodwe Motor 1",
+  "strategy": "48 direct independent LightGBM models",
+  "source": {
+    "source_path": "C:\\Users\\Tommaso\\Desktop\\Gie\\consumo_predio_6_meses.csv",
+    "sha256": "1b241f5f20154ba8a1d2f6599435c9ec23761fb23ffe48a2306636c3665396d7",
+    "rows": 17376,
+    "first": "2026-01-01 00:00:00",
+    "last": "2026-06-30 23:45:00",
+    "interval_minutes": 15,
+    "duplicates": 0,
+    "missing_values": 0,
+    "negative_consumption": 0,
+    "continuous": true,
+    "raw_rows_by_month": {
+      "1": 2976,
+      "2": 2688,
+      "3": 2976,
+      "4": 2880,
+      "5": 2976,
+      "6": 2880
+    },
+    "range_kw": [
+      22.4,
+      324.713758
+    ],
+    "timestamp_semantics": "início do intervalo; a linha t está disponível em t+15min; UTC-3",
+    "source_modified": false
+  },
+  "splits": {
+    "train": {
+      "origins": 10800,
+      "first_origin": "2026-01-08 00:00:00",
+      "last_origin": "2026-04-30 11:45:00",
+      "last_target": "2026-04-30 23:45:00",
+      "target_pairs": 518400
+    },
+    "validation": {
+      "origins": 2928,
+      "first_origin": "2026-05-01 00:00:00",
+      "last_origin": "2026-05-31 11:45:00",
+      "last_target": "2026-05-31 23:45:00",
+      "target_pairs": 140544
+    },
+    "test": {
+      "origins": 2832,
+      "first_origin": "2026-06-01 00:00:00",
+      "last_origin": "2026-06-30 11:45:00",
+      "last_target": "2026-06-30 23:45:00",
+      "target_pairs": 135936
+    }
+  },
+  "feature_names": [
+    "consumo_atual_kw",
+    "consumo_lag_15m",
+    "consumo_lag_30m",
+    "consumo_lag_60m",
+    "consumo_lag_120m",
+    "consumo_lag_180m",
+    "consumo_lag_360m",
+    "consumo_lag_720m",
+    "consumo_lag_1440m",
+    "consumo_lag_10080m",
+    "consumo_mean_60m",
+    "consumo_min_60m",
+    "consumo_max_60m",
+    "consumo_std_60m",
+    "consumo_mean_180m",
+    "consumo_min_180m",
+    "consumo_max_180m",
+    "consumo_std_180m",
+    "consumo_mean_360m",
+    "consumo_min_360m",
+    "consumo_max_360m",
+    "consumo_std_360m",
+    "consumo_mean_1440m",
+    "consumo_min_1440m",
+    "consumo_max_1440m",
+    "consumo_std_1440m",
+    "temperatura_externa_c_atual",
+    "temperatura_externa_c_lag_15m",
+    "temperatura_externa_c_lag_60m",
+    "temperatura_externa_c_lag_180m",
+    "temperatura_externa_c_lag_360m",
+    "temperatura_externa_c_lag_720m",
+    "temperatura_externa_c_lag_1440m",
+    "temperatura_externa_c_media_60m",
+    "temperatura_externa_c_media_180m",
+    "temperatura_externa_c_media_360m",
+    "temperatura_externa_c_media_1440m",
+    "umidade_relativa_pct_atual",
+    "umidade_relativa_pct_lag_15m",
+    "umidade_relativa_pct_lag_60m",
+    "umidade_relativa_pct_lag_180m",
+    "umidade_relativa_pct_lag_360m",
+    "umidade_relativa_pct_lag_720m",
+    "umidade_relativa_pct_lag_1440m",
+    "umidade_relativa_pct_media_60m",
+    "umidade_relativa_pct_media_180m",
+    "umidade_relativa_pct_media_360m",
+    "umidade_relativa_pct_media_1440m",
+    "origem_hora",
+    "origem_dia_semana",
+    "origem_fim_de_semana",
+    "origem_mes",
+    "origem_hora_sin",
+    "origem_hora_cos",
+    "origem_semana_sin",
+    "origem_semana_cos",
+    "alvo_hora",
+    "alvo_dia_semana",
+    "alvo_fim_de_semana",
+    "alvo_mes",
+    "alvo_hora_sin",
+    "alvo_hora_cos",
+    "alvo_semana_sin",
+    "alvo_semana_cos",
+    "consumo_alvo_dia_anterior",
+    "consumo_alvo_semana_anterior"
+  ],
+  "feature_count": 66,
+  "minimum_history_rows": 673,
+  "horizon_count": 48,
+  "step_minutes": 15,
+  "target_unit": "kW average over interval",
+  "timezone": "UTC-03:00",
+  "origin_semantics": "last observed interval START t; available at t+15min",
+  "prediction_semantics": "target starts t+h*15min; first target begins at issuance t+15min",
+  "known_future_features": "calendar only; no future weather or consumption",
+  "parameters": {
+    "objective": "regression",
+    "metric": "l1",
+    "learning_rate": 0.05,
+    "num_leaves": 15,
+    "min_data_in_leaf": 40,
+    "lambda_l2": 1.0,
+    "feature_fraction": 1.0,
+    "bagging_fraction": 1.0,
+    "seed": 20260905,
+    "num_threads": 2,
+    "deterministic": true,
+    "force_col_wise": true,
+    "verbosity": -1
+  },
+  "max_rounds": 400,
+  "early_stopping_rounds": 35,
+  "fit_period": "Jan-Apr",
+  "early_stopping_period": "May",
+  "held_out_period": "June",
+  "postprocessing": "negative predictions floored to zero, shared in evaluation/inference",
+  "versions": {
+    "python": "3.12.14",
+    "lightgbm": "4.7.0",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5"
+  },
+  "models": [
+    {
+      "horizon": 1,
+      "minutes": 15,
+      "target": "target_15m",
+      "file": "horizon_01.txt",
+      "best_iteration": 400,
+      "validation_mae_kw": 4.463211827862423,
+      "sha256": "29247834ca5bfbc25d8d568880647e95b8a4826596fa5321de72f944e766f90e"
+    },
+    {
+      "horizon": 2,
+      "minutes": 30,
+      "target": "target_30m",
+      "file": "horizon_02.txt",
+      "best_iteration": 396,
+      "validation_mae_kw": 6.083650516390638,
+      "sha256": "5cfc1b8dfef3d60181adba7aecbed8a101bc39366694c23bb624ad84a705aa82"
+    },
+    {
+      "horizon": 3,
+      "minutes": 45,
+      "target": "target_45m",
+      "file": "horizon_03.txt",
+      "best_iteration": 133,
+      "validation_mae_kw": 7.203875982743965,
+      "sha256": "1af234d4fb54949d6435bccdd0b26b74ba3ce247ef1bf964a45702b542b743e0"
+    },
+    {
+      "horizon": 4,
+      "minutes": 60,
+      "target": "target_1h",
+      "file": "horizon_04.txt",
+      "best_iteration": 129,
+      "validation_mae_kw": 7.6678193469844915,
+      "sha256": "94958b9bbfe89c27bd5745257278c946041d8141be2d4db6a877b49c24cf0f65"
+    },
+    {
+      "horizon": 5,
+      "minutes": 75,
+      "target": "target_75m",
+      "file": "horizon_05.txt",
+      "best_iteration": 137,
+      "validation_mae_kw": 8.009305148231833,
+      "sha256": "febfd1ff56935e1edf31e7c9aa07e89ce38ec85ab19c28e417230826dd64d4f9"
+    },
+    {
+      "horizon": 6,
+      "minutes": 90,
+      "target": "target_90m",
+      "file": "horizon_06.txt",
+      "best_iteration": 120,
+      "validation_mae_kw": 8.438216302464387,
+      "sha256": "cb40f284831b38fe53910bb115d711ef12d4e084a89f21718dce4d4e57fc3e8e"
+    },
+    {
+      "horizon": 7,
+      "minutes": 105,
+      "target": "target_105m",
+      "file": "horizon_07.txt",
+      "best_iteration": 143,
+      "validation_mae_kw": 8.469676450550491,
+      "sha256": "1c13c990179e685a603f005a2558af044c75168e6fa05e181b5bb7c1db5d2cb1"
+    },
+    {
+      "horizon": 8,
+      "minutes": 120,
+      "target": "target_2h",
+      "file": "horizon_08.txt",
+      "best_iteration": 133,
+      "validation_mae_kw": 8.586876778209595,
+      "sha256": "fed76e4b4c0f7e3d82a45946c8d1d1e1fc1eede7a0ad904025caed660307e30d"
+    },
+    {
+      "horizon": 9,
+      "minutes": 135,
+      "target": "target_135m",
+      "file": "horizon_09.txt",
+      "best_iteration": 124,
+      "validation_mae_kw": 8.995222911931434,
+      "sha256": "caa0225fd9eaf46c6f5fb6422c9c90514b2ad8a89ad002e070879749833df782"
+    },
+    {
+      "horizon": 10,
+      "minutes": 150,
+      "target": "target_150m",
+      "file": "horizon_10.txt",
+      "best_iteration": 128,
+      "validation_mae_kw": 9.287758958296736,
+      "sha256": "dcc005034052c1329362948d89e78d814398aa95eab125f613d02e610de45422"
+    },
+    {
+      "horizon": 11,
+      "minutes": 165,
+      "target": "target_165m",
+      "file": "horizon_11.txt",
+      "best_iteration": 125,
+      "validation_mae_kw": 9.577716096701154,
+      "sha256": "dda50403bde5335d20dff70f70973bacf2b302da6cf77d5f8708bc0127f5feba"
+    },
+    {
+      "horizon": 12,
+      "minutes": 180,
+      "target": "target_3h",
+      "file": "horizon_12.txt",
+      "best_iteration": 117,
+      "validation_mae_kw": 9.58390875915591,
+      "sha256": "427c6059066f0bb834d301063d3ce1f1885acbf542c3ac1a5ac4dd909d07264c"
+    },
+    {
+      "horizon": 13,
+      "minutes": 195,
+      "target": "target_195m",
+      "file": "horizon_13.txt",
+      "best_iteration": 121,
+      "validation_mae_kw": 9.489211450879793,
+      "sha256": "1879ef6a6213edea986e207e8a316cec54dd7a152d516817ac5c724f306012a7"
+    },
+    {
+      "horizon": 14,
+      "minutes": 210,
+      "target": "target_210m",
+      "file": "horizon_14.txt",
+      "best_iteration": 121,
+      "validation_mae_kw": 9.589594702489672,
+      "sha256": "df2124208341f617f13fd386a4c01e97d3206bda40bb2721eefe4d1d89bb26da"
+    },
+    {
+      "horizon": 15,
+      "minutes": 225,
+      "target": "target_225m",
+      "file": "horizon_15.txt",
+      "best_iteration": 120,
+      "validation_mae_kw": 9.680272554690161,
+      "sha256": "e7c1fa07126b0a296760e94da6bedab8515a71bd066a79d8cde6f62c94d8baa9"
+    },
+    {
+      "horizon": 16,
+      "minutes": 240,
+      "target": "target_4h",
+      "file": "horizon_16.txt",
+      "best_iteration": 137,
+      "validation_mae_kw": 9.412106959253816,
+      "sha256": "f3b3de9d99372818a1a4b658946dd7cc2a79422d6cfffdd60eb3f6c0ebae848c"
+    },
+    {
+      "horizon": 17,
+      "minutes": 255,
+      "target": "target_255m",
+      "file": "horizon_17.txt",
+      "best_iteration": 124,
+      "validation_mae_kw": 9.388060328940997,
+      "sha256": "b4ffc0b24de973755f814bc3d50f12f7aa23670023ceffbfed409a7035f30ada"
+    },
+    {
+      "horizon": 18,
+      "minutes": 270,
+      "target": "target_270m",
+      "file": "horizon_18.txt",
+      "best_iteration": 123,
+      "validation_mae_kw": 9.256888597158115,
+      "sha256": "46a9f891ca0fe5c8b002ca7ae283cd60472b5afdf55f94094ef406dcb2595912"
+    },
+    {
+      "horizon": 19,
+      "minutes": 285,
+      "target": "target_285m",
+      "file": "horizon_19.txt",
+      "best_iteration": 120,
+      "validation_mae_kw": 9.312843784978979,
+      "sha256": "29e6e2f61e1c5db12e30efaeb2ab04daac9ba30cbffb93618cb657ba98ac1eb3"
+    },
+    {
+      "horizon": 20,
+      "minutes": 300,
+      "target": "target_5h",
+      "file": "horizon_20.txt",
+      "best_iteration": 133,
+      "validation_mae_kw": 9.5394073115628,
+      "sha256": "274827edca5d157fdef96113b7023a55d51bbc9de80acb3d6da94eef8ac19666"
+    },
+    {
+      "horizon": 21,
+      "minutes": 315,
+      "target": "target_315m",
+      "file": "horizon_21.txt",
+      "best_iteration": 121,
+      "validation_mae_kw": 9.578544365624087,
+      "sha256": "6c189515e18ac0a20bb5a2ccac4b6177e22d0e9af37b5be031650de30bf8225e"
+    },
+    {
+      "horizon": 22,
+      "minutes": 330,
+      "target": "target_330m",
+      "file": "horizon_22.txt",
+      "best_iteration": 126,
+      "validation_mae_kw": 9.512556945660043,
+      "sha256": "0087318d1ecc553a7d67f4c65f8c4142e6cafc4c5f3b9e15f3363a39326b4fe0"
+    },
+    {
+      "horizon": 23,
+      "minutes": 345,
+      "target": "target_345m",
+      "file": "horizon_23.txt",
+      "best_iteration": 120,
+      "validation_mae_kw": 9.618473443256683,
+      "sha256": "72cb8d385503f29bcc36449d9e439f33637b58cd09449555fd81b5306f492f7c"
+    },
+    {
+      "horizon": 24,
+      "minutes": 360,
+      "target": "target_6h",
+      "file": "horizon_24.txt",
+      "best_iteration": 126,
+      "validation_mae_kw": 9.676634265848412,
+      "sha256": "00c391e560b5bd050b18f0eb00a38c4ea0e4d229ec9433d7813dfe8e78f227cc"
+    },
+    {
+      "horizon": 25,
+      "minutes": 375,
+      "target": "target_375m",
+      "file": "horizon_25.txt",
+      "best_iteration": 216,
+      "validation_mae_kw": 9.592765284210305,
+      "sha256": "6f70f09cdd2958a70a7f1b37af1b6b9a861191b36b1182c35ea47218356d7e40"
+    },
+    {
+      "horizon": 26,
+      "minutes": 390,
+      "target": "target_390m",
+      "file": "horizon_26.txt",
+      "best_iteration": 222,
+      "validation_mae_kw": 9.575178080539025,
+      "sha256": "54b6c504974f6e8b91e9dfac123b4a8a6cac237cd6e7620171b38ee13bf2cdda"
+    },
+    {
+      "horizon": 27,
+      "minutes": 405,
+      "target": "target_405m",
+      "file": "horizon_27.txt",
+      "best_iteration": 149,
+      "validation_mae_kw": 9.554710123670434,
+      "sha256": "e489457032a1956dfc05d5de1aa0e6ba3f4ae12c622d2aa8cfffb8e2d6280101"
+    },
+    {
+      "horizon": 28,
+      "minutes": 420,
+      "target": "target_7h",
+      "file": "horizon_28.txt",
+      "best_iteration": 172,
+      "validation_mae_kw": 9.319422394056103,
+      "sha256": "de19f25c31b8467b0e57d7d7d7ec40085a98fb590d1fc2be51ef9f8d34f25936"
+    },
+    {
+      "horizon": 29,
+      "minutes": 435,
+      "target": "target_435m",
+      "file": "horizon_29.txt",
+      "best_iteration": 131,
+      "validation_mae_kw": 9.523972199383392,
+      "sha256": "62cde00a5826cf1a0fec52a13105943171d84ce09e819f54295d4953e04fc5d3"
+    },
+    {
+      "horizon": 30,
+      "minutes": 450,
+      "target": "target_450m",
+      "file": "horizon_30.txt",
+      "best_iteration": 132,
+      "validation_mae_kw": 9.832668877827032,
+      "sha256": "0502dbf836fbf06a0a7af04d13f15b08175a9395a7bffc9d2c1d67d4851ba1ab"
+    },
+    {
+      "horizon": 31,
+      "minutes": 465,
+      "target": "target_465m",
+      "file": "horizon_31.txt",
+      "best_iteration": 122,
+      "validation_mae_kw": 10.338064151235406,
+      "sha256": "f901b90ca26a8880201ec24ad03e8458835148a9561b7bfe014e6552ac1492fe"
+    },
+    {
+      "horizon": 32,
+      "minutes": 480,
+      "target": "target_8h",
+      "file": "horizon_32.txt",
+      "best_iteration": 150,
+      "validation_mae_kw": 9.89490114458729,
+      "sha256": "0d992d5f871ee621cbcd3d48b4c82fa945740244a5df4540a9def32b6e7d77d7"
+    },
+    {
+      "horizon": 33,
+      "minutes": 495,
+      "target": "target_495m",
+      "file": "horizon_33.txt",
+      "best_iteration": 130,
+      "validation_mae_kw": 10.173411898385039,
+      "sha256": "e6d988a9292ee67507b1d7bacf0c38299408a7fe92e9c53d30740cd379335b61"
+    },
+    {
+      "horizon": 34,
+      "minutes": 510,
+      "target": "target_510m",
+      "file": "horizon_34.txt",
+      "best_iteration": 247,
+      "validation_mae_kw": 9.983631802588052,
+      "sha256": "747365e31201513518d206be72f32ab3ce22260c4d30ce98ee23abac2025f2b9"
+    },
+    {
+      "horizon": 35,
+      "minutes": 525,
+      "target": "target_525m",
+      "file": "horizon_35.txt",
+      "best_iteration": 116,
+      "validation_mae_kw": 9.88596560487197,
+      "sha256": "c9b2ce24d5e13170d8d3e7a56edd01990e52d6d6546b7960f8bab7a68ac130c0"
+    },
+    {
+      "horizon": 36,
+      "minutes": 540,
+      "target": "target_9h",
+      "file": "horizon_36.txt",
+      "best_iteration": 125,
+      "validation_mae_kw": 9.52219131214887,
+      "sha256": "4b94fccdee6175eac221294e05102251d767faaefd6e57807418adb8efc5cb79"
+    },
+    {
+      "horizon": 37,
+      "minutes": 555,
+      "target": "target_555m",
+      "file": "horizon_37.txt",
+      "best_iteration": 126,
+      "validation_mae_kw": 9.368611473068611,
+      "sha256": "bcf6cf62f20a1bea8811f1792040c501aba0175b1bfcbd0c1d60c48e6955836a"
+    },
+    {
+      "horizon": 38,
+      "minutes": 570,
+      "target": "target_570m",
+      "file": "horizon_38.txt",
+      "best_iteration": 127,
+      "validation_mae_kw": 9.855157277165787,
+      "sha256": "5e0f86747149a65bec69960740346839e88be8cc13d26d0e07bed2f815f9d2a1"
+    },
+    {
+      "horizon": 39,
+      "minutes": 585,
+      "target": "target_585m",
+      "file": "horizon_39.txt",
+      "best_iteration": 129,
+      "validation_mae_kw": 9.722796952888151,
+      "sha256": "d36ea1412287191cdabed61f34d26bd7529f2fc33e1f81c70a1141373710b409"
+    },
+    {
+      "horizon": 40,
+      "minutes": 600,
+      "target": "target_10h",
+      "file": "horizon_40.txt",
+      "best_iteration": 126,
+      "validation_mae_kw": 9.851251596044195,
+      "sha256": "fd54a94b5ef4a02ea5564025263e46560f20466288663ea3fdaba37e449e99e6"
+    },
+    {
+      "horizon": 41,
+      "minutes": 615,
+      "target": "target_615m",
+      "file": "horizon_41.txt",
+      "best_iteration": 122,
+      "validation_mae_kw": 9.644278225826506,
+      "sha256": "6e8951c2ef44b8ff6ab33e82f9f98ca9a78ed28abe8a63113bda9cb26340b6bd"
+    },
+    {
+      "horizon": 42,
+      "minutes": 630,
+      "target": "target_630m",
+      "file": "horizon_42.txt",
+      "best_iteration": 115,
+      "validation_mae_kw": 9.706302818774063,
+      "sha256": "3a0f93c0f1407406bb6ce08e09e437ac446b497f3c263fe46c62ba9515c0dfbc"
+    },
+    {
+      "horizon": 43,
+      "minutes": 645,
+      "target": "target_645m",
+      "file": "horizon_43.txt",
+      "best_iteration": 112,
+      "validation_mae_kw": 9.652966383687382,
+      "sha256": "86d2a242e2f8bf2821e3a730a08c59f3b949331664322a9c76280fe6588f6892"
+    },
+    {
+      "horizon": 44,
+      "minutes": 660,
+      "target": "target_11h",
+      "file": "horizon_44.txt",
+      "best_iteration": 115,
+      "validation_mae_kw": 9.676549300592356,
+      "sha256": "76058e9b91802e126deb4472ebb55368e3bb3e9c5b070aa7133f8ee5e7e63921"
+    },
+    {
+      "horizon": 45,
+      "minutes": 675,
+      "target": "target_675m",
+      "file": "horizon_45.txt",
+      "best_iteration": 119,
+      "validation_mae_kw": 9.607432806221095,
+      "sha256": "d8df7296e69dc5cb879a9e834597c7f9f19cef43e1fb63bed186147c67cf8ef9"
+    },
+    {
+      "horizon": 46,
+      "minutes": 690,
+      "target": "target_690m",
+      "file": "horizon_46.txt",
+      "best_iteration": 116,
+      "validation_mae_kw": 9.699361637784756,
+      "sha256": "8c2e6604c9347bb706090fa5e88b4cac1a88e82012b1b4bcad8f83b2f0a4348a"
+    },
+    {
+      "horizon": 47,
+      "minutes": 705,
+      "target": "target_705m",
+      "file": "horizon_47.txt",
+      "best_iteration": 124,
+      "validation_mae_kw": 9.78824689411725,
+      "sha256": "d8197970e53a94b077b988718937e6101a61a8e56aaec7de10df063cce10b630"
+    },
+    {
+      "horizon": 48,
+      "minutes": 720,
+      "target": "target_12h",
+      "file": "horizon_48.txt",
+      "best_iteration": 123,
+      "validation_mae_kw": 9.878360537779818,
+      "sha256": "3f0d979a69505c21a7d5c86ad5f3f5aea381996c15352a9ba0b54ffaa919e770"
+    }
+  ],
+  "training_seconds": 19.965561599994544
+}

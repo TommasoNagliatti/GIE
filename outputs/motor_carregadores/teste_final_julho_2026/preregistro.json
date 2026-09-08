@@ -1,0 +1,19 @@
+{
+  "registered_utc": "2026-09-06T18:31:32.172466+00:00",
+  "authorized_extension": {
+    "july_arrival_factor": 1.03,
+    "july_peak_shift_hours": -0.03
+  },
+  "reason": "Julho herda diretamente junho porque o simulador original só define seis meses. Extensão sintética do cenário; demais regras inalteradas.",
+  "original_simulator_sha256": "c77c403d52cef192aff4413eeae632105c8a7f8aa95b244e839e4365a84378d0",
+  "seed": 20260905,
+  "simulation": "continuous Jan-Jul, preserving RNG sequence, original Jan-Jun must match byte for byte",
+  "evaluation": "same 2976 July target timestamps for each of 48 horizons; rolling observations up to each origin only",
+  "models": "frozen Motor 2 V2 and V1 dependencies; original risk threshold; no fit/selection/calibration",
+  "sample_origins": [
+    "2026-06-30 23:45",
+    "2026-07-15 07:45",
+    "2026-07-25 07:45",
+    "2026-07-31 11:45"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Commercial_HighAutonomy_V2",
+  "solar_dc_kwp": 800,
+  "solar_ac_kw": 500,
+  "battery_capacity_kwh": 2000,
+  "battery_charge_max_kw": 450,
+  "battery_discharge_max_kw": 450,
+  "soc_min_pct": 20,
+  "soc_max_pct": 95,
+  "operational_reserve": null,
+  "strategic_soc_target": null,
+  "ev_max_kw": 88,
+  "grid_import_max_kw": 350,
+  "grid_export_max_kw": 500,
+  "initial_soc_pct": 50,
+  "charge_efficiency": 0.95,
+  "discharge_efficiency": 0.95
+}

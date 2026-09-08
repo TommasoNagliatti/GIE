@@ -1,0 +1,89 @@
+{
+  "date": "2026-09-08",
+  "tests": [
+    {
+      "suite": "tests",
+      "run": 9,
+      "passed": 9,
+      "skipped": 0,
+      "success": true
+    },
+    {
+      "suite": "tests/gie_runtime",
+      "run": 18,
+      "passed": 18,
+      "skipped": 0,
+      "success": true
+    },
+    {
+      "suite": "tests/motor_gerenciamento",
+      "run": 29,
+      "passed": 29,
+      "skipped": 0,
+      "success": true
+    },
+    {
+      "suite": "tests/load_balancer",
+      "run": 24,
+      "passed": 24,
+      "skipped": 0,
+      "success": true
+    },
+    {
+      "suite": "tests/integracoes",
+      "run": 29,
+      "passed": 29,
+      "skipped": 0,
+      "success": true
+    },
+    {
+      "suite": "tests/observabilidade",
+      "run": 20,
+      "passed": 19,
+      "skipped": 1,
+      "success": true
+    },
+    {
+      "suite": "tests/high_autonomy_v2",
+      "run": 18,
+      "passed": 17,
+      "skipped": 1,
+      "success": true
+    },
+    {
+      "suite": "demo/simulation/tests",
+      "run": 17,
+      "passed": 16,
+      "skipped": 1,
+      "success": true
+    },
+    {
+      "suite": "demo/tests",
+      "run": 6,
+      "passed": 6,
+      "skipped": 0,
+      "success": true
+    },
+    {
+      "suite": "demo/high_autonomy_v2",
+      "run": 2,
+      "passed": 2,
+      "skipped": 0,
+      "success": true
+    }
+  ],
+  "tests_passed": 169,
+  "historical_snapshot_checks_skipped": 3,
+  "failures": 0,
+  "skips_explanation": "Three historical local whole-disk manifests include intentionally excluded archives and old publication configuration. The portable release manifest checks all frozen code/models/data/demo/tests instead.",
+  "preserved_existing_files": 1025,
+  "changed_existing_functional_files": [],
+  "demo_retry": "One UI real-step test timed out on the first attempt; rerun passed with unchanged dashboard and unchanged timeout.",
+  "training_performed": false,
+  "full_day_simulation_rerun": false,
+  "staged_only_checkout_core_validation": {
+    "passed": 161,
+    "skipped": 3,
+    "success": true
+  }
+}

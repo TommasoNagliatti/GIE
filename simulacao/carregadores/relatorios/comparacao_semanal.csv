@@ -1,0 +1,3 @@
+tipo,dias,chegadas_por_dia,sessoes_atendidas_por_dia,ocupacao_media_pct,potencia_media_kw,energia_total_kwh
+dias_uteis,129,39.713178,20.015504,47.639023,13.191592,40841.168198
+finais_de_semana,52,6.807692,6.442308,14.200053,4.199738,5241.273220

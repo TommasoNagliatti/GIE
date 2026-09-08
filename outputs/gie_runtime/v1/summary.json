@@ -1,0 +1,112 @@
+{
+  "status": "ok",
+  "decision_time": "2026-09-07 12:00:00",
+  "tests": {
+    "gie_runtime": {
+      "tests": 18,
+      "passed": true
+    },
+    "motor_gerenciamento": {
+      "tests": 29,
+      "passed": true
+    },
+    "load_balancer": {
+      "tests": 24,
+      "passed": true
+    },
+    "integracoes": {
+      "tests": 29,
+      "passed": true
+    }
+  },
+  "tests_total": 100,
+  "health": {
+    "validation": {
+      "status": "ok",
+      "elapsed_ms": 1.020299969241023
+    },
+    "motor1": {
+      "status": "ok",
+      "elapsed_ms": 272.25300000282004
+    },
+    "motor2": {
+      "status": "ok",
+      "elapsed_ms": 1263.3001999929547
+    },
+    "solar": {
+      "status": "ok",
+      "elapsed_ms": 1223.667000012938,
+      "source": "open_meteo",
+      "stale": false,
+      "diagnostics": []
+    },
+    "alignment": {
+      "status": "ok",
+      "elapsed_ms": 10.201299970503896
+    },
+    "motor3": {
+      "status": "ok",
+      "elapsed_ms": 12.451899994630367,
+      "solver_status": "optimal",
+      "fallback_used": false,
+      "reason": null
+    },
+    "load_balancer": {
+      "status": "ok",
+      "elapsed_ms": 0.31109998235479
+    },
+    "total_elapsed_ms": 2783.5556999780238
+  },
+  "model_loading_ms": 895.1187000493519,
+  "block_kw": 31.291103640870475,
+  "setpoints_kw": [
+    7.822775910217619,
+    7.822775910217619,
+    7.822775910217619,
+    7.822775910217619
+  ],
+  "flows": {
+    "solar_to_building_kw": 25.0,
+    "solar_to_ev_kw": 0,
+    "solar_to_battery_kw": 0,
+    "solar_to_grid_kw": 0,
+    "battery_to_building_kw": 0,
+    "battery_to_ev_kw": 0,
+    "grid_to_building_kw": 110.66976600000001,
+    "grid_to_ev_kw": 7.22390095
+  },
+  "battery_charge_kw": 0,
+  "battery_discharge_kw": 0,
+  "power_balance_error_kw": 8.881784197001252e-16,
+  "history_provenance": {
+    "kind": "synthetic historical replay, timestamps shifted in memory",
+    "source_current_timestamp": "2026-06-15 12:00:00",
+    "shift_days": 84,
+    "weekdays_preserved": true,
+    "independent_forecast_evaluation": false,
+    "training_data_modified": false
+  },
+  "current_state_provenance": {
+    "kind": "demonstration telemetry fixture; no physical inverter/EVSE connection",
+    "building_and_ev": "synthetic official dataset at source_current_timestamp",
+    "solar_kw": "explicit 25 kW fixture",
+    "battery_soc": "explicit 50% fixture",
+    "evses": "four connected 22 kW fixture"
+  },
+  "preservation": {
+    "files_checked": 444,
+    "authorized_changes": [
+      "src/motor_gerenciamento/adapters.py",
+      "src/motor_gerenciamento/config.py",
+      "src/motor_gerenciamento/constraints.py",
+      "src/motor_gerenciamento/dispatch.py",
+      "src/motor_gerenciamento/flow_allocator.py",
+      "src/motor_gerenciamento/objective.py",
+      "src/motor_gerenciamento/run.py",
+      "src/motor_gerenciamento/state.py",
+      "src/motor_gerenciamento/validation.py"
+    ],
+    "unauthorized_changes": [],
+    "motor3_previous_sources_verified": true
+  }
+}

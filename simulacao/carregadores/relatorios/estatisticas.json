@@ -1,0 +1,345 @@
+{
+  "seed": 20260905,
+  "registros_agregados": 17376,
+  "dias": 181,
+  "max_carros_chegando": 6,
+  "max_ocupacao_pct": 100.0,
+  "distribuicao_carros_chegando": [
+    {
+      "carros_chegando": 0,
+      "intervalos": 13769,
+      "percentual": 79.24148250460405
+    },
+    {
+      "carros_chegando": 1,
+      "intervalos": 2327,
+      "percentual": 13.392034990791895
+    },
+    {
+      "carros_chegando": 2,
+      "intervalos": 852,
+      "percentual": 4.903314917127072
+    },
+    {
+      "carros_chegando": 3,
+      "intervalos": 297,
+      "percentual": 1.709254143646409
+    },
+    {
+      "carros_chegando": 4,
+      "intervalos": 104,
+      "percentual": 0.5985267034990792
+    },
+    {
+      "carros_chegando": 5,
+      "intervalos": 23,
+      "percentual": 0.13236648250460406
+    },
+    {
+      "carros_chegando": 6,
+      "intervalos": 4,
+      "percentual": 0.02302025782688766
+    }
+  ],
+  "intervalos_5_ou_6_chegadas_pct": 0.15538674033149172,
+  "primeiro_timestamp": "2026-01-01 00:00:00",
+  "ultimo_timestamp": "2026-06-30 23:45:00",
+  "total_tentativas_sessoes": 5477,
+  "sessoes_atendidas": 2917,
+  "sessoes_nao_conectadas": 2560,
+  "media_chegadas_por_dia": 30.259668508287294,
+  "media_sessoes_atendidas_por_dia": 16.116022099447513,
+  "max_carros_conectados_simultaneos": 4,
+  "max_carros_carregando_simultaneos": 4,
+  "numero_carregadores": 4,
+  "potencia_maxima_fisica_kw": 88.0,
+  "max_carregadores_ocupados": 4,
+  "ocupacao_media_temporal_pct": 38.03224754450583,
+  "fila_media_temporal_carros": 0.2768147636586863,
+  "fila_maxima_carros": 3,
+  "media_coluna_carros_na_fila": 0.386567679558011,
+  "intervalos_com_fila_pct": 19.59599447513812,
+  "intervalos_todos_carregadores_ocupados_em_algum_minuto_pct": 27.745165745856355,
+  "intervalos_todos_carregadores_ocupados_15min_inteiros_pct": 21.886510128913443,
+  "fila_por_hora": [
+    {
+      "hora": 0,
+      "fila_media_temporal": 0.0,
+      "fila_maxima": 0,
+      "intervalos_com_fila_pct": 0.0
+    },
+    {
+      "hora": 1,
+      "fila_media_temporal": 0.0,
+      "fila_maxima": 0,
+      "intervalos_com_fila_pct": 0.0
+    },
+    {
+      "hora": 2,
+      "fila_media_temporal": 0.0,
+      "fila_maxima": 0,
+      "intervalos_com_fila_pct": 0.0
+    },
+    {
+      "hora": 3,
+      "fila_media_temporal": 0.0,
+      "fila_maxima": 0,
+      "intervalos_com_fila_pct": 0.0
+    },
+    {
+      "hora": 4,
+      "fila_media_temporal": 0.0,
+      "fila_maxima": 0,
+      "intervalos_com_fila_pct": 0.0
+    },
+    {
+      "hora": 5,
+      "fila_media_temporal": 0.0,
+      "fila_maxima": 0,
+      "intervalos_com_fila_pct": 0.0
+    },
+    {
+      "hora": 6,
+      "fila_media_temporal": 0.0,
+      "fila_maxima": 0,
+      "intervalos_com_fila_pct": 0.0
+    },
+    {
+      "hora": 7,
+      "fila_media_temporal": 0.2906998158379374,
+      "fila_maxima": 3,
+      "intervalos_com_fila_pct": 21.2707182320442
+    },
+    {
+      "hora": 8,
+      "fila_media_temporal": 1.4443830570902394,
+      "fila_maxima": 3,
+      "intervalos_com_fila_pct": 66.98895027624309
+    },
+    {
+      "hora": 9,
+      "fila_media_temporal": 0.9880294659300185,
+      "fila_maxima": 3,
+      "intervalos_com_fila_pct": 62.430939226519335
+    },
+    {
+      "hora": 10,
+      "fila_media_temporal": 0.42384898710865565,
+      "fila_maxima": 3,
+      "intervalos_com_fila_pct": 39.3646408839779
+    },
+    {
+      "hora": 11,
+      "fila_media_temporal": 0.3736648250460405,
+      "fila_maxima": 3,
+      "intervalos_com_fila_pct": 34.530386740331494
+    },
+    {
+      "hora": 12,
+      "fila_media_temporal": 0.37044198895027625,
+      "fila_maxima": 3,
+      "intervalos_com_fila_pct": 32.04419889502763
+    },
+    {
+      "hora": 13,
+      "fila_media_temporal": 0.35736648250460407,
+      "fila_maxima": 3,
+      "intervalos_com_fila_pct": 31.629834254143645
+    },
+    {
+      "hora": 14,
+      "fila_media_temporal": 0.651841620626151,
+      "fila_maxima": 3,
+      "intervalos_com_fila_pct": 45.85635359116022
+    },
+    {
+      "hora": 15,
+      "fila_media_temporal": 0.8658379373848987,
+      "fila_maxima": 3,
+      "intervalos_com_fila_pct": 54.41988950276243
+    },
+    {
+      "hora": 16,
+      "fila_media_temporal": 0.5095764272559853,
+      "fila_maxima": 3,
+      "intervalos_com_fila_pct": 42.95580110497237
+    },
+    {
+      "hora": 17,
+      "fila_media_temporal": 0.216390423572744,
+      "fila_maxima": 3,
+      "intervalos_com_fila_pct": 21.408839779005525
+    },
+    {
+      "hora": 18,
+      "fila_media_temporal": 0.11003683241252303,
+      "fila_maxima": 3,
+      "intervalos_com_fila_pct": 12.98342541436464
+    },
+    {
+      "hora": 19,
+      "fila_media_temporal": 0.041252302025782686,
+      "fila_maxima": 3,
+      "intervalos_com_fila_pct": 4.281767955801105
+    },
+    {
+      "hora": 20,
+      "fila_media_temporal": 0.00018416206261510129,
+      "fila_maxima": 1,
+      "intervalos_com_fila_pct": 0.13812154696132597
+    },
+    {
+      "hora": 21,
+      "fila_media_temporal": 0.0,
+      "fila_maxima": 0,
+      "intervalos_com_fila_pct": 0.0
+    },
+    {
+      "hora": 22,
+      "fila_media_temporal": 0.0,
+      "fila_maxima": 0,
+      "intervalos_com_fila_pct": 0.0
+    },
+    {
+      "hora": 23,
+      "fila_media_temporal": 0.0,
+      "fila_maxima": 0,
+      "intervalos_com_fila_pct": 0.0
+    }
+  ],
+  "potencia_media_kw": 10.608296827264427,
+  "potencia_max_media_15min_kw": 75.76703255566596,
+  "potencia_max_1min_kw": 75.76703255566593,
+  "energia_total_entregue_kwh": 46082.44141763667,
+  "energia_total_solicitada_todas_tentativas_kwh": 135429.53862077196,
+  "energia_nao_atendida_kwh": 89347.09720313527,
+  "sessoes_atendidas_com_meta_energia_cumprida": 1221,
+  "sessoes_que_esperaram_e_conectaram": 1223,
+  "espera_media_atendidas_min": 6.890298251628385,
+  "status_sessoes": {
+    "atendida": 2917,
+    "abandono_espera": 1735,
+    "abandono_fila_cheia": 825
+  },
+  "tipos_dia": {
+    "normal": 156,
+    "movimentado": 17,
+    "vazio": 8
+  },
+  "duracao_conexao_min": {
+    "count": 2917.0,
+    "mean": 135.93040795337674,
+    "std": 111.7218444732957,
+    "min": 2.0,
+    "10%": 35.0,
+    "25%": 56.0,
+    "50%": 102.0,
+    "75%": 158.0,
+    "90%": 332.4000000000001,
+    "95%": 398.1999999999998,
+    "max": 480.0
+  },
+  "distribuicao_duracao": {
+    "1-29 min (espera/corte)": 157,
+    "30-60 min": 653,
+    "61-180 min": 1584,
+    "181-239 min": 10,
+    "240 min ou mais": 513
+  },
+  "comparacao_semanal": [
+    {
+      "tipo": "dias_uteis",
+      "dias": 129,
+      "chegadas_por_dia": 39.713178294573645,
+      "sessoes_atendidas_por_dia": 20.015503875968992,
+      "ocupacao_media_pct": 47.63902347114557,
+      "potencia_media_kw": 13.191591795059523,
+      "energia_total_kwh": 40841.16819750428
+    },
+    {
+      "tipo": "finais_de_semana",
+      "dias": 52,
+      "chegadas_por_dia": 6.8076923076923075,
+      "sessoes_atendidas_por_dia": 6.4423076923076925,
+      "ocupacao_media_pct": 14.200053418803419,
+      "potencia_media_kw": 4.199738157157361,
+      "energia_total_kwh": 5241.273220132386
+    }
+  ],
+  "chegadas_medias_por_hora_por_dia": {
+    "0": 0.0,
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.5524861878453039,
+    "7": 3.8950276243093924,
+    "8": 6.18232044198895,
+    "9": 2.9337016574585637,
+    "10": 1.408839779005525,
+    "11": 1.3922651933701657,
+    "12": 1.3259668508287292,
+    "13": 1.9005524861878453,
+    "14": 3.2320441988950277,
+    "15": 3.3370165745856353,
+    "16": 1.9337016574585635,
+    "17": 1.0883977900552486,
+    "18": 0.7513812154696132,
+    "19": 0.3259668508287293,
+    "20": 0.0,
+    "21": 0.0,
+    "22": 0.0,
+    "23": 0.0
+  },
+  "pico_manha_dias_uteis_hora": 8,
+  "pico_tarde_dias_uteis_hora": 15,
+  "chegadas_pico_manha_por_dia_util": 8.116279069767442,
+  "chegadas_pico_tarde_por_dia_util": 4.410852713178294,
+  "timestamps_sha256": "e4abb6b678530cb6616e0989b9baeff3f056f025fa3101705b1510309223d3e4",
+  "validacoes": "Capacidade, fila, nao sobreposicao, conservacao energia, ocupacao reconstruida, timestamps e ausencia de nulos no agregado: OK",
+  "configuracao": {
+    "carregadores": 4,
+    "potencia_nominal_kw": 22.0,
+    "fila_maxima": 3,
+    "espera_maxima_min": 30,
+    "seed": 20260905,
+    "resolucao_interna_min": 1,
+    "chegadas_base_dia": 44.0,
+    "max_chegadas_15min": 6,
+    "distribuicao_chegadas": "Binomial(6, 1-exp(-lambda_15min/6))",
+    "fatores_seg_dom": [
+      0.9,
+      1.06,
+      1.1,
+      1.04,
+      0.84,
+      0.2,
+      0.075
+    ],
+    "fatores_mes": [
+      0.94,
+      0.99,
+      1.04,
+      1.02,
+      0.98,
+      1.03
+    ],
+    "prob_dia_movimentado": 0.055,
+    "prob_dia_vazio": 0.065,
+    "sigma_variacao_diaria": 0.2,
+    "prob_limite_veiculo_7_4_11_22_kw": [
+      0.3,
+      0.5,
+      0.2
+    ]
+  },
+  "ambiente": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1"
+  },
+  "reprodutibilidade_duas_execucoes_identicas": true,
+  "sessoes_carregadores_6_meses.csv_sha256": "2bf7460dac23de08f595394a6d781b7c13a0e4681ee646be86f054836e9868d1",
+  "demanda_carregadores_6_meses.csv_sha256": "3c63f7b11e808b0bcb5d4dd66af0a0282ff628a830f2892c03411dbad10ee2cd"
+}

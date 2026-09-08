@@ -1,0 +1,18 @@
+{
+  "tests_passed": 24,
+  "randomized_cases": 2000,
+  "cycles": 48,
+  "hours": 12,
+  "max_allocated_total_kw": 77.0,
+  "max_individual_kw": 22.0,
+  "block_limit_violations": 0,
+  "protected_files_checked": 372,
+  "protected_files_changed": [],
+  "events": {
+    "EVSE_CONNECTED": 4,
+    "EVSE_DISCONNECTED": 3,
+    "EVSE_FAULT": 1,
+    "EVSE_POWER_LIMITED": 56,
+    "EV_BLOCK_FULLY_ALLOCATED": 20
+  }
+}

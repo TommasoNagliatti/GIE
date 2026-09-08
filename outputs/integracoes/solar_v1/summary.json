@@ -1,0 +1,19 @@
+{
+  "called_at": "2026-09-07T09:53:07.111509-03:00",
+  "source": "open_meteo",
+  "stale": false,
+  "first_timestamp": "2026-09-07T10:00:00-03:00",
+  "last_timestamp": "2026-09-07T21:45:00-03:00",
+  "records": 48,
+  "gti_min_wm2": 0.0,
+  "gti_max_wm2": 248.0,
+  "solar_peak_kw": 30.504,
+  "positive_intervals": 31,
+  "tests_passed": 29,
+  "motor3_alignment_verified": true,
+  "fallback_with_cache_source": "cache",
+  "fallback_without_cache_source": "fallback",
+  "diagnostics": [],
+  "protected_files_checked": 386,
+  "protected_files_changed": []
+}

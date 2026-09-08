@@ -1,0 +1,23 @@
+{
+  "colunas_exogenas": [
+    "session_id",
+    "hora_chegada",
+    "saida_planejada",
+    "permanencia_planejada_min",
+    "energia_solicitada_kwh",
+    "limite_veiculo_kw",
+    "potencia_efetiva_nominal_kw",
+    "tipo_permanencia",
+    "capacidade_bateria_kwh",
+    "soc_chegada_pct",
+    "soc_alvo_pct"
+  ],
+  "sha256_atributos_veiculos_antes": "916f986243bd317b69553657541792d0c311c05b47eaebbfc7e655140aa9d55c",
+  "sha256_chegadas_intervalos_antes": "270efe6496dafcc9b3606fa8495c5517822a866e8de3fdd76fe1edf86743c69e",
+  "sha256_predio_antes": "1b241f5f20154ba8a1d2f6599435c9ec23761fb23ffe48a2306636c3665396d7",
+  "tentativas_antes": 6126,
+  "sha256_atributos_veiculos_depois": "916f986243bd317b69553657541792d0c311c05b47eaebbfc7e655140aa9d55c",
+  "sha256_chegadas_intervalos_depois": "270efe6496dafcc9b3606fa8495c5517822a866e8de3fdd76fe1edf86743c69e",
+  "sha256_predio_depois": "1b241f5f20154ba8a1d2f6599435c9ec23761fb23ffe48a2306636c3665396d7",
+  "validacao": "OK: mesmas 6126 chegadas, mesmos atributos de veiculos e arquivo do predio intacto"
+}

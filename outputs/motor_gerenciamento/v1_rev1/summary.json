@@ -1,0 +1,87 @@
+{
+  "tests_passed": 29,
+  "results": {
+    "integrated": {
+      "mode": "integrated",
+      "cycles": 192,
+      "hours": 48.0,
+      "plans_48_recomputed": 192,
+      "only_step_zero_applied": true,
+      "solver_mean_ms": 5.719901041629782,
+      "solver_p95_ms": 7.0987650367897,
+      "solver_max_ms": 8.853900013491511,
+      "controller_mean_ms": 7.984876043337863,
+      "forecast_mean_ms": 1376.5182541646936,
+      "soc_min_pct": 20.39366932236842,
+      "soc_max_pct": 95.0,
+      "grid_import_max_kw": 273.7200374252365,
+      "grid_export_max_kw": 0.0,
+      "battery_charge_max_kw": 100.0,
+      "battery_discharge_max_kw": 100.0,
+      "export_total_kwh": 0.0,
+      "ev_unserved_kwh": 0.0,
+      "grid_over_target_kwh": 0.0,
+      "safety_overrides": 0,
+      "fallbacks": [],
+      "balance_error_max_kw": 5.684341886080802e-14,
+      "soc_dynamics_error_max_kwh": 1.4210854715202004e-14,
+      "solar_fully_used": true,
+      "events": {
+        "EV_DEMAND_ABOVE_FORECAST": 44,
+        "BATTERY_DISCHARGE_STARTED": 10,
+        "BATTERY_CHARGE_STARTED": 7,
+        "EV_BLOCK_LIMIT_RELAXED": 7,
+        "LOW_BATTERY_RESERVE": 2
+      }
+    },
+    "mock_stress": {
+      "mode": "mock_stress",
+      "cycles": 288,
+      "hours": 72.0,
+      "plans_48_recomputed": 288,
+      "only_step_zero_applied": true,
+      "solver_mean_ms": 5.519648611273927,
+      "solver_p95_ms": 6.841090015950613,
+      "solver_max_ms": 8.274400024674833,
+      "controller_mean_ms": 7.69887117975385,
+      "forecast_mean_ms": 1.0485381966039615,
+      "soc_min_pct": 20.0,
+      "soc_max_pct": 95.0,
+      "grid_import_max_kw": 350.0,
+      "grid_export_max_kw": 87.0,
+      "battery_charge_max_kw": 87.0,
+      "battery_discharge_max_kw": 67.47580328532666,
+      "export_total_kwh": 1546.9590131964235,
+      "ev_unserved_kwh": 0.0,
+      "grid_over_target_kwh": 579.393147536005,
+      "safety_overrides": 0,
+      "fallbacks": [],
+      "balance_error_max_kw": 0.0,
+      "soc_dynamics_error_max_kwh": 4.1744385725905886e-14,
+      "solar_fully_used": true,
+      "events": {
+        "GRID_EXPORT_ACTIVE": 102,
+        "EV_BLOCK_LIMIT_RELAXED": 48,
+        "PEAK_SHAVING_ACTIVE": 48,
+        "GRID_TARGET_EXCEEDED": 48,
+        "BATTERY_CHARGE_STARTED": 18,
+        "LOW_BATTERY_RESERVE": 6,
+        "BATTERY_DISCHARGE_STARTED": 5
+      }
+    }
+  },
+  "comparison": {
+    "integrated": {
+      "before_ev_unserved_kwh": 11.835240960414424,
+      "after_ev_unserved_kwh": 0.0,
+      "grid_import_max_kw": 273.7200374252365,
+      "grid_over_target_kwh": 0.0
+    },
+    "mock_stress": {
+      "before_ev_unserved_kwh": 579.393147536005,
+      "after_ev_unserved_kwh": 0.0,
+      "grid_import_max_kw": 350.0,
+      "grid_over_target_kwh": 579.393147536005
+    }
+  }
+}
