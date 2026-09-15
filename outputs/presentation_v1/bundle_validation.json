@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "no_forbidden_files": true,
+    "m1_identical": true,
+    "m2_identical": true,
+    "full_numeric_cycle_identical": true,
+    "48_steps": true,
+    "offline_presentation": true,
+    "models_loaded_from_bundle": true,
+    "model_hashes_identical": true,
+    "inference_function_AST_identical": true
+  },
+  "tests": 9,
+  "passed": true,
+  "bytes": 7424733,
+  "files": 124
+}

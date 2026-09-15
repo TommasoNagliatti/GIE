@@ -323,3 +323,14 @@ Os dados principais ainda são sintéticos: prédio via EnergyPlus e sessões EV
 **Próximas etapas:** adaptadores físicos, dados reais, validação em múltiplos locais, interfaces de implantação e explicação opcional por LLM.
 
 **Licença pendente de escolha do autor.** Consulte [LICENSE_NOTICE.md](LICENSE_NOTICE.md). Nenhuma licença definitiva foi escolhida automaticamente. [Publicação manual no GitHub Desktop](docs/PUBLISHING.md).
+
+
+## Presentation e integração V1
+
+Execute `run_high_autonomy_v2.bat` (porta 8503) e selecione **Presentation** ou **Manual Demo**.
+A comparação V1/V2 foi preservada. São 16 cenas offline validadas, autoplay 5/10/15s,
+mensagens determinísticas e estado visual para futura maquete, sem LLM ou hardware.
+`gie_control.GIEControl` oferece a interface Python para backend futuro.
+Gere o pacote com `.venv\Scripts\python.exe -B tools\build_integration_bundle.py`.
+Consulte [Presentation](docs/PRESENTATION_MODE.md), [API](docs/GIE_CONTROL_INTERFACE.md),
+[Maquete](docs/MAQUETTE_INTERFACE.md) e [Bundle](docs/INTEGRATION_BUNDLE.md).

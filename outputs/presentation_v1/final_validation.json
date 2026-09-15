@@ -1,0 +1,44 @@
+{
+  "profile": "Commercial_HighAutonomy_V2",
+  "frozen_files_checked": 429,
+  "unexpected_changes": [],
+  "authorized_modified_files": [
+    ".gitignore",
+    "README.md",
+    "demo/high_autonomy_v2/app.py"
+  ],
+  "unit_tests_passed": 56,
+  "bundle_checks_passed": 9,
+  "total_checks": 65,
+  "scenes": 16,
+  "physical_violations": 0,
+  "llm_calls": 0,
+  "historical_outputs_preserved": true,
+  "bundle": {
+    "checks": {
+      "no_forbidden_files": true,
+      "m1_identical": true,
+      "m2_identical": true,
+      "full_numeric_cycle_identical": true,
+      "48_steps": true,
+      "offline_presentation": true,
+      "models_loaded_from_bundle": true,
+      "model_hashes_identical": true,
+      "inference_function_AST_identical": true
+    },
+    "tests": 9,
+    "passed": true,
+    "bytes": 7424733,
+    "files": 124
+  },
+  "output_layer_mean_ms": 1.6588840004988015,
+  "output_layer_max_ms": 3.936199995223433,
+  "screenshot": "outputs/presentation_v1/dashboard_final.png",
+  "git_base": "153d3a287642ae2ec3af9d9b3c1d2c5f790db146",
+  "caveats": [
+    "Scenes use independent explicit inputs and forecast fixtures, not new Motor 1/2 forecasts.",
+    "Manual UI calls existing core venv; no new dependencies.",
+    "Normal needs caller histories and solar provider; no hardware commands.",
+    "Profile JSON checked against frozen configuration; mismatches fail closed."
+  ]
+}

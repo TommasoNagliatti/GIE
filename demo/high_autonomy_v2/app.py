@@ -2,7 +2,7 @@ import sys,json,time
 from pathlib import Path
 import pandas as pd
 import streamlit as st
-ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT))
+ROOT=Path(__file__).resolve().parents[2];sys.path[:0]=[str(ROOT),str(ROOT/"src")]
 from demo.simulation.view import diagram,timeline
 st.set_page_config(page_title="GIE · High Autonomy V2",page_icon="⚡",layout="wide")
 st.markdown("<style>.stApp{background:#081425}div[data-testid=stMetric]{background:#13283e;padding:12px;border-radius:10px}div[data-testid=stMetricValue]{font-size:22px}</style>",unsafe_allow_html=True)
@@ -14,10 +14,19 @@ if "step" not in st.session_state:st.session_state.step=1;st.session_state.play=
 st.sidebar.title("⚡ GIE · Simulation Mode")
 profile=st.sidebar.radio("Perfil energético",list(data),index=1)
 v2=profile=="High Autonomy V2"
+from gie_control.profile import load_profile
+official_profile,_=load_profile(ROOT)
+area=st.sidebar.radio("Área",["V1 × V2 Comparison","Presentation","Manual Demo"])
+if area!="V1 × V2 Comparison" and v2:
+ from demo.high_autonomy_v2.presentation_view import render
+ render(area)
+ st.stop()
+elif area!="V1 × V2 Comparison":
+ st.sidebar.info("Presentation e Manual Demo usam High Autonomy V2. Selecione esse perfil para acessá-los.")
 st.sidebar.info("Reprodução da comparação de 24h. Decisões calculadas pelo MPC; nenhuma simulação é recalculada ao trocar o perfil.")
-st.sidebar.metric("Solar instalado","800 kWp / 500 kW AC" if v2 else "150 kWp / 125 kW AC")
-st.sidebar.metric("Bateria instalada","2.000 kWh" if v2 else "200 kWh")
-st.sidebar.caption("Potência bateria: ±450 kW" if v2 else "Potência bateria: ±100 kW")
+st.sidebar.metric("Solar instalado",f"{official_profile['solar_dc_kwp']} kWp / {official_profile['solar_ac_kw']} kW AC" if v2 else "150 kWp / 125 kW AC")
+st.sidebar.metric("Bateria instalada",f"{official_profile['battery_capacity_kwh']:,} kWh" if v2 else "200 kWh")
+st.sidebar.caption(f"Potência bateria: ±{official_profile['battery_charge_max_kw']} kW" if v2 else "Potência bateria: ±100 kW")
 st.sidebar.caption("V2: SOC físico 20–95%, sem reserva operacional. Rede máxima 350 kW; EV 88 kW.")
 speed=st.sidebar.selectbox("Segundos por ciclo",[60.,15.,7.5],index=1)
 @st.fragment(run_every="1s" if st.session_state.play else None)

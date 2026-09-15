@@ -214,3 +214,7 @@ simulacao/energyplus/scripts/executar.ps1
 
 # Entire local publication workspace: never traverse nested checkout ignore files.
 /outputs/publication_local/
+
+# Regenerable integration export and runtime weather cache
+/dist/
+/runtime_cache/

@@ -1,0 +1,10 @@
+{
+  "tests": 56,
+  "core_tests": 50,
+  "ui_tests": 6,
+  "failures": 0,
+  "errors": 0,
+  "core_exit": 0,
+  "passed": true,
+  "elapsed_seconds": 8.432855600025505
+}
