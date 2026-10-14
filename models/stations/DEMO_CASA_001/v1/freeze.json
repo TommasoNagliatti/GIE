@@ -1,0 +1,27 @@
+{
+  "frozen_at": "2026-10-12T12:55:27.471735+00:00",
+  "test_accessed": false,
+  "station_id": "DEMO_CASA_001",
+  "files": {
+    "arrivals.txt": "e9d8d31db9304e437694c178d859843fb98645f1bb5b75f1c4f84d1311eaf0b2",
+    "building_15.txt": "98d079ad65faf15269125efd93a110b10e320ff68ea77a5d2b04cab5e7cde6db",
+    "building_31.txt": "0be42bc642aecdaa6bb7b60cb8150da56d0ba8d64e407ef79a1ca418dcdfda6e",
+    "config.json": "09c94a84049835cced3e927edf78f4497a57df772ac5402313fd8017bbc767a8",
+    "event.txt": "73a34a0773d27340224053fa2b6d0bc37e02acce2dc4213a8cc7a25675b72c57",
+    "frequency.json": "cecb658d4650c7cfd5d129cc281f3a2cf0891c7cd0e8cabca07f7035f9714b2e",
+    "metadata.json": "f04ed2e4b0ca2c58c15c5cc73e8db70d13719bb4b81a3f8efa80eec9234e4472",
+    "occupancy.txt": "663ce559509224aadce169deb86b98efb5fd9afd087316ad3a402d49189f3ce2",
+    "power.txt": "ea4c8a480881122b6853521b5dcdc14b75bfd299c89b40a95f415c02844ae710",
+    "q90.txt": "9f4d19a4f0337bd29042a58525fb56622ea62f0ba654a2c1ce958292289a543a",
+    "selection.json": "7588296c6e18c77e6698087c5283ccdc22023abb91898b385476a34da1d494ac"
+  },
+  "code_sha256": {
+    "src\\station_forecasts\\core.py": "f97ca5c0aff743ed912a81d03ad918a5d269785370ee433b937bdb28b2edf328",
+    "src\\station_forecasts\\metrics.py": "65aff8a2f1a333bf31f2dc308c9c0a9c595f9429e70dddd12feba3f64de96a5f",
+    "src\\station_forecasts\\predict.py": "3323b233344947449561f2b3176cd17ed8bd4d443705236c98d38ff7a01f1ce1",
+    "src\\station_forecasts\\train.py": "d15fdbaf7e02d6cec3b4f3ceeb0443c35a4aea0a8c2868b5edd7d924dc52b32b",
+    "src\\station_forecasts\\__init__.py": "60c6bb88199f5001c4a1d0d9314f8034a19e6db7046c6c1acc9a63aeaea55ff9"
+  },
+  "validation_metrics_sha256": "abd9591374db4af890b576812c8e9965d5fa7106bd7910015fe06152d69fd8f4",
+  "protocol_sha256": "a4f278559f06c0a5344caba327882f17c20667e7a498cfbfaf4ba6639f9f9b53"
+}

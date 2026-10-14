@@ -1,0 +1,131 @@
+[
+  {
+    "cursor": 1,
+    "schema_version": "1.0",
+    "event_id": "774d30c6-dd99-45d5-b89a-4fdce429fbdb:1",
+    "alert_id": "774d30c6-dd99-45d5-b89a-4fdce429fbdb",
+    "station_id": "Commercial_HighAutonomy_V2",
+    "emitted_at": "2026-10-14T07:49:11.305111+00:00",
+    "transition": "CREATED",
+    "alert": {
+      "schema_version": "1.0",
+      "alert_id": "774d30c6-dd99-45d5-b89a-4fdce429fbdb",
+      "station_id": "Commercial_HighAutonomy_V2",
+      "code": "EVSE_FAULT",
+      "equipment_id": "EVSE3",
+      "first_seen": "2026-10-13T10:00:00-03:00",
+      "occurrence_count": 1,
+      "acknowledged_at": null,
+      "resolved_at": null,
+      "status": "OPEN",
+      "revision": 1,
+      "generation": "test-generation",
+      "timestamp": "2026-10-13T10:00:00-03:00",
+      "detected_at": "2026-10-14T07:49:11.305111+00:00",
+      "last_seen": "2026-10-13T10:00:00-03:00",
+      "title": "Falha simulada de EVSE",
+      "description": "Condição observada na simulação; não representa diagnóstico físico ou causa interna do solver.",
+      "severity": "warning",
+      "domain": "energy",
+      "reason_codes": [
+        "EVSE_FAULT"
+      ],
+      "numeric_context": {},
+      "provenance": {
+        "origin": "SIMULATED",
+        "source_ref": "test-run:1",
+        "physical_dispatch": false
+      },
+      "source_ref": "test-run:1",
+      "clear_count": 0
+    },
+    "physical_dispatch": false,
+    "hardware_commands_sent": false
+  },
+  {
+    "cursor": 2,
+    "schema_version": "1.0",
+    "event_id": "774d30c6-dd99-45d5-b89a-4fdce429fbdb:2",
+    "alert_id": "774d30c6-dd99-45d5-b89a-4fdce429fbdb",
+    "station_id": "Commercial_HighAutonomy_V2",
+    "emitted_at": "2026-10-14T07:49:11.305111+00:00",
+    "transition": "ACKNOWLEDGED",
+    "alert": {
+      "schema_version": "1.0",
+      "alert_id": "774d30c6-dd99-45d5-b89a-4fdce429fbdb",
+      "station_id": "Commercial_HighAutonomy_V2",
+      "code": "EVSE_FAULT",
+      "equipment_id": "EVSE3",
+      "first_seen": "2026-10-13T10:00:00-03:00",
+      "occurrence_count": 1,
+      "acknowledged_at": "2026-10-14T07:49:11.305111+00:00",
+      "resolved_at": null,
+      "status": "ACKNOWLEDGED",
+      "revision": 2,
+      "generation": "test-generation",
+      "timestamp": "2026-10-13T10:00:00-03:00",
+      "detected_at": "2026-10-14T07:49:11.305111+00:00",
+      "last_seen": "2026-10-13T10:00:00-03:00",
+      "title": "Falha simulada de EVSE",
+      "description": "Condição observada na simulação; não representa diagnóstico físico ou causa interna do solver.",
+      "severity": "warning",
+      "domain": "energy",
+      "reason_codes": [
+        "EVSE_FAULT"
+      ],
+      "numeric_context": {},
+      "provenance": {
+        "origin": "SIMULATED",
+        "source_ref": "test-run:1",
+        "physical_dispatch": false
+      },
+      "source_ref": "test-run:1",
+      "clear_count": 0
+    },
+    "physical_dispatch": false,
+    "hardware_commands_sent": false
+  },
+  {
+    "cursor": 3,
+    "schema_version": "1.0",
+    "event_id": "774d30c6-dd99-45d5-b89a-4fdce429fbdb:3",
+    "alert_id": "774d30c6-dd99-45d5-b89a-4fdce429fbdb",
+    "station_id": "Commercial_HighAutonomy_V2",
+    "emitted_at": "2026-10-14T07:49:11.313483+00:00",
+    "transition": "RESOLVED",
+    "alert": {
+      "schema_version": "1.0",
+      "alert_id": "774d30c6-dd99-45d5-b89a-4fdce429fbdb",
+      "station_id": "Commercial_HighAutonomy_V2",
+      "code": "EVSE_FAULT",
+      "equipment_id": "EVSE3",
+      "first_seen": "2026-10-13T10:00:00-03:00",
+      "occurrence_count": 1,
+      "acknowledged_at": "2026-10-14T07:49:11.305111+00:00",
+      "resolved_at": "2026-10-13T10:30:00-03:00",
+      "status": "RESOLVED",
+      "revision": 3,
+      "generation": "test-generation",
+      "timestamp": "2026-10-13T10:30:00-03:00",
+      "detected_at": "2026-10-14T07:49:11.313483+00:00",
+      "last_seen": "2026-10-13T10:00:00-03:00",
+      "title": "Falha simulada de EVSE",
+      "description": "Condição observada na simulação; não representa diagnóstico físico ou causa interna do solver.",
+      "severity": "warning",
+      "domain": "energy",
+      "reason_codes": [
+        "EVSE_FAULT"
+      ],
+      "numeric_context": {},
+      "provenance": {
+        "origin": "SIMULATED",
+        "source_ref": "test-run:3",
+        "physical_dispatch": false
+      },
+      "source_ref": "test-run:3",
+      "clear_count": 2
+    },
+    "physical_dispatch": false,
+    "hardware_commands_sent": false
+  }
+]

@@ -1,0 +1,165 @@
+{
+  "station_id": "DEMO_POSTO_24H_001",
+  "version": "v1",
+  "origin": "SIMULATED",
+  "deployment": "offline_only_experimental",
+  "selection": {
+    "motor1": "lightgbm_15",
+    "motor2": "lightgbm",
+    "q90": "frequency",
+    "event_threshold": 0.35,
+    "candidate_event_thresholds": {
+      "persistence": 0.5,
+      "previous_day": 0.5,
+      "previous_week": 0.5,
+      "frequency": 0.35,
+      "zero": 0.5,
+      "lightgbm": 0.35
+    },
+    "detection_unresolved": false,
+    "selection_partition": "validation",
+    "test_used": false,
+    "selected_at": "2026-10-11T20:59:29.093145+00:00",
+    "version": "v1",
+    "station_id": "DEMO_POSTO_24H_001"
+  },
+  "configuration": {
+    "station_id": "DEMO_POSTO_24H_001",
+    "profile": "posto_24h_v1",
+    "timezone": "America/Sao_Paulo",
+    "location": {
+      "name": "Itirapina/SP — hypothetical site",
+      "latitude": -22.25,
+      "longitude": -47.82,
+      "weather_proxy": "Sao Carlos station 868450; regional proxy, not local measurements"
+    },
+    "step_minutes": 15,
+    "horizons": 48,
+    "dataset_dir": "data/synthetic_profiles/posto_24h_v1",
+    "n_evse": 2,
+    "evse_kw": [
+      22.0,
+      22.0
+    ],
+    "ev_limit_kw": 44.0,
+    "queue_limit": 3,
+    "minimum_history": 2689,
+    "schema": "emps-forecast-v1",
+    "seed": 20261011,
+    "origin": "SIMULATED",
+    "periods": {
+      "train": [
+        "2025-01-01",
+        "2025-09-01"
+      ],
+      "validation": [
+        "2025-09-01",
+        "2025-11-01"
+      ],
+      "test": [
+        "2025-11-01",
+        "2026-01-01"
+      ]
+    }
+  },
+  "models": {
+    "building_15": {
+      "file": "building_15.txt",
+      "sha256": "5f6441dc7868fdb4c68d3bbf5a9b1674675f2cd59ecf9a4d5c75f231b9ed1ac5",
+      "trees": 111
+    },
+    "building_31": {
+      "file": "building_31.txt",
+      "sha256": "a24b7f3d43fbba4eafebe5791f44a903f4d6622a2af7bd3b1579bef896e8997f",
+      "trees": 110
+    },
+    "power": {
+      "file": "power.txt",
+      "sha256": "8abed94e454e80b9d53519e914d58de99da9045c75ac191aa18051dda2cb03b1",
+      "trees": 72
+    },
+    "occupancy": {
+      "file": "occupancy.txt",
+      "sha256": "00fd5a3f720c16c96419ac4b753feed54386f0e654c93375534685f16294efef",
+      "trees": 147
+    },
+    "arrivals": {
+      "file": "arrivals.txt",
+      "sha256": "baec1eb1e2b0184a8481cf277c734f9995ee305b3af063365f00bfa2ad6035e1",
+      "trees": 29
+    },
+    "queue": {
+      "file": "queue.txt",
+      "sha256": "e7b02f49d3a78884d812e7f050e7da362a5888589b608296198a3db6c3f5a836",
+      "trees": 51
+    },
+    "risk": {
+      "file": "risk.txt",
+      "sha256": "00602d13c5a634bfbbbeeb1eb67f427706c1ae205e96360099c6d0ed59891b6e",
+      "trees": 16
+    },
+    "event": {
+      "file": "event.txt",
+      "sha256": "e94a484e47ffad59c2ac1a16c3df7ec5d149239b996d5c239346ccd95af61ff2",
+      "trees": 94
+    },
+    "q90": {
+      "file": "q90.txt",
+      "sha256": "12d089c53c9bb7f9fdf6c2cbbe0774d6d73ae8432c74a0f823fd029929a3a302",
+      "trees": 36
+    }
+  },
+  "schema": "feature_schema.json",
+  "provenance_manifest_sha256": "fa9762e393ef6fcdb41197140b00dadf837f41b8402078b58d2071c48458d1c0",
+  "training_input_sha256": {
+    "data\\synthetic_profiles\\posto_24h_v1\\monthly\\building_2025-01.csv": "58ed2be5b968f74f7b7f7aea4cd2cf34bb1bdc39197ff57480671dfdf55b1040",
+    "data\\synthetic_profiles\\posto_24h_v1\\monthly\\building_2025-02.csv": "e023cf70d45ff695f1b878abd863475ef3a8cc352e08bc937890e205b3e5445d",
+    "data\\synthetic_profiles\\posto_24h_v1\\monthly\\building_2025-03.csv": "31f366350baf234c7bafb2d94be00699666d4fc17b7772319b695730a5d60fbe",
+    "data\\synthetic_profiles\\posto_24h_v1\\monthly\\building_2025-04.csv": "fbbba4d23fc99d467a7daff73c63a942bea6cdadac043eca5387a12ab6eff227",
+    "data\\synthetic_profiles\\posto_24h_v1\\monthly\\building_2025-05.csv": "ae00df1d18f37ddf0f6825947d43f7ce3b4bc593e604b4e5d986b97a6347ecde",
+    "data\\synthetic_profiles\\posto_24h_v1\\monthly\\building_2025-06.csv": "c679ed2efe0cd3e2faa715fc1051f7d64b1e5ecb098ba8aba17f8d1596dbf00e",
+    "data\\synthetic_profiles\\posto_24h_v1\\monthly\\building_2025-07.csv": "46bae760a24e189cbc2d0bf5de0b916c03d164352fd4a63e0c9c6639d52e636d",
+    "data\\synthetic_profiles\\posto_24h_v1\\monthly\\building_2025-08.csv": "a3d9d6aec9bcfb9011e2ab8c09171dea36b6aa3fc5076b285b790022152ee696",
+    "data\\synthetic_profiles\\posto_24h_v1\\monthly\\building_2025-09.csv": "ed7ffc4600481c492e233301fba13bb9ae72f55890977027f3c66ba7cb412b09",
+    "data\\synthetic_profiles\\posto_24h_v1\\monthly\\building_2025-10.csv": "594617649bfffce8228beb52f64f65050a1fdd21f25775e387a848879b082ede",
+    "data\\synthetic_profiles\\posto_24h_v1\\monthly\\ev_2025-01.csv": "f08f232e14f11f3fe1b188bf31d70d8d2d1de2cb45225c4d879f5bd00037bd59",
+    "data\\synthetic_profiles\\posto_24h_v1\\monthly\\ev_2025-02.csv": "dca6037d86c5bf89862e2e56b1949d73d22021fbe384c5b567cf7fb9ce7fe69c",
+    "data\\synthetic_profiles\\posto_24h_v1\\monthly\\ev_2025-03.csv": "a89418bb364c1dcab39b4514c834c58fb391b55233048fd3a58bf068f8d0b1d1",
+    "data\\synthetic_profiles\\posto_24h_v1\\monthly\\ev_2025-04.csv": "b845aeb8a45cbb20c17bf36f75a66b3c09fe33258f9b117f5e0d133e19cab1fd",
+    "data\\synthetic_profiles\\posto_24h_v1\\monthly\\ev_2025-05.csv": "1ea9ae4309f82a6f9563c6ce3f95e88820ac129ade14e2bf22d14b6cba9778d1",
+    "data\\synthetic_profiles\\posto_24h_v1\\monthly\\ev_2025-06.csv": "efb76ddc5796ca1550f4e89ac812fe6fba97337ce8812c909dae637bd6f65721",
+    "data\\synthetic_profiles\\posto_24h_v1\\monthly\\ev_2025-07.csv": "1e12dd742adabf850d45a85f395cb7448130b48a161e90715784f0313e17c028",
+    "data\\synthetic_profiles\\posto_24h_v1\\monthly\\ev_2025-08.csv": "2a9e44e6ea9f7e957d6363d8edf635ec885ff4737a4ca46465be400c07cac3c6",
+    "data\\synthetic_profiles\\posto_24h_v1\\monthly\\ev_2025-09.csv": "f27aba1fea651d553d03380e785b7d6dd3a88eadb5c343ec5b50cf29210e1338",
+    "data\\synthetic_profiles\\posto_24h_v1\\monthly\\ev_2025-10.csv": "2ca2409de64ac9906d9be4f93a8c7bbb656b293c9be0399e4fa05832171a490b"
+  },
+  "metrics": "reports/station_forecasts/v1/DEMO_POSTO_24H_001",
+  "model_files_sha256": {
+    "arrivals.txt": "baec1eb1e2b0184a8481cf277c734f9995ee305b3af063365f00bfa2ad6035e1",
+    "building_15.txt": "5f6441dc7868fdb4c68d3bbf5a9b1674675f2cd59ecf9a4d5c75f231b9ed1ac5",
+    "building_31.txt": "a24b7f3d43fbba4eafebe5791f44a903f4d6622a2af7bd3b1579bef896e8997f",
+    "config.json": "ab6988f465664382377003ddfc4c902a57298eabe5606315cef237c41f542c7c",
+    "event.txt": "e94a484e47ffad59c2ac1a16c3df7ec5d149239b996d5c239346ccd95af61ff2",
+    "feature_schema.json": "69bc48f77b73a404c4fc01d42c6ab6e4fa80e4aeb8ba16cbc704c7f03739c73d",
+    "freeze.json": "f9f728277eb1823b7126c3eca62370ee64fd5443cbf12b048dd30fcab004dc64",
+    "frequency.json": "ef6dcf180ad6f0f08e036b1d913226f7349708517bcb09ae6bb493443bd7fde9",
+    "metadata.json": "c67fcc64f6b0738f1beae1a7d8662a76ccbe9b87d3583196f1a4fafe906646ce",
+    "occupancy.txt": "00fd5a3f720c16c96419ac4b753feed54386f0e654c93375534685f16294efef",
+    "power.txt": "8abed94e454e80b9d53519e914d58de99da9045c75ac191aa18051dda2cb03b1",
+    "q90.txt": "12d089c53c9bb7f9fdf6c2cbbe0774d6d73ae8432c74a0f823fd029929a3a302",
+    "queue.txt": "e7b02f49d3a78884d812e7f050e7da362a5888589b608296198a3db6c3f5a836",
+    "risk.txt": "00602d13c5a634bfbbbeeb1eb67f427706c1ae205e96360099c6d0ed59891b6e",
+    "selection.json": "b89ef20ee862a875d0e3112cd364556a23da9c60bcf3ee90e136caa20fc48c3a"
+  },
+  "evaluation_sha256": {
+    "validation_metrics.json": "9fcb3764723f7a003b3a835ea17f9c3065fc0a833322fe3173f399b384c24280",
+    "test_metrics.json": "14c5d8deacdd98106c3473b1b5a82a0340e429445085841d7f6f53052d6cdd61",
+    "test_horizons.json": "e98bfee478049160a3ac65557a691bc706a3745469711ab8e7d968ef7d4526dc",
+    "test_predictions.csv.gz": "82b86a34c168ea323e3723f6a34970b5b8f4b2f918183c2855ced22ef8599101"
+  },
+  "limitations": [
+    "Synthetic data only; not deployed.",
+    "Queue detection and peak forecasting remain limited.",
+    "Residential EV has only seven held-out sessions and low recall."
+  ]
+}

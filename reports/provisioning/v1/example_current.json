@@ -1,0 +1,39 @@
+{
+  "issue_time": "2026-10-13T00:00:00-04:00",
+  "current": {
+    "station_id": "NEW_NO_HISTORY",
+    "observed_at": "2026-10-13T00:00:00-04:00",
+    "available_at": "2026-10-13T00:00:00-04:00",
+    "origin": "SIMULATED",
+    "quality": "TRUSTED",
+    "building_kw": 3.0,
+    "solar_kw": 0.0,
+    "demands": [
+      {
+        "evse_id": "E0",
+        "connected": true,
+        "requested_kw": 2.0
+      },
+      {
+        "evse_id": "E1",
+        "connected": true,
+        "requested_kw": 3.0
+      },
+      {
+        "evse_id": "E2",
+        "connected": true,
+        "requested_kw": 4.0
+      },
+      {
+        "evse_id": "E3",
+        "connected": true,
+        "requested_kw": 5.0
+      },
+      {
+        "evse_id": "E4",
+        "connected": true,
+        "requested_kw": 6.0
+      }
+    ]
+  }
+}

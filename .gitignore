@@ -218,3 +218,32 @@ simulacao/energyplus/scripts/executar.ps1
 # Regenerable integration export and runtime weather cache
 /dist/
 /runtime_cache/
+
+# Local regression snapshots and execution evidence (recreated outside the release).
+/reports/**/regression_snapshot/
+/reports/**/phase*_before/
+/reports/**/regression_outputs/
+/reports/**/runtime/
+/reports/residential_battery/v1/runs/
+/reports/residential_battery/v1/before/
+/reports/**/*.txt
+/reports/**/test_predictions.csv.gz
+/reports/**/test_horizons.json
+/reports/**/test_started.json
+/reports/**/test_artifacts_sha256.json
+/reports/**/preserved_hashes.json
+/reports/**/progress.json
+/reports/**/interactive_96*.json
+/reports/**/inventory*.json
+/reports/**/preservation_*.json
+/reports/**/changed-files.json
+/reports/**/git_status.txt
+/reports/**/git_diff_stat.txt
+/reports/**/delivery_inventory.json
+/reports/**/dependency_versions.json
+/reports/**/*.diff
+/simulacao/perfis/weather/source.zip
+/simulacao/perfis/*execution.txt
+/simulacao/perfis/*validation.txt
+/simulacao/perfis/*/energyplus_execution.txt
+/simulacao/perfis/*/model_build.txt

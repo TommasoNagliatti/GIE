@@ -1,0 +1,5 @@
+# Local outputs copied by OpenStudio, rebuilt by the pipeline.
+/initial_tool_files/
+/*/files/
+/*/run/
+__pycache__/

@@ -1,0 +1,20 @@
+{
+  "motor1": "lightgbm_31",
+  "motor2": "lightgbm",
+  "q90": "lightgbm",
+  "event_threshold": 0.35,
+  "candidate_event_thresholds": {
+    "persistence": 0.5,
+    "previous_day": 0.5,
+    "previous_week": 0.5,
+    "frequency": 0.05,
+    "zero": 0.5,
+    "lightgbm": 0.35
+  },
+  "detection_unresolved": false,
+  "selection_partition": "validation",
+  "test_used": false,
+  "selected_at": "2026-10-12T12:55:26.772319+00:00",
+  "version": "v1",
+  "station_id": "DEMO_CASA_001"
+}

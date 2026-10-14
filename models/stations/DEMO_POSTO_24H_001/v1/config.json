@@ -1,0 +1,39 @@
+{
+  "station_id": "DEMO_POSTO_24H_001",
+  "profile": "posto_24h_v1",
+  "timezone": "America/Sao_Paulo",
+  "location": {
+    "name": "Itirapina/SP — hypothetical site",
+    "latitude": -22.25,
+    "longitude": -47.82,
+    "weather_proxy": "Sao Carlos station 868450; regional proxy, not local measurements"
+  },
+  "step_minutes": 15,
+  "horizons": 48,
+  "dataset_dir": "data/synthetic_profiles/posto_24h_v1",
+  "n_evse": 2,
+  "evse_kw": [
+    22.0,
+    22.0
+  ],
+  "ev_limit_kw": 44.0,
+  "queue_limit": 3,
+  "minimum_history": 2689,
+  "schema": "emps-forecast-v1",
+  "seed": 20261011,
+  "origin": "SIMULATED",
+  "periods": {
+    "train": [
+      "2025-01-01",
+      "2025-09-01"
+    ],
+    "validation": [
+      "2025-09-01",
+      "2025-11-01"
+    ],
+    "test": [
+      "2025-11-01",
+      "2026-01-01"
+    ]
+  }
+}

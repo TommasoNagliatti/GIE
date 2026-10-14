@@ -1,0 +1,47 @@
+{
+  "station_id": "NEW_NO_HISTORY",
+  "timezone": "America/Manaus",
+  "import_kw": 25.0,
+  "export_kw": 3.0,
+  "chargers": [
+    {
+      "evse_id": "E0",
+      "max_kw": 2.0,
+      "minimum_kw": 0
+    },
+    {
+      "evse_id": "E1",
+      "max_kw": 3.0,
+      "minimum_kw": 0
+    },
+    {
+      "evse_id": "E2",
+      "max_kw": 4.0,
+      "minimum_kw": 0
+    },
+    {
+      "evse_id": "E3",
+      "max_kw": 5.0,
+      "minimum_kw": 0
+    },
+    {
+      "evse_id": "E4",
+      "max_kw": 6.0,
+      "minimum_kw": 0
+    }
+  ],
+  "batteries": [],
+  "solar": [],
+  "inverters": [],
+  "circuits": [
+    {
+      "circuit_id": "BRANCH",
+      "evse_ids": [
+        "E0",
+        "E1"
+      ],
+      "max_kw": 4.0
+    }
+  ],
+  "baseline_building_kw": 3.0
+}

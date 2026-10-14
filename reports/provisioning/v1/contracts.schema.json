@@ -1,0 +1,622 @@
+{
+  "Provision": {
+    "$defs": {
+      "Branch": {
+        "additionalProperties": false,
+        "properties": {
+          "circuit_id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "title": "Circuit Id",
+            "type": "string"
+          },
+          "evse_ids": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 64,
+            "minItems": 1,
+            "title": "Evse Ids",
+            "type": "array"
+          },
+          "max_kw": {
+            "maximum": 10000,
+            "minimum": 0,
+            "title": "Max Kw",
+            "type": "number"
+          }
+        },
+        "required": [
+          "circuit_id",
+          "evse_ids",
+          "max_kw"
+        ],
+        "title": "Branch",
+        "type": "object"
+      },
+      "Charger": {
+        "additionalProperties": false,
+        "properties": {
+          "evse_id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "title": "Evse Id",
+            "type": "string"
+          },
+          "max_kw": {
+            "exclusiveMinimum": 0,
+            "maximum": 1000,
+            "title": "Max Kw",
+            "type": "number"
+          },
+          "minimum_kw": {
+            "default": 0,
+            "minimum": 0,
+            "title": "Minimum Kw",
+            "type": "number"
+          },
+          "available": {
+            "default": true,
+            "title": "Available",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "evse_id",
+          "max_kw"
+        ],
+        "title": "Charger",
+        "type": "object"
+      },
+      "Converter": {
+        "additionalProperties": false,
+        "properties": {
+          "inverter_id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "title": "Inverter Id",
+            "type": "string"
+          },
+          "ac_kw": {
+            "exclusiveMinimum": 0,
+            "maximum": 10000,
+            "title": "Ac Kw",
+            "type": "number"
+          },
+          "available": {
+            "default": true,
+            "title": "Available",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "inverter_id",
+          "ac_kw"
+        ],
+        "title": "Converter",
+        "type": "object"
+      },
+      "Solar": {
+        "additionalProperties": false,
+        "properties": {
+          "solar_id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "title": "Solar Id",
+            "type": "string"
+          },
+          "inverter_id": {
+            "title": "Inverter Id",
+            "type": "string"
+          },
+          "dc_kwp": {
+            "exclusiveMinimum": 0,
+            "maximum": 10000,
+            "title": "Dc Kwp",
+            "type": "number"
+          },
+          "available": {
+            "default": true,
+            "title": "Available",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "solar_id",
+          "inverter_id",
+          "dc_kwp"
+        ],
+        "title": "Solar",
+        "type": "object"
+      },
+      "Storage": {
+        "additionalProperties": false,
+        "properties": {
+          "battery_id": {
+            "maxLength": 64,
+            "minLength": 1,
+            "title": "Battery Id",
+            "type": "string"
+          },
+          "capacity_kwh": {
+            "exclusiveMinimum": 0,
+            "maximum": 100000,
+            "title": "Capacity Kwh",
+            "type": "number"
+          },
+          "soc_initial": {
+            "maximum": 1,
+            "minimum": 0,
+            "title": "Soc Initial",
+            "type": "number"
+          },
+          "soc_min": {
+            "maximum": 1,
+            "minimum": 0,
+            "title": "Soc Min",
+            "type": "number"
+          },
+          "soc_max": {
+            "maximum": 1,
+            "minimum": 0,
+            "title": "Soc Max",
+            "type": "number"
+          },
+          "charge_kw": {
+            "maximum": 10000,
+            "minimum": 0,
+            "title": "Charge Kw",
+            "type": "number"
+          },
+          "discharge_kw": {
+            "maximum": 10000,
+            "minimum": 0,
+            "title": "Discharge Kw",
+            "type": "number"
+          },
+          "eta_charge": {
+            "exclusiveMinimum": 0,
+            "maximum": 1,
+            "title": "Eta Charge",
+            "type": "number"
+          },
+          "eta_discharge": {
+            "exclusiveMinimum": 0,
+            "maximum": 1,
+            "title": "Eta Discharge",
+            "type": "number"
+          },
+          "inverter_id": {
+            "title": "Inverter Id",
+            "type": "string"
+          },
+          "available": {
+            "default": true,
+            "title": "Available",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "battery_id",
+          "capacity_kwh",
+          "soc_initial",
+          "soc_min",
+          "soc_max",
+          "charge_kw",
+          "discharge_kw",
+          "eta_charge",
+          "eta_discharge",
+          "inverter_id"
+        ],
+        "title": "Storage",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "schema_version": {
+        "const": "1.0",
+        "default": "1.0",
+        "title": "Schema Version",
+        "type": "string"
+      },
+      "station_id": {
+        "title": "Station Id",
+        "type": "string"
+      },
+      "timezone": {
+        "title": "Timezone",
+        "type": "string"
+      },
+      "import_kw": {
+        "maximum": 100000,
+        "minimum": 0,
+        "title": "Import Kw",
+        "type": "number"
+      },
+      "export_kw": {
+        "maximum": 100000,
+        "minimum": 0,
+        "title": "Export Kw",
+        "type": "number"
+      },
+      "chargers": {
+        "items": {
+          "$ref": "#/$defs/Charger"
+        },
+        "maxItems": 64,
+        "title": "Chargers",
+        "type": "array"
+      },
+      "batteries": {
+        "items": {
+          "$ref": "#/$defs/Storage"
+        },
+        "maxItems": 16,
+        "title": "Batteries",
+        "type": "array"
+      },
+      "solar": {
+        "items": {
+          "$ref": "#/$defs/Solar"
+        },
+        "maxItems": 32,
+        "title": "Solar",
+        "type": "array"
+      },
+      "inverters": {
+        "items": {
+          "$ref": "#/$defs/Converter"
+        },
+        "maxItems": 32,
+        "title": "Inverters",
+        "type": "array"
+      },
+      "circuits": {
+        "items": {
+          "$ref": "#/$defs/Branch"
+        },
+        "maxItems": 64,
+        "title": "Circuits",
+        "type": "array"
+      },
+      "policy": {
+        "default": "solar_only_lex_v3.0",
+        "enum": [
+          "solar_only_lex_v3.0",
+          "grid_allowed_lex_v3.0"
+        ],
+        "title": "Policy",
+        "type": "string"
+      },
+      "training_state": {
+        "const": "BASELINE",
+        "default": "BASELINE",
+        "title": "Training State",
+        "type": "string"
+      },
+      "baseline_building_kw": {
+        "anyOf": [
+          {
+            "maximum": 100000,
+            "minimum": 0,
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Baseline Building Kw"
+      },
+      "origin": {
+        "const": "SIMULATED",
+        "default": "SIMULATED",
+        "title": "Origin",
+        "type": "string"
+      }
+    },
+    "required": [
+      "station_id",
+      "timezone",
+      "import_kw",
+      "export_kw",
+      "chargers",
+      "batteries",
+      "solar",
+      "inverters"
+    ],
+    "title": "Provision",
+    "type": "object"
+  },
+  "DynamicCycle": {
+    "$defs": {
+      "Request": {
+        "additionalProperties": false,
+        "properties": {
+          "evse_id": {
+            "title": "Evse Id",
+            "type": "string"
+          },
+          "connected": {
+            "title": "Connected",
+            "type": "boolean"
+          },
+          "requested_kw": {
+            "minimum": 0,
+            "title": "Requested Kw",
+            "type": "number"
+          },
+          "available": {
+            "default": true,
+            "title": "Available",
+            "type": "boolean"
+          },
+          "vehicle_max_kw": {
+            "anyOf": [
+              {
+                "minimum": 0,
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Vehicle Max Kw"
+          }
+        },
+        "required": [
+          "evse_id",
+          "connected",
+          "requested_kw"
+        ],
+        "title": "Request",
+        "type": "object"
+      },
+      "Sample": {
+        "additionalProperties": false,
+        "properties": {
+          "station_id": {
+            "title": "Station Id",
+            "type": "string"
+          },
+          "observed_at": {
+            "title": "Observed At",
+            "type": "string"
+          },
+          "available_at": {
+            "title": "Available At",
+            "type": "string"
+          },
+          "origin": {
+            "const": "SIMULATED",
+            "title": "Origin",
+            "type": "string"
+          },
+          "quality": {
+            "enum": [
+              "TRUSTED",
+              "UNTRUSTED"
+            ],
+            "title": "Quality",
+            "type": "string"
+          },
+          "building_kw": {
+            "minimum": 0,
+            "title": "Building Kw",
+            "type": "number"
+          },
+          "solar_kw": {
+            "minimum": 0,
+            "title": "Solar Kw",
+            "type": "number"
+          },
+          "demands": {
+            "items": {
+              "$ref": "#/$defs/Request"
+            },
+            "maxItems": 64,
+            "title": "Demands",
+            "type": "array"
+          },
+          "battery_available": {
+            "additionalProperties": {
+              "type": "boolean"
+            },
+            "title": "Battery Available",
+            "type": "object"
+          },
+          "inverter_available": {
+            "additionalProperties": {
+              "type": "boolean"
+            },
+            "title": "Inverter Available",
+            "type": "object"
+          },
+          "grid_available": {
+            "default": true,
+            "title": "Grid Available",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "station_id",
+          "observed_at",
+          "available_at",
+          "origin",
+          "quality",
+          "building_kw",
+          "solar_kw",
+          "demands"
+        ],
+        "title": "Sample",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "issue_time": {
+        "title": "Issue Time",
+        "type": "string"
+      },
+      "current": {
+        "anyOf": [
+          {
+            "$ref": "#/$defs/Sample"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null
+      }
+    },
+    "required": [
+      "issue_time"
+    ],
+    "title": "DynamicCycle",
+    "type": "object"
+  },
+  "ModelState": {
+    "additionalProperties": false,
+    "properties": {
+      "schema_version": {
+        "const": "1.0",
+        "default": "1.0",
+        "title": "Schema Version",
+        "type": "string"
+      },
+      "station_id": {
+        "title": "Station Id",
+        "type": "string"
+      },
+      "state": {
+        "default": "BASELINE",
+        "enum": [
+          "BASELINE",
+          "CANDIDATE",
+          "PERSONALIZED",
+          "DEGRADED"
+        ],
+        "title": "State",
+        "type": "string"
+      },
+      "revision": {
+        "default": 0,
+        "minimum": 0,
+        "title": "Revision",
+        "type": "integer"
+      },
+      "active_version": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Active Version"
+      },
+      "candidate_version": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Candidate Version"
+      },
+      "previous_version": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Previous Version"
+      },
+      "activation_supported": {
+        "const": false,
+        "default": false,
+        "title": "Activation Supported",
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "station_id"
+    ],
+    "title": "ModelState",
+    "type": "object"
+  },
+  "ModelVersion": {
+    "additionalProperties": false,
+    "description": "Future activation request only; no arbitrary artifact path or code upload.",
+    "properties": {
+      "contract_version": {
+        "const": "1.0",
+        "default": "1.0",
+        "title": "Contract Version",
+        "type": "string"
+      },
+      "station_id": {
+        "title": "Station Id",
+        "type": "string"
+      },
+      "action": {
+        "enum": [
+          "REGISTER_CANDIDATE",
+          "ACTIVATE",
+          "ROLLBACK"
+        ],
+        "title": "Action",
+        "type": "string"
+      },
+      "version": {
+        "pattern": "^[A-Za-z0-9_-]{1,64}$",
+        "title": "Version",
+        "type": "string"
+      },
+      "expected_revision": {
+        "minimum": 0,
+        "title": "Expected Revision",
+        "type": "integer"
+      },
+      "artifact_sha256": {
+        "pattern": "^[a-f0-9]{64}$",
+        "title": "Artifact Sha256",
+        "type": "string"
+      },
+      "validation_sha256": {
+        "anyOf": [
+          {
+            "pattern": "^[a-f0-9]{64}$",
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Validation Sha256"
+      }
+    },
+    "required": [
+      "station_id",
+      "action",
+      "version",
+      "expected_revision",
+      "artifact_sha256"
+    ],
+    "title": "ModelVersion",
+    "type": "object"
+  }
+}

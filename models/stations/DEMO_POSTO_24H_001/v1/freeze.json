@@ -1,0 +1,29 @@
+{
+  "frozen_at": "2026-10-11T20:59:29.703114+00:00",
+  "test_accessed": false,
+  "station_id": "DEMO_POSTO_24H_001",
+  "files": {
+    "arrivals.txt": "baec1eb1e2b0184a8481cf277c734f9995ee305b3af063365f00bfa2ad6035e1",
+    "building_15.txt": "5f6441dc7868fdb4c68d3bbf5a9b1674675f2cd59ecf9a4d5c75f231b9ed1ac5",
+    "building_31.txt": "a24b7f3d43fbba4eafebe5791f44a903f4d6622a2af7bd3b1579bef896e8997f",
+    "config.json": "ab6988f465664382377003ddfc4c902a57298eabe5606315cef237c41f542c7c",
+    "event.txt": "e94a484e47ffad59c2ac1a16c3df7ec5d149239b996d5c239346ccd95af61ff2",
+    "frequency.json": "ef6dcf180ad6f0f08e036b1d913226f7349708517bcb09ae6bb493443bd7fde9",
+    "metadata.json": "c67fcc64f6b0738f1beae1a7d8662a76ccbe9b87d3583196f1a4fafe906646ce",
+    "occupancy.txt": "00fd5a3f720c16c96419ac4b753feed54386f0e654c93375534685f16294efef",
+    "power.txt": "8abed94e454e80b9d53519e914d58de99da9045c75ac191aa18051dda2cb03b1",
+    "q90.txt": "12d089c53c9bb7f9fdf6c2cbbe0774d6d73ae8432c74a0f823fd029929a3a302",
+    "queue.txt": "e7b02f49d3a78884d812e7f050e7da362a5888589b608296198a3db6c3f5a836",
+    "risk.txt": "00602d13c5a634bfbbbeeb1eb67f427706c1ae205e96360099c6d0ed59891b6e",
+    "selection.json": "b89ef20ee862a875d0e3112cd364556a23da9c60bcf3ee90e136caa20fc48c3a"
+  },
+  "code_sha256": {
+    "src\\station_forecasts\\core.py": "f97ca5c0aff743ed912a81d03ad918a5d269785370ee433b937bdb28b2edf328",
+    "src\\station_forecasts\\metrics.py": "65aff8a2f1a333bf31f2dc308c9c0a9c595f9429e70dddd12feba3f64de96a5f",
+    "src\\station_forecasts\\predict.py": "3323b233344947449561f2b3176cd17ed8bd4d443705236c98d38ff7a01f1ce1",
+    "src\\station_forecasts\\train.py": "d15fdbaf7e02d6cec3b4f3ceeb0443c35a4aea0a8c2868b5edd7d924dc52b32b",
+    "src\\station_forecasts\\__init__.py": "60c6bb88199f5001c4a1d0d9314f8034a19e6db7046c6c1acc9a63aeaea55ff9"
+  },
+  "validation_metrics_sha256": "9fcb3764723f7a003b3a835ea17f9c3065fc0a833322fe3173f399b384c24280",
+  "protocol_sha256": "a4f278559f06c0a5344caba327882f17c20667e7a498cfbfaf4ba6639f9f9b53"
+}

@@ -1,0 +1,1821 @@
+{
+  "origin": "SIMULATED",
+  "transport": "FastAPI ASGI TestClient; real spawned workers",
+  "stations": [
+    {
+      "station_id": "Commercial_HighAutonomy_V2",
+      "pid": 32244,
+      "generation": "17cef983-6b6c-4a2f-ba58-36e518dc3448",
+      "model_identity": {
+        "station_id": "Commercial_HighAutonomy_V2",
+        "motor1": "motor_consumo frozen hybrid",
+        "motor2": "motor_carregadores_v2 frozen selector",
+        "policy": "Commercial_HighAutonomy_V2"
+      },
+      "hardware_commands_sent": false
+    },
+    {
+      "station_id": "DEMO_POSTO_24H_001",
+      "pid": 11712,
+      "generation": "bf94b7a2-2260-46fd-a325-1112e4d4908d",
+      "model_identity": {
+        "station_id": "DEMO_POSTO_24H_001",
+        "path": "models/stations/DEMO_POSTO_24H_001/v1",
+        "freeze_sha256": "f9f728277eb1823b7126c3eca62370ee64fd5443cbf12b048dd30fcab004dc64",
+        "selection": {
+          "motor1": "lightgbm_15",
+          "motor2": "lightgbm",
+          "q90": "frequency",
+          "event_threshold": 0.35,
+          "candidate_event_thresholds": {
+            "persistence": 0.5,
+            "previous_day": 0.5,
+            "previous_week": 0.5,
+            "frequency": 0.35,
+            "zero": 0.5,
+            "lightgbm": 0.35
+          },
+          "detection_unresolved": false,
+          "selection_partition": "validation",
+          "test_used": false,
+          "selected_at": "2026-10-11T20:59:29.093145+00:00",
+          "version": "v1",
+          "station_id": "DEMO_POSTO_24H_001"
+        }
+      },
+      "hardware_commands_sent": false
+    },
+    {
+      "station_id": "DEMO_CASA_001",
+      "pid": 14156,
+      "generation": "6cc60051-58b5-4542-8ae4-7ab39f8cb452",
+      "model_identity": {
+        "station_id": "DEMO_CASA_001",
+        "path": "models/stations/DEMO_CASA_001/v1",
+        "freeze_sha256": "ede87b6b8bf02f5ae1e5b60e84b617e8c13361acd0ef9cb006ae8996598a2d84",
+        "selection": {
+          "motor1": "lightgbm_31",
+          "motor2": "lightgbm",
+          "q90": "lightgbm",
+          "event_threshold": 0.35,
+          "candidate_event_thresholds": {
+            "persistence": 0.5,
+            "previous_day": 0.5,
+            "previous_week": 0.5,
+            "frequency": 0.05,
+            "zero": 0.5,
+            "lightgbm": 0.35
+          },
+          "detection_unresolved": false,
+          "selection_partition": "validation",
+          "test_used": false,
+          "selected_at": "2026-10-12T12:55:26.772319+00:00",
+          "version": "v1",
+          "station_id": "DEMO_CASA_001"
+        }
+      },
+      "hardware_commands_sent": false
+    },
+    {
+      "station_id": "NEW_NO_HISTORY",
+      "pid": 20208,
+      "generation": "ff31631d-d7c1-41c2-9536-c6aab274cf11",
+      "model_identity": {
+        "station_id": "NEW_NO_HISTORY",
+        "state": "BASELINE",
+        "version": "baseline-v1",
+        "personalized": false,
+        "artifact_path": null
+      },
+      "hardware_commands_sent": false
+    }
+  ],
+  "new_station_result": {
+    "output_version": "1.0",
+    "timestamp": "2026-10-13T00:00:00-04:00",
+    "decision_time": "2026-10-13T00:00:00-04:00",
+    "mode": "NORMAL",
+    "profile": "dynamic_baseline_v1",
+    "status": "optimal_simulated",
+    "execution_allowed": true,
+    "physical_dispatch": false,
+    "hardware_commands_sent": false,
+    "numeric_state": {
+      "building_kw": 3.0,
+      "solar_kw": 0.0,
+      "ev_demand_kw": 20.0,
+      "battery_soc_pct": null,
+      "battery_soc_after_pct": null,
+      "battery_charge_kw": 0,
+      "battery_discharge_kw": 0,
+      "grid_import_kw": 22.0,
+      "grid_export_kw": 0.0,
+      "ev_served_kw": 19.0,
+      "ev_unserved_kw": 1.0,
+      "ev_block_limit_kw": 19.0,
+      "energy_balance_error_kw": 0.0,
+      "evse_setpoints_kw": [
+        2.0,
+        2.0,
+        4.0,
+        5.0,
+        6.0
+      ],
+      "evses": {
+        "E0": {
+          "evse_id": "E0",
+          "connected": true,
+          "requested_kw": 2.0,
+          "available": true
+        },
+        "E1": {
+          "evse_id": "E1",
+          "connected": true,
+          "requested_kw": 3.0,
+          "available": true
+        },
+        "E2": {
+          "evse_id": "E2",
+          "connected": true,
+          "requested_kw": 4.0,
+          "available": true
+        },
+        "E3": {
+          "evse_id": "E3",
+          "connected": true,
+          "requested_kw": 5.0,
+          "available": true
+        },
+        "E4": {
+          "evse_id": "E4",
+          "connected": true,
+          "requested_kw": 6.0,
+          "available": true
+        }
+      }
+    },
+    "visual_state": {
+      "valid": true,
+      "commands_valid": false,
+      "grid_flow": "importing",
+      "battery_flow": "idle",
+      "solar": "inactive",
+      "evses": {
+        "E0": "charging",
+        "E1": "charging",
+        "E2": "charging",
+        "E3": "charging",
+        "E4": "charging"
+      },
+      "evse_1_active": true,
+      "evse_1_fault": false,
+      "evse_2_active": true,
+      "evse_2_fault": false,
+      "evse_3_active": true,
+      "evse_3_fault": false,
+      "evse_4_active": true,
+      "evse_4_fault": false,
+      "evse_5_active": true,
+      "evse_5_fault": false,
+      "solar_active": false,
+      "building_active": true,
+      "grid_importing": true,
+      "grid_exporting": false,
+      "battery_charging": false,
+      "battery_discharging": false
+    },
+    "forecasts": {
+      "records": [
+        {
+          "timestamp": "2026-10-13T00:00:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T00:15:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T00:30:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T00:45:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T01:00:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T01:15:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T01:30:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T01:45:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T02:00:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T02:15:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T02:30:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T02:45:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T03:00:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T03:15:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T03:30:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T03:45:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T04:00:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T04:15:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T04:30:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T04:45:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T05:00:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T05:15:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T05:30:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T05:45:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T06:00:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T06:15:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T06:30:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T06:45:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T07:00:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T07:15:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T07:30:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T07:45:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T08:00:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T08:15:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T08:30:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T08:45:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T09:00:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T09:15:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T09:30:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T09:45:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T10:00:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T10:15:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T10:30:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T10:45:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T11:00:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T11:15:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T11:30:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        },
+        {
+          "timestamp": "2026-10-13T11:45:00-04:00",
+          "building_kw": 3.0,
+          "potencia_solicitada_prevista_kw": 20.0,
+          "solar_previsto_kw": 0.0,
+          "origin": "ESTIMATE",
+          "method": "technical_envelope_v1",
+          "is_measurement": false
+        }
+      ],
+      "steps": 48,
+      "interval_minutes": 15,
+      "timezone": "America/Manaus",
+      "origin": "ESTIMATE",
+      "personalized": false
+    },
+    "management": {
+      "status": "optimal",
+      "execution_allowed": true,
+      "policy": "solar_only_lex_v3.0",
+      "plan": [
+        {
+          "step": 0,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 2.0,
+            "E1": 2.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 1,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 21.999959999999987,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 18.999959999999987,
+          "evse_setpoints_kw": {
+            "E0": 0.9999599999999873,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 2,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 3,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 4,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 5,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 6,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 7,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 8,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 9,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 10,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 11,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 12,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 13,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 14,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 15,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 16,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 17,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 18,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 19,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 20,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 21,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 22,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 23,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 24,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 25,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 26,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 27,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 28,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 29,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 30,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 31,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 32,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 33,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 34,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 35,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 36,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 37,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 38,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 39,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 40,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 41,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 42,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 43,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 44,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 45,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 46,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        },
+        {
+          "step": 47,
+          "building_kw": 3.0,
+          "solar_available_kw": 0.0,
+          "solar_used_kw": 0.0,
+          "solar_curtailed_kw": 0.0,
+          "grid_import_kw": 22.0,
+          "grid_export_kw": 0.0,
+          "ev_requested_kw": 20.0,
+          "ev_served_kw": 19.0,
+          "evse_setpoints_kw": {
+            "E0": 1.0,
+            "E1": 3.0,
+            "E2": 4.0,
+            "E3": 5.0,
+            "E4": 6.0
+          },
+          "solar_by_inverter_kw": {},
+          "batteries": {},
+          "balance_error_kw": 0.0
+        }
+      ],
+      "first_decision": {
+        "step": 0,
+        "building_kw": 3.0,
+        "solar_available_kw": 0.0,
+        "solar_used_kw": 0.0,
+        "solar_curtailed_kw": 0.0,
+        "grid_import_kw": 22.0,
+        "grid_export_kw": 0.0,
+        "ev_requested_kw": 20.0,
+        "ev_served_kw": 19.0,
+        "evse_setpoints_kw": {
+          "E0": 2.0,
+          "E1": 2.0,
+          "E2": 4.0,
+          "E3": 5.0,
+          "E4": 6.0
+        },
+        "solar_by_inverter_kw": {},
+        "batteries": {},
+        "balance_error_kw": 0.0
+      },
+      "stages": [
+        {
+          "stage": "maximize_ev_12h",
+          "status": 0,
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "objective": -228.0
+        },
+        {
+          "stage": "maximize_ev_now",
+          "status": 0,
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "objective": -4.75
+        },
+        {
+          "stage": "minimize_import",
+          "status": 0,
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "objective": 263.99999
+        },
+        {
+          "stage": "minimize_import_now",
+          "status": 0,
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "objective": 5.49999
+        },
+        {
+          "stage": "minimize_curtailment",
+          "status": 0,
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "objective": 0.0
+        },
+        {
+          "stage": "minimize_throughput",
+          "status": 0,
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "objective": 263.99999
+        }
+      ],
+      "verification": {
+        "max_balance_error_kw": 0.0,
+        "max_energy_error_kwh": 0.0,
+        "active_constraints": [],
+        "checked_steps": 48
+      },
+      "elapsed_ms": 30.90950008481741,
+      "physical_dispatch": false,
+      "hardware_commands_sent": false
+    },
+    "load_balancer": {
+      "available": true,
+      "setpoints_kw": {
+        "E0": 2.0,
+        "E1": 2.0,
+        "E2": 4.0,
+        "E3": 5.0,
+        "E4": 6.0
+      },
+      "allocated_kw": 19.0,
+      "suspended": []
+    },
+    "station_extension": {
+      "schema_version": "1.0",
+      "station_id": "NEW_NO_HISTORY",
+      "training_state": "BASELINE",
+      "operational_state": "BASELINE",
+      "model_state": {
+        "schema_version": "1.0",
+        "station_id": "NEW_NO_HISTORY",
+        "state": "BASELINE",
+        "revision": 0,
+        "active_version": null,
+        "candidate_version": null,
+        "previous_version": null,
+        "activation_supported": false
+      },
+      "simulation_state": {
+        "origin": "SIMULATED",
+        "station_id": "NEW_NO_HISTORY",
+        "configuration_sha256": "63ce6efa5ba67079beb3e8eb1ab922ef0c3d2aa05dcf237d292a17e273f7d51c",
+        "energy_kwh": {},
+        "last_issue": "2026-10-13T00:00:00-04:00",
+        "cycles": 1
+      },
+      "current_trusted": true,
+      "energy_version": "3.0",
+      "policy": "solar_only_lex_v3.0",
+      "battery_decisions": {}
+    },
+    "provenance": {
+      "origin": "SIMULATED",
+      "station_id": "NEW_NO_HISTORY",
+      "input_source": "explicit simulated current only",
+      "forecast_origin": "ESTIMATE",
+      "history_records": 0
+    },
+    "presentation_metadata": {
+      "hardware_commands_sent": false,
+      "setpoints_are_limits": true,
+      "llm_calls": 0
+    },
+    "primary_message": {
+      "code": "BASELINE_SIMULATED_ONLY",
+      "severity": "info",
+      "text": "Baseline estimates; no physical dispatch. BASELINE_SIMULATED_ONLY",
+      "reason_codes": [
+        "BASELINE_SIMULATED_ONLY"
+      ]
+    },
+    "messages": [
+      {
+        "code": "BASELINE_SIMULATED_ONLY",
+        "severity": "info",
+        "text": "Baseline estimates; no physical dispatch. BASELINE_SIMULATED_ONLY",
+        "reason_codes": [
+          "BASELINE_SIMULATED_ONLY"
+        ]
+      }
+    ],
+    "events": [
+      {
+        "code": "BASELINE_SIMULATED_ONLY",
+        "origin": "SIMULATED"
+      }
+    ],
+    "reason_codes": [
+      "BASELINE_SIMULATED_ONLY"
+    ],
+    "maquette_state": {
+      "valid": true,
+      "commands_valid": false,
+      "grid_flow": "importing",
+      "battery_flow": "idle",
+      "solar": "inactive",
+      "evses": {
+        "E0": "charging",
+        "E1": "charging",
+        "E2": "charging",
+        "E3": "charging",
+        "E4": "charging"
+      },
+      "evse_1_active": true,
+      "evse_1_fault": false,
+      "evse_2_active": true,
+      "evse_2_fault": false,
+      "evse_3_active": true,
+      "evse_3_fault": false,
+      "evse_4_active": true,
+      "evse_4_fault": false,
+      "evse_5_active": true,
+      "evse_5_fault": false,
+      "solar_active": false,
+      "building_active": true,
+      "grid_importing": true,
+      "grid_exporting": false,
+      "battery_charging": false,
+      "battery_discharging": false
+    }
+  }
+}

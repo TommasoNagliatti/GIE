@@ -1,0 +1,51 @@
+{
+  "station_id": "DEMO_POSTO_24H_001",
+  "seed": 240101,
+  "n_evse": 2,
+  "evse_kw": 22.0,
+  "pv_kwp": 50.0,
+  "inverter_kw": 60.0,
+  "area": 150.0,
+  "expected_range": [
+    6000,
+    13000
+  ],
+  "profile": "posto_24h_v1",
+  "loads": {
+    "refrigeration": {
+      "kw": 5.0,
+      "lost": 0.8,
+      "expected_daily_kwh": 84.0
+    },
+    "lights_inside": {
+      "kw": 1.2,
+      "lost": 0,
+      "expected_daily_kwh": 28.8
+    },
+    "lights_outside": {
+      "kw": 2.6,
+      "lost": 1,
+      "expected_daily_kwh": 31.2
+    },
+    "pos": {
+      "kw": 0.6,
+      "lost": 0,
+      "expected_daily_kwh": 14.4
+    },
+    "fuel_pumps": {
+      "kw": 4.4,
+      "lost": 1,
+      "expected_daily_kwh": 36.96
+    },
+    "kitchen": {
+      "kw": 2.4,
+      "lost": 0.7,
+      "expected_daily_kwh": 19.2
+    },
+    "compressor": {
+      "kw": 1.5,
+      "lost": 1,
+      "expected_daily_kwh": 1.6
+    }
+  }
+}

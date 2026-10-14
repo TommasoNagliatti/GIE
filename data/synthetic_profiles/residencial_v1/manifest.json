@@ -1,0 +1,180 @@
+{
+  "station_id": "DEMO_CASA_001",
+  "profile": "RESIDENCIAL_V1",
+  "version": "1.0.0",
+  "origin": "SIMULATED",
+  "calendar_year": 2025,
+  "interval_minutes": 15,
+  "timestamp": "interval_start",
+  "available_at": "timestamp + 15 minutes",
+  "timezone": "America/Sao_Paulo",
+  "utc_offset": "-03:00",
+  "rows": 35040,
+  "location": {
+    "name": "Itirapina/SP — hypothetical site",
+    "latitude": -22.25,
+    "longitude": -47.82,
+    "weather_proxy": "Sao Carlos station 868450; regional proxy, not local measurements"
+  },
+  "building_engine": "EnergyPlus 25.2.0-cf7368216c / OpenStudio 3.11.0+241b8abb4d",
+  "building_area_m2": 80.0,
+  "weather": {
+    "url": "https://climate.onebuilding.org/WMO_Region_3_South_America/BRA_Brazil/SP_Sao_Paulo/BRA_SP_Sao.Carlos.868450_TMYx.2011-2025.zip",
+    "retrieved": "2026-10-10",
+    "sha256": "173c54db21a9fe607fd827c6b76293a99427ce8a2c2b9b041ccee3c8268b98f7",
+    "type": "TMYx; not measured 2025"
+  },
+  "equipment": {
+    "evse": [
+      {
+        "id": "EVSE_01",
+        "model": "GW7K-HCA-20",
+        "max_kw": 7.0
+      }
+    ],
+    "pv": {
+      "dc_kwp": 5.5,
+      "plane": "horizontal proxy",
+      "noct_c": 45.0,
+      "temperature_coefficient_per_c": -0.0035,
+      "other_loss_fraction": 0.14,
+      "inverter_efficiency": 0.97
+    },
+    "inverters": [
+      {
+        "id": "INV_01",
+        "model": "GW6000-ES-20",
+        "ac_kw": 6.0,
+        "pv_dc_kwp": 5.5,
+        "shared_pv_plus_battery_discharge_ac_kw": 6.0,
+        "battery_input_current_a": 120.0
+      }
+    ],
+    "batteries": [],
+    "optional_battery_template": {
+      "model": "LX U5.4-20",
+      "nominal_kwh": 5.4,
+      "usable_catalog_kwh": 5.4,
+      "min_voltage_v": 47.5,
+      "max_current_a": 50.0,
+      "charge_kw": 2.2,
+      "discharge_kw": 2.2,
+      "soc_initial": 0.5,
+      "soc_min": 0.2,
+      "soc_max": 0.95,
+      "eta_charge": 0.95,
+      "eta_discharge": 0.95
+    },
+    "grid": {
+      "import_kw": 17.0,
+      "export_kw": 6.0,
+      "source": "simulation assumption"
+    },
+    "battery_dispatch": "NOT_SIMULATED",
+    "soc_timeseries": "NOT_GENERATED",
+    "battery_power_reference": "AC bus; DC discharge demand = discharge_kw / eta_discharge",
+    "hardware_status": "demonstrative nominal envelopes, not certified electrical design"
+  },
+  "seeds": {
+    "loads": 240202,
+    "ev": 240212
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "matplotlib": "3.11.1"
+  },
+  "evidence": {
+    "energyplus": "Completed Successfully, error log included",
+    "original_commit": "50e0d6cba42754c24350da9fd513fce4547f2f39"
+  },
+  "ev_semantics": {
+    "energy": "AC-meter kWh; battery gain=0.92*delivered AC",
+    "power": "15-minute mean; requested=connected vehicles only, before outages, bounded by EV acceptance and EVSE",
+    "occupancy": "maximum simultaneous connected within interval; mean occupancy separately",
+    "queue": "max waiting within interval; requests of queued/rejected vehicles only in sessions",
+    "sessions": "connection held until departure, even after target; timestamps [start,end)",
+    "residential_frequency": "3-4 arrivals/month; latest user supplement"
+  },
+  "weather_causality": "Hourly source only known at weather_available_at; availability-safe asof or one-hour lag required for weather features. No future TMY as forecast.",
+  "pv_semantics": "horizontal GHI proxy, hourly radiation held over four quarters; clipping only at real AC limit; no dispatch",
+  "compatibility": {
+    "current_models": "NOT compatible without dedicated adaptation/training; Motor2 fixed4EVSE/88kW, calendar2026, naive timestamps",
+    "backend_import": "NOT directly importable: current endpoint accepts IMPORTED only; files remain SIMULATED",
+    "monthly_shards": "each <10000 rows and 8MB; schema/provenance adapter still required"
+  },
+  "sources": {
+    "retrieved": "2026-10-10",
+    "sources": {
+      "BAT_C": "https://en.goodwe.com/Ftp/EN/Downloads/Datasheet/GW_BAT-60-112_Datasheet-EN.pdf",
+      "ET": "https://en.goodwe.com/Ftp/Downloads/Datasheet/PT/GW_ET%2012-30kW_Datasheet-PT.pdf",
+      "compatibility_ET_BAT": "https://br.goodwe.com/Ftp/EN/Downloads/User%20Manual/GW_Commercial-Smart-Inverter-Solutions_User-Manual-ET15-30kW-LXC60kWh-EN.pdf",
+      "ES_G2": "https://en.goodwe.com/Ftp/EN/Downloads/Datasheet/GW_ES%20G2_Datasheet-EN.pdf",
+      "Lynx_U": "https://en.goodwe.com/Skippower/downloadFileF?id=2111&mid=60",
+      "HCA_G2": "https://en.goodwe.com/hca-g2",
+      "weather": "https://climate.onebuilding.org/WMO_Region_3_South_America/BRA_Brazil/SP_Sao_Paulo/BRA_SP_Sao.Carlos.868450_TMYx.2011-2025.zip",
+      "EPlus_interpolation": "https://bigladdersoftware.com/epx/docs/25-2/input-output-reference/weather-data-hourly-interpolation.html"
+    }
+  },
+  "inputs_sha256": {
+    "simulacao/perfis/residencial_v1/parameters.json": "97b3524c35f0eb39bc5c9a10dd3c167a266fc8bfbd75708b3f1727cdcf90672a",
+    "simulacao/perfis/residencial_v1/schedules.csv": "cca5ce0506008e4143ce48f7c1e7e561d278877de64cb045e31bc9f778e9aa2f",
+    "simulacao/perfis/residencial_v1/building.idf": "a506bcfcc939ff6c6183ef6ad061b336958b0e8ae497c639fcfa369c205663f3",
+    "simulacao/perfis/residencial_v1/building.osm": "a2c690f2a2f196eae218534c5b7d12b8beed26221fdfd692ef5ae59a2f1b0617",
+    "simulacao/perfis/weather/BRA_SP_Sao.Carlos.868450_TMYx.2011-2025.epw": "e95e6da81cf8f27249d6cae767be42bcf35cc20d57a83feba2ee1f777c0b11af",
+    "simulacao/perfis/loads.py": "d785558c5b4c356cf395683783c46d9922b70f73507f61a54d042165fab93386",
+    "simulacao/perfis/ev.py": "e98b1ababde3775c6ef571123a27f3cb2cbdfb064e906b8ac7be0792f4b13e2c",
+    "simulacao/perfis/build_model.rb": "f9010616aa826c61a9f534c0e868f30dea3aa10e52c66b58d25588a30758afc2",
+    "simulacao/perfis/generate.py": "c1fb9e7b4e6a23f517659f3f75ee42c3d790e276c122efae2a0523498d2edea2"
+  },
+  "outputs_sha256": {
+    "building.csv": "dc4439c563d9ccaf5bdc8dea14dc5b8b30058a9d7f95e7efe9b52c8e304aeb2f",
+    "diagnostics.png": "4a435b6342315634130c8c431e5db5e69a7b895667f850bd2a2fd7e5bf4b2043",
+    "energy.csv": "f26102e9947496eb44a8d02a9baf9335f55e7b7f0ad25ebce6b98ed9d216fb7d",
+    "energyplus_errors.txt": "74288065b4e309507fa1f292566bf160ba61c5799b8137df34656c68571e6303",
+    "equipment_events.csv": "58a9cba1cd92218adf97cac92c36331b0b677bd1a42842741449f42e4523a2a9",
+    "ev.csv": "65c4cc6f6e2635a53405e6a544d66777ca918abed2def2bae8fcc4afdb75e442",
+    "expected_vs_simulated.csv": "6f1d0ac3488e5f4e8a591f74eb2d3f0c41e1e4f1df9733adcbe82c1207507555",
+    "monthly/building_2025-01.csv": "7d357707b074e24277c2f245992251ef7774de74780f664a8664052b8002b974",
+    "monthly/building_2025-02.csv": "b10059d819dd8e554582809ee2f0dd6f212d2ccd886e949484887f0377f671f2",
+    "monthly/building_2025-03.csv": "af13f89af51a885258337b7737cf16a4d319a7e1a719efdd383248606794bd49",
+    "monthly/building_2025-04.csv": "035d6ff9493b0cfbf08891298ea5bd67da75d1a33d4ce0dad6130db607346841",
+    "monthly/building_2025-05.csv": "497755a8cb84b311a54ab1dc3fd6387c1244d5ed8f4a23229aad1092f0d4329b",
+    "monthly/building_2025-06.csv": "1335a7dd346e1aaec998f79cb0388387020b5c487008b79a66626e2c95a48fc8",
+    "monthly/building_2025-07.csv": "c04dfd55d118e4074b2bad69896b89477a062d401f7ea817f0b04e30ef4de195",
+    "monthly/building_2025-08.csv": "d6e2e4f631bbe6eab64c689cae7df9d3e761d3de1e1c5aee7b37a814b371a061",
+    "monthly/building_2025-09.csv": "3bbbe80c7ac9d2a5657dca17db6237274582e8e46b843d6709a63ce5319dd7ba",
+    "monthly/building_2025-10.csv": "5b5d4eec5723f21497fd7c9bedfb74e9e18346b50d020f2ec18331746d56533b",
+    "monthly/building_2025-11.csv": "ab4ead2e398ab44846c9161e655f5a73363154fd0293841591d5379e86a65078",
+    "monthly/building_2025-12.csv": "3c26ad9d3623df386c799078b29322a947428b70636ee79790a439cc8ff2e4b0",
+    "monthly/energy_2025-01.csv": "13464ca7d31f908a03e98870076fd46ae22fc36419f21b0d30efa3c807f4e9fe",
+    "monthly/energy_2025-02.csv": "58f9f7fbbac7d4cc2682e497cff3ae9dab4a399d73436a123542eae7b1460227",
+    "monthly/energy_2025-03.csv": "d00aac9fe5035612e1669706a4cfeac34db81eb7158bfcef988e742500d7fc75",
+    "monthly/energy_2025-04.csv": "26588ef40608acdcbccca957018d4f71eb993cc62cbd3d1b1d68f60e0bf19a52",
+    "monthly/energy_2025-05.csv": "64d39bd1f314e0afff96766eaf4fb41250f96ea9173cbee366a4743dd008784c",
+    "monthly/energy_2025-06.csv": "0947b2e6201ba846da13921389956fbf150c238f04be6a137a1a165da1176d2c",
+    "monthly/energy_2025-07.csv": "99cc1c9a2550b82ecf45612d2cae99c9931fee18b542a588558cca7c5543b829",
+    "monthly/energy_2025-08.csv": "edeaa9df40baf2f00041db8d4144c21b6ff7526b56c6bcced7ba6b48add2615f",
+    "monthly/energy_2025-09.csv": "47a628b96c3411cd10bbf6d2d4a5a608bdb09833dc2f85ae4a979478df8f3b2d",
+    "monthly/energy_2025-10.csv": "50b271a0c2e3ddcf1cd9aefd7c2ba5e8a75fadeb8b85496df83ddab973bbb210",
+    "monthly/energy_2025-11.csv": "1dfd29ad58e185f969cfdc79260703de057a4b43dd85d650747a8e48a4363d69",
+    "monthly/energy_2025-12.csv": "fdfe42b81c24fad714f21371f1a58882b940367d215c91c66050bbdedb546c37",
+    "monthly/ev_2025-01.csv": "3df771861f1fc31827e188ebc3a729117d527fd426d8d86662ca8c8a62541812",
+    "monthly/ev_2025-02.csv": "6e22574cc1be1ece87061e06f2e4d53a3200b343c30cea6e8083756339ab50e7",
+    "monthly/ev_2025-03.csv": "b5232615ca865bee752d14a595abd57f06ecb521d1bdb1f6c18aed5c71edb26b",
+    "monthly/ev_2025-04.csv": "299c3b0af0c5a0dbf1a56bed31019d8bdea8bae48d67f53ece005efe6f1b9cba",
+    "monthly/ev_2025-05.csv": "8ae1f85ad784ca552d50249f56006c7f25b4926f32e6e3d49a21fe7dbbbc41a5",
+    "monthly/ev_2025-06.csv": "cad77061ac3e074ba40138206fc3f88a344a4a35d7a43dd34ec95f7403b8c821",
+    "monthly/ev_2025-07.csv": "c9fee7b4f131f4d55db60145ac5a5fd10fa186531bdb2abe2389838cda470ad6",
+    "monthly/ev_2025-08.csv": "c96654db5a58fc24741a114374aa50ceefd46564b5db041332ca584d036a72cb",
+    "monthly/ev_2025-09.csv": "21f1b2b36c074098948169e8b82d8deff4010ad6cab34af4ad59664e32668031",
+    "monthly/ev_2025-10.csv": "341f8c237b1ccf3834848982e9bc9b37ab332e868e96410dd51f9113747e5c85",
+    "monthly/ev_2025-11.csv": "f6127cc05f20dab6bb0a0583e8da34abb8f2ccb11ec9e2034c5aac099a8704bc",
+    "monthly/ev_2025-12.csv": "ad65ea52667bf7e2dd1af3adca0ef7fc34773e299399fd6ce1c1f95261d67322",
+    "monthly_load_breakdown.csv": "679921f9892d9877ba893c32a08d8595646e292c5cf0689bb740ff4df81928f4",
+    "monthly_validation.csv": "da73857910487a59aa982f6e27c3a33bedb4b7ac360776e8064b60fcf71a2cd8",
+    "sessions.csv": "a80596c61c96bd4aca56072c08503d10b4e2aa147472372d75738ab9422f3fd2",
+    "training_split_plan.csv": "0074b441c46d118c55fd3bb6fe83e2c4db98893af67891f8b5f71ba99390fc93"
+  }
+}

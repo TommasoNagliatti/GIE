@@ -1,0 +1,18 @@
+[
+  {
+    "suite": "demo/tests",
+    "run": 6,
+    "passed": 5,
+    "skipped": 0,
+    "success": false,
+    "exit_code": 1
+  },
+  {
+    "suite": "demo/high_autonomy_v2",
+    "run": 2,
+    "passed": 2,
+    "skipped": 0,
+    "success": true,
+    "exit_code": 0
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "motor1": "lightgbm_15",
+  "motor2": "lightgbm",
+  "q90": "frequency",
+  "event_threshold": 0.35,
+  "candidate_event_thresholds": {
+    "persistence": 0.5,
+    "previous_day": 0.5,
+    "previous_week": 0.5,
+    "frequency": 0.35,
+    "zero": 0.5,
+    "lightgbm": 0.35
+  },
+  "detection_unresolved": false,
+  "selection_partition": "validation",
+  "test_used": false,
+  "selected_at": "2026-10-11T20:59:29.093145+00:00",
+  "version": "v1",
+  "station_id": "DEMO_POSTO_24H_001"
+}

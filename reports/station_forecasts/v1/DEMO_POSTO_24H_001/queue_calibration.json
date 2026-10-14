@@ -1,0 +1,72 @@
+[
+  {
+    "low": 0.0,
+    "high": 0.1,
+    "n": 267638,
+    "predicted_mean": 0.028100941528744202,
+    "observed_rate": 0.029431545595169594
+  },
+  {
+    "low": 0.1,
+    "high": 0.2,
+    "n": 11082,
+    "predicted_mean": 0.12056945506802384,
+    "observed_rate": 0.0724598447933586
+  },
+  {
+    "low": 0.2,
+    "high": 0.30000000000000004,
+    "n": 64,
+    "predicted_mean": 0.22064078264189796,
+    "observed_rate": 0.171875
+  },
+  {
+    "low": 0.30000000000000004,
+    "high": 0.4,
+    "n": 0,
+    "predicted_mean": null,
+    "observed_rate": null
+  },
+  {
+    "low": 0.4,
+    "high": 0.5,
+    "n": 0,
+    "predicted_mean": null,
+    "observed_rate": null
+  },
+  {
+    "low": 0.5,
+    "high": 0.6,
+    "n": 0,
+    "predicted_mean": null,
+    "observed_rate": null
+  },
+  {
+    "low": 0.6000000000000001,
+    "high": 0.7000000000000001,
+    "n": 0,
+    "predicted_mean": null,
+    "observed_rate": null
+  },
+  {
+    "low": 0.7000000000000001,
+    "high": 0.8,
+    "n": 0,
+    "predicted_mean": null,
+    "observed_rate": null
+  },
+  {
+    "low": 0.8,
+    "high": 0.9,
+    "n": 0,
+    "predicted_mean": null,
+    "observed_rate": null
+  },
+  {
+    "low": 0.9,
+    "high": 1.0,
+    "n": 0,
+    "predicted_mean": null,
+    "observed_rate": null
+  }
+]

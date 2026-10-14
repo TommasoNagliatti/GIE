@@ -1,0 +1,15 @@
+{
+  "passed": 223,
+  "skipped": 3,
+  "failed": 0,
+  "release_runner": "blocked by preexisting frozen hash mismatch",
+  "core": 161,
+  "control": 50,
+  "dashboard": 4,
+  "demo": 6,
+  "high_autonomy_demo": 2,
+  "notes": [
+    "Initial logs include environment failures; use configured reruns for dashboard/demo.",
+    "No frozen file edited. Snapshot .venv junction points to existing core environment."
+  ]
+}

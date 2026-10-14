@@ -1,0 +1,24 @@
+{
+  "cycles": 672,
+  "verified_steps": 32256,
+  "station_id": "NEW_WEEK",
+  "origin": "SIMULATED",
+  "personalized": false,
+  "source": "deterministic explicit current fixtures, not historical data",
+  "restart_verified": true,
+  "max_balance_error_kw": 7.105427357601002e-15,
+  "max_energy_error_kwh": 1.7763568394002505e-15,
+  "solve_ms_mean": 247.5748702379947,
+  "solve_ms_max": 443.2982000289485,
+  "final_state": {
+    "origin": "SIMULATED",
+    "station_id": "NEW_WEEK",
+    "configuration_sha256": "1f85354435e006e082ee337987c8d01ace390822a9eb09468a76711c53993536",
+    "energy_kwh": {
+      "B": 3.400010869565218
+    },
+    "last_issue": "2026-10-07T23:45:00-04:00",
+    "cycles": 672
+  },
+  "physical_dispatch": false
+}

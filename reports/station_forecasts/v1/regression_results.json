@@ -1,0 +1,86 @@
+[
+  {
+    "suite": "release_runner",
+    "exit_code": 1
+  },
+  {
+    "suite": "tests",
+    "exit_code": 0,
+    "run": 9,
+    "passed": 9,
+    "skipped": 0,
+    "success": true
+  },
+  {
+    "suite": "tests/gie_runtime",
+    "exit_code": 0,
+    "run": 18,
+    "passed": 18,
+    "skipped": 0,
+    "success": true
+  },
+  {
+    "suite": "tests/motor_gerenciamento",
+    "exit_code": 0,
+    "run": 29,
+    "passed": 29,
+    "skipped": 0,
+    "success": true
+  },
+  {
+    "suite": "tests/load_balancer",
+    "exit_code": 0,
+    "run": 24,
+    "passed": 24,
+    "skipped": 0,
+    "success": true
+  },
+  {
+    "suite": "tests/integracoes",
+    "exit_code": 0,
+    "run": 29,
+    "passed": 29,
+    "skipped": 0,
+    "success": true
+  },
+  {
+    "suite": "tests/observabilidade",
+    "exit_code": 0,
+    "run": 20,
+    "passed": 19,
+    "skipped": 1,
+    "success": true
+  },
+  {
+    "suite": "tests/high_autonomy_v2",
+    "exit_code": 0,
+    "run": 18,
+    "passed": 17,
+    "skipped": 1,
+    "success": true
+  },
+  {
+    "suite": "demo/simulation/tests",
+    "exit_code": 0,
+    "run": 17,
+    "passed": 16,
+    "skipped": 1,
+    "success": true
+  },
+  {
+    "suite": "demo/tests",
+    "exit_code": 1,
+    "run": 2,
+    "passed": 0,
+    "skipped": 0,
+    "success": false
+  },
+  {
+    "suite": "demo/high_autonomy_v2",
+    "exit_code": 1,
+    "run": 1,
+    "passed": 0,
+    "skipped": 0,
+    "success": false
+  }
+]

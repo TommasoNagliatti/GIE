@@ -1,0 +1,92 @@
+[
+  {
+    "station_id": "DEMO_POSTO_24H_001",
+    "origin": "SIMULATED",
+    "cycles": 96,
+    "start": "2025-11-01T00:00:00-03:00",
+    "elapsed_seconds": 27.457511199987493,
+    "steps_verified": 4608,
+    "initial_state": {
+      "origin": "SIMULATED",
+      "station_id": "DEMO_POSTO_24H_001",
+      "configuration_sha256": "95f73ee14917c38ddb833a4c8aa6878571bfa14b43f3a520b0ddebd58d349ebd",
+      "energy_kwh": {
+        "BAT_01": 30.7,
+        "BAT_02": 30.7
+      },
+      "last_issue": null,
+      "cycles": 0
+    },
+    "final_state": {
+      "origin": "SIMULATED",
+      "station_id": "DEMO_POSTO_24H_001",
+      "configuration_sha256": "95f73ee14917c38ddb833a4c8aa6878571bfa14b43f3a520b0ddebd58d349ebd",
+      "energy_kwh": {
+        "BAT_01": 12.280000000000001,
+        "BAT_02": 18.82961176668423
+      },
+      "last_issue": "2025-11-01T23:45:00-03:00",
+      "cycles": 96
+    },
+    "restart_after_cycle": 48,
+    "restart_preserved_state": true,
+    "totals_kwh": {
+      "building_kw": 247.52284135719998,
+      "solar_available_kw": 284.3505689202,
+      "solar_used_kw": 284.1864360385873,
+      "solar_curtailed_kw": 0.16413288161267614,
+      "grid_import_kw": 92.82956014794996,
+      "grid_export_kw": 15.384110862036373,
+      "ev_requested_kw": 133.21146100112497,
+      "ev_served_kw": 133.211451001125
+    },
+    "max_balance_error_kw": 8.570921750106208e-14,
+    "max_energy_error_kwh": 1.7763568394002505e-14,
+    "solve_ms_mean": 153.6860468731902,
+    "solve_ms_max": 293.52509998716414,
+    "physical_dispatch": false,
+    "hardware_commands_sent": false
+  },
+  {
+    "station_id": "DEMO_CASA_001",
+    "origin": "SIMULATED",
+    "cycles": 96,
+    "start": "2025-11-01T00:00:00-03:00",
+    "elapsed_seconds": 17.174523600027896,
+    "steps_verified": 4608,
+    "initial_state": {
+      "origin": "SIMULATED",
+      "station_id": "DEMO_CASA_001",
+      "configuration_sha256": "d722a4f0cfd862267cbf6a0c01f22f7991bc5bb6d9f206651606b09763e2bc4d",
+      "energy_kwh": {},
+      "last_issue": null,
+      "cycles": 0
+    },
+    "final_state": {
+      "origin": "SIMULATED",
+      "station_id": "DEMO_CASA_001",
+      "configuration_sha256": "d722a4f0cfd862267cbf6a0c01f22f7991bc5bb6d9f206651606b09763e2bc4d",
+      "energy_kwh": {},
+      "last_issue": "2025-11-01T23:45:00-03:00",
+      "cycles": 96
+    },
+    "restart_after_cycle": 48,
+    "restart_preserved_state": true,
+    "totals_kwh": {
+      "building_kw": 8.308833333425,
+      "solar_available_kw": 31.2785625812,
+      "solar_used_kw": 31.27809258120005,
+      "solar_curtailed_kw": 0.00046999999995323005,
+      "grid_import_kw": 23.68701682827507,
+      "grid_export_kw": 28.160638299225045,
+      "ev_requested_kw": 18.495697776825,
+      "ev_served_kw": 18.495637776825067
+    },
+    "max_balance_error_kw": 6.838973831690964e-14,
+    "max_energy_error_kwh": 0.0,
+    "solve_ms_mean": 49.539977086775856,
+    "solve_ms_max": 103.1155000673607,
+    "physical_dispatch": false,
+    "hardware_commands_sent": false
+  }
+]

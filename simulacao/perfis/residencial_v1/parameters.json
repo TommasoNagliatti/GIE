@@ -1,0 +1,61 @@
+{
+  "station_id": "DEMO_CASA_001",
+  "seed": 240202,
+  "n_evse": 1,
+  "evse_kw": 7.0,
+  "pv_kwp": 5.5,
+  "inverter_kw": 6.0,
+  "area": 80.0,
+  "expected_range": [
+    180,
+    450
+  ],
+  "profile": "residencial_v1",
+  "loads": {
+    "fridge": {
+      "kw": 0.14,
+      "lost": 0,
+      "expected_daily_kwh": 1.512
+    },
+    "standby": {
+      "kw": 0.035,
+      "lost": 0,
+      "expected_daily_kwh": 0.84
+    },
+    "lights": {
+      "kw": 0.22,
+      "lost": 0,
+      "expected_daily_kwh": 1.1
+    },
+    "tv": {
+      "kw": 0.18,
+      "lost": 0,
+      "expected_daily_kwh": 0.7714285714285714
+    },
+    "fan": {
+      "kw": 0.075,
+      "lost": 0,
+      "expected_daily_kwh": 0.2625
+    },
+    "washer": {
+      "kw": 0.45,
+      "lost": 0.5,
+      "expected_daily_kwh": 0.17678571428571427
+    },
+    "kitchen": {
+      "kw": 1.2,
+      "lost": 0.3,
+      "expected_daily_kwh": 0.54
+    },
+    "shower": {
+      "kw": 5.5,
+      "lost": 0.98,
+      "expected_daily_kwh": 2.2
+    },
+    "appliances": {
+      "kw": 0.35,
+      "lost": 0.2,
+      "expected_daily_kwh": 0.35
+    }
+  }
+}

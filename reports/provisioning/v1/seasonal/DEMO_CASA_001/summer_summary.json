@@ -1,0 +1,37 @@
+{
+  "station_id": "DEMO_CASA_001",
+  "season": "summer",
+  "start": "2025-02-10T00:00:00-03:00",
+  "cycles": 96,
+  "verified_steps": 4608,
+  "restart_verified": true,
+  "initial_state": {
+    "origin": "SIMULATED",
+    "station_id": "DEMO_CASA_001",
+    "configuration_sha256": "d722a4f0cfd862267cbf6a0c01f22f7991bc5bb6d9f206651606b09763e2bc4d",
+    "energy_kwh": {},
+    "last_issue": null,
+    "cycles": 0
+  },
+  "final_state": {
+    "origin": "SIMULATED",
+    "station_id": "DEMO_CASA_001",
+    "configuration_sha256": "d722a4f0cfd862267cbf6a0c01f22f7991bc5bb6d9f206651606b09763e2bc4d",
+    "energy_kwh": {},
+    "last_issue": "2025-02-10T23:45:00-03:00",
+    "cycles": 96
+  },
+  "max_balance_error_kw": 6.106226635438361e-16,
+  "max_energy_error_kwh": 0.0,
+  "solve_ms_mean": 192.79296353367195,
+  "solve_ms_max": 286.56359994784,
+  "totals_kwh": {
+    "building_kw": 7.9323333332749995,
+    "ev_requested_kw": 0.0,
+    "ev_served_kw": 0.0,
+    "solar_used_kw": 31.397107328324932,
+    "grid_import_kw": 5.419375193175,
+    "grid_export_kw": 28.884149188224928
+  },
+  "physical_dispatch": false
+}

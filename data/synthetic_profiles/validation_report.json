@@ -1,0 +1,53 @@
+{
+  "success": true,
+  "tests_run": 19,
+  "failures": 0,
+  "errors": 0,
+  "energyplus_deterministic_replay": {
+    "posto_24h_v1": {
+      "eplusout.csv": true,
+      "eplusmtr.csv": true
+    },
+    "residencial_v1": {
+      "eplusout.csv": true,
+      "eplusmtr.csv": true
+    }
+  },
+  "original_files_checked": 454,
+  "original_changed": [],
+  "frozen_manifest_entries": 221,
+  "preexisting_frozen_mismatches": [
+    "demo/high_autonomy_v2/app.py"
+  ],
+  "summary": {
+    "posto_24h_v1": {
+      "rows": 35040,
+      "building_annual_kwh": 85791.8520369158,
+      "monthly_min_kwh": 6737.1872634525,
+      "monthly_max_kwh": 7649.9950545832,
+      "ev_annual_ac_kwh": 39495.743930407,
+      "sessions": 2289,
+      "mean_ev_occupancy_pct": 29.307933789954358,
+      "unmet_session_energy_kwh": 12998.6108087031,
+      "termination_reasons": {
+        "target_reached": 1245,
+        "departure_before_target": 840,
+        "wait_timeout": 203,
+        "queue_full": 1
+      }
+    },
+    "residencial_v1": {
+      "rows": 35040,
+      "building_annual_kwh": 2794.5579281403,
+      "monthly_min_kwh": 218.1715423409,
+      "monthly_max_kwh": 245.6654745131,
+      "ev_annual_ac_kwh": 756.4236898173999,
+      "sessions": 42,
+      "mean_ev_occupancy_pct": 4.104832572298328,
+      "unmet_session_energy_kwh": 0.0,
+      "termination_reasons": {
+        "target_reached": 42
+      }
+    }
+  }
+}

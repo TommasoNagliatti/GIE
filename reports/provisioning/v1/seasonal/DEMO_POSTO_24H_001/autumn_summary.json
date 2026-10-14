@@ -1,0 +1,43 @@
+{
+  "station_id": "DEMO_POSTO_24H_001",
+  "season": "autumn",
+  "start": "2025-05-10T00:00:00-03:00",
+  "cycles": 96,
+  "verified_steps": 4608,
+  "restart_verified": true,
+  "initial_state": {
+    "origin": "SIMULATED",
+    "station_id": "DEMO_POSTO_24H_001",
+    "configuration_sha256": "95f73ee14917c38ddb833a4c8aa6878571bfa14b43f3a520b0ddebd58d349ebd",
+    "energy_kwh": {
+      "BAT_01": 30.7,
+      "BAT_02": 30.7
+    },
+    "last_issue": null,
+    "cycles": 0
+  },
+  "final_state": {
+    "origin": "SIMULATED",
+    "station_id": "DEMO_POSTO_24H_001",
+    "configuration_sha256": "95f73ee14917c38ddb833a4c8aa6878571bfa14b43f3a520b0ddebd58d349ebd",
+    "energy_kwh": {
+      "BAT_01": 12.280000000000001,
+      "BAT_02": 12.280000000000001
+    },
+    "last_issue": "2025-05-10T23:45:00-03:00",
+    "cycles": 96
+  },
+  "max_balance_error_kw": 1.3145040611561853e-13,
+  "max_energy_error_kwh": 3.907985046680551e-14,
+  "solve_ms_mean": 634.292477091852,
+  "solve_ms_max": 1205.7203999720514,
+  "totals_kwh": {
+    "building_kw": 228.0457437963,
+    "ev_requested_kw": 149.85305654855,
+    "ev_served_kw": 149.85286654854997,
+    "solar_used_kw": 183.424512932525,
+    "grid_import_kw": 164.15066686771348,
+    "grid_export_kw": 3.240997150516513e-06
+  },
+  "physical_dispatch": false
+}

@@ -1,0 +1,211 @@
+{
+  "config": {
+    "station_id": "DEMO_CASA_001",
+    "profile": "residencial_v1",
+    "timezone": "America/Sao_Paulo",
+    "location": {
+      "name": "Itirapina/SP — hypothetical site",
+      "latitude": -22.25,
+      "longitude": -47.82,
+      "weather_proxy": "Sao Carlos station 868450; regional proxy, not local measurements"
+    },
+    "step_minutes": 15,
+    "horizons": 48,
+    "dataset_dir": "data/synthetic_profiles/residencial_v1",
+    "n_evse": 1,
+    "evse_kw": [
+      7.0
+    ],
+    "ev_limit_kw": 7.0,
+    "queue_limit": 3,
+    "minimum_history": 2689,
+    "schema": "emps-forecast-v1",
+    "seed": 20261011,
+    "origin": "SIMULATED",
+    "periods": {
+      "train": [
+        "2025-01-01",
+        "2025-09-01"
+      ],
+      "validation": [
+        "2025-09-01",
+        "2025-11-01"
+      ],
+      "test": [
+        "2025-11-01",
+        "2026-01-01"
+      ]
+    }
+  },
+  "versions": {
+    "python": "3.12.14",
+    "lightgbm": "4.7.0",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5"
+  },
+  "feature_names": [
+    "horizon",
+    "target_slot",
+    "target_dow",
+    "target_month",
+    "target_hour_sin",
+    "target_hour_cos",
+    "consumo_predio_kw_now",
+    "consumo_predio_kw_lag1",
+    "consumo_predio_kw_lag4",
+    "consumo_predio_kw_lag16",
+    "consumo_predio_kw_lag96",
+    "consumo_predio_kw_lag672",
+    "consumo_predio_kw_mean4",
+    "consumo_predio_kw_mean16",
+    "consumo_predio_kw_mean96",
+    "consumo_predio_kw_previous_day_target",
+    "consumo_predio_kw_previous_week_target",
+    "potencia_solicitada_kw_now",
+    "potencia_solicitada_kw_lag1",
+    "potencia_solicitada_kw_lag4",
+    "potencia_solicitada_kw_lag16",
+    "potencia_solicitada_kw_lag96",
+    "potencia_solicitada_kw_lag672",
+    "potencia_solicitada_kw_mean4",
+    "potencia_solicitada_kw_mean16",
+    "potencia_solicitada_kw_mean96",
+    "potencia_solicitada_kw_previous_day_target",
+    "potencia_solicitada_kw_previous_week_target",
+    "carregadores_ocupados_now",
+    "carregadores_ocupados_lag1",
+    "carregadores_ocupados_lag4",
+    "carregadores_ocupados_lag16",
+    "carregadores_ocupados_lag96",
+    "carregadores_ocupados_lag672",
+    "carregadores_ocupados_mean4",
+    "carregadores_ocupados_mean16",
+    "carregadores_ocupados_mean96",
+    "carregadores_ocupados_previous_day_target",
+    "carregadores_ocupados_previous_week_target",
+    "carros_chegando_now",
+    "carros_chegando_lag1",
+    "carros_chegando_lag4",
+    "carros_chegando_lag16",
+    "carros_chegando_lag96",
+    "carros_chegando_lag672",
+    "carros_chegando_mean4",
+    "carros_chegando_mean16",
+    "carros_chegando_mean96",
+    "carros_chegando_previous_day_target",
+    "carros_chegando_previous_week_target",
+    "carros_na_fila_now",
+    "carros_na_fila_lag1",
+    "carros_na_fila_lag4",
+    "carros_na_fila_lag16",
+    "carros_na_fila_lag96",
+    "carros_na_fila_lag672",
+    "carros_na_fila_mean4",
+    "carros_na_fila_mean16",
+    "carros_na_fila_mean96",
+    "carros_na_fila_previous_day_target",
+    "carros_na_fila_previous_week_target",
+    "potencia_entregue_kw_now",
+    "potencia_entregue_kw_lag1",
+    "potencia_entregue_kw_lag4",
+    "potencia_entregue_kw_lag16",
+    "potencia_entregue_kw_lag96",
+    "potencia_entregue_kw_lag672",
+    "potencia_entregue_kw_mean4",
+    "potencia_entregue_kw_mean16",
+    "potencia_entregue_kw_mean96",
+    "potencia_entregue_kw_previous_day_target",
+    "potencia_entregue_kw_previous_week_target",
+    "temperatura_externa_c_known",
+    "umidade_relativa_pct_known",
+    "weather_age_minutes"
+  ],
+  "parameters": {
+    "learning_rate": 0.05,
+    "min_data_in_leaf": 100,
+    "lambda_l2": 2.0,
+    "max_bin": 63,
+    "seed": 20261011,
+    "num_threads": 2,
+    "deterministic": true,
+    "force_col_wise": true,
+    "verbosity": -1
+  },
+  "train_origins": 5148,
+  "validation_origins": 5808,
+  "train_examples": 247104,
+  "validation_examples": 278784,
+  "train_origin_stride": 4,
+  "validation_origin_stride": 1,
+  "train_peak_p90_kw": 0.5656666667,
+  "models": {
+    "building_15": {
+      "file": "building_15.txt",
+      "sha256": "98d079ad65faf15269125efd93a110b10e320ff68ea77a5d2b04cab5e7cde6db",
+      "trees": 104
+    },
+    "building_31": {
+      "file": "building_31.txt",
+      "sha256": "0be42bc642aecdaa6bb7b60cb8150da56d0ba8d64e407ef79a1ca418dcdfda6e",
+      "trees": 97
+    },
+    "power": {
+      "file": "power.txt",
+      "sha256": "ea4c8a480881122b6853521b5dcdc14b75bfd299c89b40a95f415c02844ae710",
+      "trees": 25
+    },
+    "occupancy": {
+      "file": "occupancy.txt",
+      "sha256": "663ce559509224aadce169deb86b98efb5fd9afd087316ad3a402d49189f3ce2",
+      "trees": 51
+    },
+    "arrivals": {
+      "file": "arrivals.txt",
+      "sha256": "e9d8d31db9304e437694c178d859843fb98645f1bb5b75f1c4f84d1311eaf0b2",
+      "trees": 1
+    },
+    "queue": {
+      "constant": 0.0
+    },
+    "risk": {
+      "constant": 0.0
+    },
+    "event": {
+      "file": "event.txt",
+      "sha256": "73a34a0773d27340224053fa2b6d0bc37e02acce2dc4213a8cc7a25675b72c57",
+      "trees": 57
+    },
+    "q90": {
+      "file": "q90.txt",
+      "sha256": "9f4d19a4f0337bd29042a58525fb56622ea62f0ba654a2c1ce958292289a543a",
+      "trees": 69
+    }
+  },
+  "all_data_synthetic": true,
+  "test_used": false,
+  "created_at": "2026-10-12T12:55:10.609612+00:00",
+  "source_manifest_sha256": "36d77287924f7d4011c9ebb954adc87735f5d779361afb684d31dc148169fb9c",
+  "input_hashes": {
+    "data\\synthetic_profiles\\residencial_v1\\monthly\\building_2025-01.csv": "7d357707b074e24277c2f245992251ef7774de74780f664a8664052b8002b974",
+    "data\\synthetic_profiles\\residencial_v1\\monthly\\building_2025-02.csv": "b10059d819dd8e554582809ee2f0dd6f212d2ccd886e949484887f0377f671f2",
+    "data\\synthetic_profiles\\residencial_v1\\monthly\\building_2025-03.csv": "af13f89af51a885258337b7737cf16a4d319a7e1a719efdd383248606794bd49",
+    "data\\synthetic_profiles\\residencial_v1\\monthly\\building_2025-04.csv": "035d6ff9493b0cfbf08891298ea5bd67da75d1a33d4ce0dad6130db607346841",
+    "data\\synthetic_profiles\\residencial_v1\\monthly\\building_2025-05.csv": "497755a8cb84b311a54ab1dc3fd6387c1244d5ed8f4a23229aad1092f0d4329b",
+    "data\\synthetic_profiles\\residencial_v1\\monthly\\building_2025-06.csv": "1335a7dd346e1aaec998f79cb0388387020b5c487008b79a66626e2c95a48fc8",
+    "data\\synthetic_profiles\\residencial_v1\\monthly\\building_2025-07.csv": "c04dfd55d118e4074b2bad69896b89477a062d401f7ea817f0b04e30ef4de195",
+    "data\\synthetic_profiles\\residencial_v1\\monthly\\building_2025-08.csv": "d6e2e4f631bbe6eab64c689cae7df9d3e761d3de1e1c5aee7b37a814b371a061",
+    "data\\synthetic_profiles\\residencial_v1\\monthly\\building_2025-09.csv": "3bbbe80c7ac9d2a5657dca17db6237274582e8e46b843d6709a63ce5319dd7ba",
+    "data\\synthetic_profiles\\residencial_v1\\monthly\\building_2025-10.csv": "5b5d4eec5723f21497fd7c9bedfb74e9e18346b50d020f2ec18331746d56533b",
+    "data\\synthetic_profiles\\residencial_v1\\monthly\\ev_2025-01.csv": "3df771861f1fc31827e188ebc3a729117d527fd426d8d86662ca8c8a62541812",
+    "data\\synthetic_profiles\\residencial_v1\\monthly\\ev_2025-02.csv": "6e22574cc1be1ece87061e06f2e4d53a3200b343c30cea6e8083756339ab50e7",
+    "data\\synthetic_profiles\\residencial_v1\\monthly\\ev_2025-03.csv": "b5232615ca865bee752d14a595abd57f06ecb521d1bdb1f6c18aed5c71edb26b",
+    "data\\synthetic_profiles\\residencial_v1\\monthly\\ev_2025-04.csv": "299c3b0af0c5a0dbf1a56bed31019d8bdea8bae48d67f53ece005efe6f1b9cba",
+    "data\\synthetic_profiles\\residencial_v1\\monthly\\ev_2025-05.csv": "8ae1f85ad784ca552d50249f56006c7f25b4926f32e6e3d49a21fe7dbbbc41a5",
+    "data\\synthetic_profiles\\residencial_v1\\monthly\\ev_2025-06.csv": "cad77061ac3e074ba40138206fc3f88a344a4a35d7a43dd34ec95f7403b8c821",
+    "data\\synthetic_profiles\\residencial_v1\\monthly\\ev_2025-07.csv": "c9fee7b4f131f4d55db60145ac5a5fd10fa186531bdb2abe2389838cda470ad6",
+    "data\\synthetic_profiles\\residencial_v1\\monthly\\ev_2025-08.csv": "c96654db5a58fc24741a114374aa50ceefd46564b5db041332ca584d036a72cb",
+    "data\\synthetic_profiles\\residencial_v1\\monthly\\ev_2025-09.csv": "21f1b2b36c074098948169e8b82d8deff4010ad6cab34af4ad59664e32668031",
+    "data\\synthetic_profiles\\residencial_v1\\monthly\\ev_2025-10.csv": "341f8c237b1ccf3834848982e9bc9b37ab332e868e96410dd51f9113747e5c85"
+  },
+  "training_fingerprint": "a4f278559f06c0a5344caba327882f17c20667e7a498cfbfaf4ba6639f9f9b53"
+}

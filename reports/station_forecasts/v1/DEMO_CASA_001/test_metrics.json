@@ -1,0 +1,587 @@
+{
+  "station_id": "DEMO_CASA_001",
+  "all_data_synthetic": true,
+  "selection": {
+    "motor1": "lightgbm_31",
+    "motor2": "lightgbm",
+    "q90": "lightgbm",
+    "event_threshold": 0.35,
+    "candidate_event_thresholds": {
+      "persistence": 0.5,
+      "previous_day": 0.5,
+      "previous_week": 0.5,
+      "frequency": 0.05,
+      "zero": 0.5,
+      "lightgbm": 0.35
+    },
+    "detection_unresolved": false,
+    "selection_partition": "validation",
+    "test_used": false,
+    "selected_at": "2026-10-12T12:55:26.772319+00:00",
+    "version": "v1",
+    "station_id": "DEMO_CASA_001"
+  },
+  "freeze_sha256": "ede87b6b8bf02f5ae1e5b60e84b617e8c13361acd0ef9cb006ae8996598a2d84",
+  "started_at": "2026-10-12T12:59:22.648625+00:00",
+  "finished_at": "2026-10-12T12:59:39.380581+00:00",
+  "origins": 5808,
+  "overlapping_origin_horizon_rows": 278784,
+  "independent_arrivals": 7,
+  "connected_sessions": 7,
+  "motor1": {
+    "persistence": {
+      "n": 278784,
+      "mae": 0.39668155162778207,
+      "rmse": 0.8056769024026093,
+      "wape": 1.2267510028823772,
+      "peak": {
+        "n": 30964,
+        "mae": 1.2931396791186767,
+        "rmse": 1.6910948910632915,
+        "wape": 0.8699917054374793
+      },
+      "peak_threshold_kw": 0.5656666667
+    },
+    "previous_day": {
+      "n": 278784,
+      "mae": 0.1962806243784636,
+      "rmse": 0.572425906371103,
+      "wape": 0.6070044140308227,
+      "peak": {
+        "n": 30964,
+        "mae": 0.8945162693715283,
+        "rmse": 1.346870184182422,
+        "wape": 0.6018079464257835
+      },
+      "peak_threshold_kw": 0.5656666667
+    },
+    "previous_week": {
+      "n": 278784,
+      "mae": 0.17396767809532435,
+      "rmse": 0.522449938652537,
+      "wape": 0.5380008792866962,
+      "peak": {
+        "n": 30964,
+        "mae": 0.7698684633114907,
+        "rmse": 1.2030024505626138,
+        "wape": 0.5179480516871735
+      },
+      "peak_threshold_kw": 0.5656666667
+    },
+    "lightgbm_15": {
+      "n": 278784,
+      "mae": 0.166109596304655,
+      "rmse": 0.403587425386976,
+      "wape": 0.5136994977934606,
+      "peak": {
+        "n": 30964,
+        "mae": 0.7064740476248098,
+        "rmse": 1.0132093464496916,
+        "wape": 0.47529789044855414
+      },
+      "peak_threshold_kw": 0.5656666667
+    },
+    "lightgbm_31": {
+      "n": 278784,
+      "mae": 0.1656904562769326,
+      "rmse": 0.40787651055751856,
+      "wape": 0.512403293200011,
+      "peak": {
+        "n": 30964,
+        "mae": 0.7075519361201206,
+        "rmse": 1.0176954699380256,
+        "wape": 0.47602306659576354
+      },
+      "peak_threshold_kw": 0.5656666667
+    }
+  },
+  "motor2": {
+    "persistence": {
+      "power": {
+        "n": 278784,
+        "mae": 0.1396305020975171,
+        "rmse": 0.9709183962312931,
+        "wape": 1.8204561268093609
+      },
+      "active": {
+        "n": 3408,
+        "mae": 5.793461881169718,
+        "rmse": 6.244369457099691,
+        "wape": 0.9233573530435835
+      },
+      "connected": {
+        "n": 12624,
+        "mae": 2.5172566626387676,
+        "rmse": 4.1203755251077,
+        "wape": 1.4861291641495693
+      },
+      "idle": {
+        "n": 275376,
+        "mae": 0.06965978082958499,
+        "rmse": 0.6868694918968152,
+        "wape": null
+      },
+      "detection": {
+        "positives": 3408,
+        "predicted_positives": 3408,
+        "tp": 341,
+        "fp": 3067,
+        "fn": 3067,
+        "precision": 0.10005868544600939,
+        "recall": 0.10005868544600939,
+        "f1": 0.10005868544600939
+      },
+      "event_threshold": 0.5,
+      "peaks": 2880,
+      "peaks_missed": 2638,
+      "peak": {
+        "n": 2880,
+        "mae": 6.343191585970556,
+        "rmse": 6.638277344461054,
+        "wape": 0.9097809930910293
+      },
+      "occupancy": {
+        "n": 278784,
+        "mae": 0.05592860422405877,
+        "rmse": 0.23649229210284797,
+        "wape": 1.23510773130545
+      },
+      "arrivals": {
+        "n": 278784,
+        "mae": 0.0024104683195592287,
+        "rmse": 0.04909652044248379,
+        "wape": 2.0
+      },
+      "queue": {
+        "n": 278784,
+        "mae": 0.0,
+        "rmse": 0.0,
+        "wape": null
+      },
+      "queue_risk": {
+        "positives": 0,
+        "predicted_positives": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "brier": 0.0,
+        "logloss": 1.0000000494736474e-07
+      },
+      "selection_score": 0.5087885358839207,
+      "no_queue_positives": true
+    },
+    "previous_day": {
+      "power": {
+        "n": 278784,
+        "mae": 0.1534016668034091,
+        "rmse": 1.0192618059105163,
+        "wape": 2.0000000000000004
+      },
+      "active": {
+        "n": 3408,
+        "mae": 6.274344230945071,
+        "rmse": 6.518608253107381,
+        "wape": 1.0
+      },
+      "connected": {
+        "n": 12624,
+        "mae": 1.6938343741334598,
+        "rmse": 3.386929698927821,
+        "wape": 1.0
+      },
+      "idle": {
+        "n": 275376,
+        "mae": 0.07765006804899774,
+        "rmse": 0.725173009545952,
+        "wape": null
+      },
+      "detection": {
+        "positives": 3408,
+        "predicted_positives": 3408,
+        "tp": 0,
+        "fp": 3408,
+        "fn": 3408,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "event_threshold": 0.5,
+      "peaks": 2880,
+      "peaks_missed": 2880,
+      "peak": {
+        "n": 2880,
+        "mae": 6.97221818673,
+        "rmse": 6.973326520115108,
+        "wape": 1.0
+      },
+      "occupancy": {
+        "n": 278784,
+        "mae": 0.09056473829201102,
+        "rmse": 0.3009397585763819,
+        "wape": 2.0
+      },
+      "arrivals": {
+        "n": 278784,
+        "mae": 0.0024104683195592287,
+        "rmse": 0.04909652044248379,
+        "wape": 2.0
+      },
+      "queue": {
+        "n": 278784,
+        "mae": 0.0,
+        "rmse": 0.0,
+        "wape": null
+      },
+      "queue_risk": {
+        "positives": 0,
+        "predicted_positives": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "brier": 0.0,
+        "logloss": 1.0000000494736474e-07
+      },
+      "selection_score": 0.5537138784995763,
+      "no_queue_positives": true
+    },
+    "previous_week": {
+      "power": {
+        "n": 278784,
+        "mae": 0.1424729273724823,
+        "rmse": 0.9741026063625352,
+        "wape": 1.8575147238141494
+      },
+      "active": {
+        "n": 3408,
+        "mae": 5.403470896411267,
+        "rmse": 6.013287522120745,
+        "wape": 0.8612008996512088
+      },
+      "connected": {
+        "n": 12624,
+        "mae": 1.5843130309771862,
+        "rmse": 3.256238947302582,
+        "wape": 0.935341173358639
+      },
+      "idle": {
+        "n": 275376,
+        "mae": 0.07736383624440947,
+        "rmse": 0.7163200814035101,
+        "wape": null
+      },
+      "detection": {
+        "positives": 3408,
+        "predicted_positives": 4069,
+        "tp": 576,
+        "fp": 3493,
+        "fn": 2832,
+        "precision": 0.1415581223887933,
+        "recall": 0.16901408450704225,
+        "f1": 0.1540724889661629
+      },
+      "event_threshold": 0.5,
+      "peaks": 2880,
+      "peaks_missed": 2448,
+      "peak": {
+        "n": 2880,
+        "mae": 5.872222222221667,
+        "rmse": 6.3755342383199425,
+        "wape": 0.8422315631771363
+      },
+      "occupancy": {
+        "n": 278784,
+        "mae": 0.07555670339761249,
+        "rmse": 0.27487579631101117,
+        "wape": 1.6685678073510772
+      },
+      "arrivals": {
+        "n": 278784,
+        "mae": 0.002640036730945822,
+        "rmse": 0.051381287750949,
+        "wape": 2.1904761904761907
+      },
+      "queue": {
+        "n": 278784,
+        "mae": 0.0,
+        "rmse": 0.0,
+        "wape": null
+      },
+      "queue_risk": {
+        "positives": 0,
+        "predicted_positives": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "brier": 0.0,
+        "logloss": 1.0000000494736474e-07
+      },
+      "selection_score": 0.47608094629307496,
+      "no_queue_positives": true
+    },
+    "frequency": {
+      "power": {
+        "n": 278784,
+        "mae": 0.15977477923054784,
+        "rmse": 0.7020256051963655,
+        "wape": 2.0830905238507764
+      },
+      "active": {
+        "n": 3408,
+        "mae": 5.865782752051318,
+        "rmse": 6.117700367757912,
+        "wape": 0.9348837960023412
+      },
+      "connected": {
+        "n": 12624,
+        "mae": 1.6401425165308243,
+        "rmse": 3.1812346003118397,
+        "wape": 0.9683015893274077
+      },
+      "idle": {
+        "n": 275376,
+        "mae": 0.08915833055174799,
+        "rmse": 0.18910084600262123,
+        "wape": null
+      },
+      "detection": {
+        "positives": 3408,
+        "predicted_positives": 38024,
+        "tp": 2448,
+        "fp": 35576,
+        "fn": 960,
+        "precision": 0.06438039133179045,
+        "recall": 0.7183098591549296,
+        "f1": 0.11816953079745124
+      },
+      "event_threshold": 0.05,
+      "peaks": 2880,
+      "peaks_missed": 2880,
+      "peak": {
+        "n": 2880,
+        "mae": 6.5455849565211865,
+        "rmse": 6.548610676152974,
+        "wape": 0.9388095411269816
+      },
+      "occupancy": {
+        "n": 278784,
+        "mae": 0.07804064252049117,
+        "rmse": 0.20406801270415734,
+        "wape": 1.7234222500342689
+      },
+      "arrivals": {
+        "n": 278784,
+        "mae": 0.002377445801229684,
+        "rmse": 0.03452415011659131,
+        "wape": 1.972600744791715
+      },
+      "queue": {
+        "n": 278784,
+        "mae": 0.0,
+        "rmse": 0.0,
+        "wape": null
+      },
+      "queue_risk": {
+        "positives": 0,
+        "predicted_positives": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "brier": 0.0,
+        "logloss": 1.0000000494736474e-07
+      },
+      "selection_score": 0.5135359813919025,
+      "no_queue_positives": true
+    },
+    "zero": {
+      "power": {
+        "n": 278784,
+        "mae": 0.07670083340170454,
+        "rmse": 0.7207269347637727,
+        "wape": 1.0
+      },
+      "active": {
+        "n": 3408,
+        "mae": 6.274344230945071,
+        "rmse": 6.518608253107381,
+        "wape": 1.0
+      },
+      "connected": {
+        "n": 12624,
+        "mae": 1.6938343741334598,
+        "rmse": 3.386929698927821,
+        "wape": 1.0
+      },
+      "idle": {
+        "n": 275376,
+        "mae": 0.0,
+        "rmse": 0.0,
+        "wape": null
+      },
+      "detection": {
+        "positives": 3408,
+        "predicted_positives": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 3408,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "event_threshold": 0.5,
+      "peaks": 2880,
+      "peaks_missed": 2880,
+      "peak": {
+        "n": 2880,
+        "mae": 6.97221818673,
+        "rmse": 6.973326520115108,
+        "wape": 1.0
+      },
+      "occupancy": {
+        "n": 278784,
+        "mae": 0.04528236914600551,
+        "rmse": 0.2127965440180021,
+        "wape": 1.0
+      },
+      "arrivals": {
+        "n": 278784,
+        "mae": 0.0012052341597796144,
+        "rmse": 0.034716482537544245,
+        "wape": 1.0
+      },
+      "queue": {
+        "n": 278784,
+        "mae": 0.0,
+        "rmse": 0.0,
+        "wape": null
+      },
+      "queue_risk": {
+        "positives": 0,
+        "predicted_positives": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "brier": 0.0,
+        "logloss": 1.0000000494736474e-07
+      },
+      "selection_score": 0.5481674450675051,
+      "no_queue_positives": true
+    },
+    "lightgbm": {
+      "power": {
+        "n": 278784,
+        "mae": 0.15491806728061433,
+        "rmse": 0.6847105981708752,
+        "wape": 2.019770325952828
+      },
+      "active": {
+        "n": 3408,
+        "mae": 5.707483739519724,
+        "rmse": 6.022625960235945,
+        "wape": 0.9096542251173294
+      },
+      "connected": {
+        "n": 12624,
+        "mae": 1.6311977483031537,
+        "rmse": 3.14671689971752,
+        "wape": 0.9630208084173812
+      },
+      "idle": {
+        "n": 275376,
+        "mae": 0.08620059077216449,
+        "rmse": 0.16042195440450918,
+        "wape": null
+      },
+      "detection": {
+        "positives": 3408,
+        "predicted_positives": 457,
+        "tp": 231,
+        "fp": 226,
+        "fn": 3177,
+        "precision": 0.5054704595185996,
+        "recall": 0.06778169014084508,
+        "f1": 0.11953428201811125
+      },
+      "event_threshold": 0.35,
+      "peaks": 2880,
+      "peaks_missed": 2880,
+      "peak": {
+        "n": 2880,
+        "mae": 6.341193881857473,
+        "rmse": 6.439666579857828,
+        "wape": 0.9094944696261033
+      },
+      "occupancy": {
+        "n": 278784,
+        "mae": 0.06016189096332102,
+        "rmse": 0.17097476387996433,
+        "wape": 1.3285941548097662
+      },
+      "arrivals": {
+        "n": 278784,
+        "mae": 0.0023824398137497834,
+        "rmse": 0.0346888182422727,
+        "wape": 1.9767443483226774
+      },
+      "queue": {
+        "n": 278784,
+        "mae": 0.0,
+        "rmse": 0.0,
+        "wape": null
+      },
+      "queue_risk": {
+        "positives": 0,
+        "predicted_positives": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "brier": 0.0,
+        "logloss": 1.0000000494736474e-07
+      },
+      "selection_score": 0.501881166819038,
+      "no_queue_positives": true
+    }
+  },
+  "q90": {
+    "frequency": {
+      "pinball": 0.0690307500615341,
+      "raw_coverage": 0.987775482093664,
+      "upper_coverage": 0.9879225493572085,
+      "active_raw_coverage": 0.0,
+      "crossing_rate": 1.0,
+      "mean_raw_kw": 0.0,
+      "mean_upper_kw": 0.09255145460153716
+    },
+    "lightgbm": {
+      "pinball": 0.06536930562760374,
+      "raw_coverage": 0.9880337465564738,
+      "upper_coverage": 0.9880373335629018,
+      "active_raw_coverage": 0.02112676056338028,
+      "crossing_rate": 0.9919256485307621,
+      "mean_raw_kw": 0.03569540765734584,
+      "mean_upper_kw": 0.11799363898029962
+    }
+  },
+  "notes": [
+    "Session diagnostics use aggregate site power; cannot attribute shared station load to one EV.",
+    "Overlapping forecast rows are not independent EV sessions.",
+    "All choices and probability thresholds frozen before reading test."
+  ]
+}

@@ -1,0 +1,370 @@
+{
+  "transport": "real loopback HTTP",
+  "port": 65096,
+  "station_count": 3,
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/v1/health",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/v1/stations",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/v1/stations/Commercial_HighAutonomy_V2/initialize",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/v1/stations/DEMO_POSTO_24H_001/initialize",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/v1/stations/DEMO_CASA_001/initialize",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/v1/stations/DEMO_CASA_001/cycle",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/v1/stations/DEMO_POSTO_24H_001/cycle",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/v1/stations/Commercial_HighAutonomy_V2/cycle",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/v1/stations/Commercial_HighAutonomy_V2/state",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/v1/stations/Commercial_HighAutonomy_V2/health",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/v1/stations/DEMO_POSTO_24H_001/state",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/v1/stations/DEMO_POSTO_24H_001/health",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/v1/stations/DEMO_CASA_001/state",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/v1/stations/DEMO_CASA_001/health",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/v1/stations/Commercial_HighAutonomy_V2/mode",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/v1/stations/Commercial_HighAutonomy_V2/presentation",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/v1/stations/Commercial_HighAutonomy_V2/presentation",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/v1/stations/Commercial_HighAutonomy_V2/presentation",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/v1/stations/Commercial_HighAutonomy_V2/presentation",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/v1/stations/Commercial_HighAutonomy_V2/stop",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/v1/stations/DEMO_POSTO_24H_001/stop",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/v1/stations/DEMO_CASA_001/stop",
+      "status": 200
+    }
+  ],
+  "stations": [
+    {
+      "station_id": "Commercial_HighAutonomy_V2",
+      "pid": 25684,
+      "generation": "00abf314-dae3-48e6-8e0b-5a3995bb213a",
+      "model_identity": {
+        "station_id": "Commercial_HighAutonomy_V2",
+        "motor1": "motor_consumo frozen hybrid",
+        "motor2": "motor_carregadores_v2 frozen selector",
+        "policy": "Commercial_HighAutonomy_V2"
+      },
+      "capabilities": {
+        "forecasts": true,
+        "mpc_demo": true,
+        "physical_dispatch": false,
+        "load_balancer": true,
+        "presentation": true,
+        "manual_demo": true
+      },
+      "history": [
+        {
+          "station_id": "Commercial_HighAutonomy_V2",
+          "issue_time": "2026-06-15T12:00:00-03:00",
+          "origin": "SIMULATED",
+          "status": "ok"
+        }
+      ],
+      "status": "ok",
+      "forecast_steps": 48,
+      "numeric_state": {
+        "building_kw": 135.669766,
+        "solar_kw": 0.0,
+        "battery_soc_pct": 50.0,
+        "ev_demand_kw": 7.223900950000001,
+        "battery_charge_kw": 0,
+        "battery_discharge_kw": 142.89366695,
+        "grid_import_kw": 0,
+        "grid_export_kw": 0,
+        "ev_block_limit_kw": 31.291103640870475,
+        "battery_soc_after_pct": 48.11982017171053,
+        "energy_balance_error_kw": 0.0,
+        "ev_unserved_kw": 0.0,
+        "ev_served_kw": 7.223900950000001,
+        "evse_setpoints_kw": [
+          2.4079669833333335,
+          2.4079669833333335,
+          2.4079669833333335,
+          0.0
+        ],
+        "evses": {
+          "EVSE1": {
+            "state": "available",
+            "connected": true,
+            "requested_kw": 2.4079669833333335,
+            "allocated_kw": 2.4079669833333335,
+            "reported_evse_max_kw": 2.4079669833333335,
+            "vehicle_max_kw": 22.0,
+            "minimum_kw": 0.0,
+            "connected_since": "2026-06-15T12:00:00"
+          },
+          "EVSE2": {
+            "state": "available",
+            "connected": true,
+            "requested_kw": 2.4079669833333335,
+            "allocated_kw": 2.4079669833333335,
+            "reported_evse_max_kw": 2.4079669833333335,
+            "vehicle_max_kw": 22.0,
+            "minimum_kw": 0.0,
+            "connected_since": "2026-06-15T12:00:00"
+          },
+          "EVSE3": {
+            "state": "available",
+            "connected": true,
+            "requested_kw": 2.4079669833333335,
+            "allocated_kw": 2.4079669833333335,
+            "reported_evse_max_kw": 2.4079669833333335,
+            "vehicle_max_kw": 22.0,
+            "minimum_kw": 0.0,
+            "connected_since": "2026-06-15T12:00:00"
+          },
+          "EVSE4": {
+            "state": "available",
+            "connected": false,
+            "requested_kw": 0.0,
+            "allocated_kw": 0.0,
+            "reported_evse_max_kw": 0.0,
+            "vehicle_max_kw": 22.0,
+            "minimum_kw": 0.0,
+            "connected_since": null
+          }
+        }
+      },
+      "source": "SIMULATED",
+      "hardware_commands_sent": false
+    },
+    {
+      "station_id": "DEMO_POSTO_24H_001",
+      "pid": 8568,
+      "generation": "da3dc70f-5a1d-4263-a8df-92156bb79bb4",
+      "model_identity": {
+        "station_id": "DEMO_POSTO_24H_001",
+        "path": "models/stations/DEMO_POSTO_24H_001/v1",
+        "freeze_sha256": "f9f728277eb1823b7126c3eca62370ee64fd5443cbf12b048dd30fcab004dc64",
+        "selection": {
+          "motor1": "lightgbm_15",
+          "motor2": "lightgbm",
+          "q90": "frequency",
+          "event_threshold": 0.35,
+          "candidate_event_thresholds": {
+            "persistence": 0.5,
+            "previous_day": 0.5,
+            "previous_week": 0.5,
+            "frequency": 0.35,
+            "zero": 0.5,
+            "lightgbm": 0.35
+          },
+          "detection_unresolved": false,
+          "selection_partition": "validation",
+          "test_used": false,
+          "selected_at": "2026-10-11T20:59:29.093145+00:00",
+          "version": "v1",
+          "station_id": "DEMO_POSTO_24H_001"
+        }
+      },
+      "capabilities": {
+        "forecasts": true,
+        "mpc_demo": false,
+        "physical_dispatch": false,
+        "load_balancer": false,
+        "presentation": false,
+        "manual_demo": false
+      },
+      "history": [
+        {
+          "station_id": "DEMO_POSTO_24H_001",
+          "issue_time": "2025-10-01T12:00:00-03:00",
+          "origin": "SIMULATED",
+          "status": "forecast_only"
+        }
+      ],
+      "status": "forecast_only",
+      "forecast_steps": 48,
+      "numeric_state": {
+        "battery_soc_pct": null,
+        "battery_charge_kw": null,
+        "battery_discharge_kw": null,
+        "grid_import_kw": null,
+        "grid_export_kw": null,
+        "ev_block_limit_kw": null,
+        "battery_soc_after_pct": null,
+        "energy_balance_error_kw": null,
+        "ev_unserved_kw": null,
+        "ev_served_kw": null,
+        "building_kw": 12.5751911638,
+        "solar_kw": 31.0756070601,
+        "ev_demand_kw": 0,
+        "evse_setpoints_kw": [
+          null,
+          null
+        ],
+        "evses": {
+          "EVSE_01": {
+            "evse_id": "EVSE_01",
+            "requested_kw": 0.0,
+            "connected": false
+          },
+          "EVSE_02": {
+            "evse_id": "EVSE_02",
+            "requested_kw": 0.0,
+            "connected": false
+          }
+        }
+      },
+      "source": "SIMULATED",
+      "hardware_commands_sent": false
+    },
+    {
+      "station_id": "DEMO_CASA_001",
+      "pid": 7320,
+      "generation": "59072d65-33a5-4e78-8776-b9f938cb6098",
+      "model_identity": {
+        "station_id": "DEMO_CASA_001",
+        "path": "models/stations/DEMO_CASA_001/v1",
+        "freeze_sha256": "ede87b6b8bf02f5ae1e5b60e84b617e8c13361acd0ef9cb006ae8996598a2d84",
+        "selection": {
+          "motor1": "lightgbm_31",
+          "motor2": "lightgbm",
+          "q90": "lightgbm",
+          "event_threshold": 0.35,
+          "candidate_event_thresholds": {
+            "persistence": 0.5,
+            "previous_day": 0.5,
+            "previous_week": 0.5,
+            "frequency": 0.05,
+            "zero": 0.5,
+            "lightgbm": 0.35
+          },
+          "detection_unresolved": false,
+          "selection_partition": "validation",
+          "test_used": false,
+          "selected_at": "2026-10-12T12:55:26.772319+00:00",
+          "version": "v1",
+          "station_id": "DEMO_CASA_001"
+        }
+      },
+      "capabilities": {
+        "forecasts": true,
+        "mpc_demo": false,
+        "physical_dispatch": false,
+        "load_balancer": false,
+        "presentation": false,
+        "manual_demo": false
+      },
+      "history": [
+        {
+          "station_id": "DEMO_CASA_001",
+          "issue_time": "2025-10-01T12:00:00-03:00",
+          "origin": "SIMULATED",
+          "status": "forecast_only"
+        }
+      ],
+      "status": "forecast_only",
+      "forecast_steps": 48,
+      "numeric_state": {
+        "battery_soc_pct": null,
+        "battery_charge_kw": null,
+        "battery_discharge_kw": null,
+        "grid_import_kw": null,
+        "grid_export_kw": null,
+        "ev_block_limit_kw": null,
+        "battery_soc_after_pct": null,
+        "energy_balance_error_kw": null,
+        "ev_unserved_kw": null,
+        "ev_served_kw": null,
+        "building_kw": 0.1376666667,
+        "solar_kw": 3.4183167766,
+        "ev_demand_kw": 0,
+        "evse_setpoints_kw": [
+          null
+        ],
+        "evses": {
+          "EVSE_01": {
+            "evse_id": "EVSE_01",
+            "requested_kw": 0.0,
+            "connected": false
+          }
+        }
+      },
+      "source": "SIMULATED",
+      "hardware_commands_sent": false
+    }
+  ],
+  "service_stopped_after_demo": true
+}
